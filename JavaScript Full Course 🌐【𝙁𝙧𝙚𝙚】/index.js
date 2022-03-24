@@ -142,3 +142,143 @@ x = Math.round(x);
 
 console.log(maximum)
 */
+
+/*======================= AULA 7 =======================*/
+/*
+let  a;
+let b;
+let c;
+
+a = window.prompt('enter side a');
+a = Number(a);
+
+b = window.prompt('enter side b');
+b = Number(b);
+
+c = Math.pow(a, 2) + Math.pow(b, 2);
+c = Math.sqrt(c);
+
+console.log('side c:', c);
+*/
+/*
+document.getElementById("submitButton").onclick = function () {
+
+    a = document.getElementById('atextBox').value;
+    a = Number(a);
+
+    b = document.getElementById("btextBox").value;
+    b = Number(b);
+
+    c = Math.pow(a, 2) + Math.pow(b, 2);
+    c = Math.sqrt(c);
+
+    document.getElementById('clabel').innerHTML = 'side c:' + c;
+};
+*/
+
+/*======================= AULA 8 =======================*/
+/*
+let count = 0;
+
+document.getElementById('decreaseBtn').onclick = function () {
+    count -= 1;
+    document.getElementById('countLabel').innerHTML = count;
+}
+
+document.getElementById('increaseBtn').onclick = function () {
+    count += 1;
+    document.getElementById('countLabel').innerHTML = count;
+}
+
+document.getElementById('resetBtn').onclick = function () {
+    count = 0;
+    document.getElementById('countLabel').innerHTML = count;  
+}
+*/
+
+/*======================= AULA 9 =======================*/
+
+/*
+let x; 
+let y; 
+let z;
+
+document.getElementById('rollButton').onclick = function (){
+    
+    x = Math.floor(Math.random() * 6) + 1;
+    y = Math.floor(Math.random() * 6) + 1;
+    z = Math.floor(Math.random() * 6) + 1;
+    
+    document.getElementById('xlabel').innerHTML = x
+    document.getElementById('ylabel').innerHTML = y
+    document.getElementById('zlabel').innerHTML = z
+}
+*/
+
+/*======================= AULA 10 =======================*/
+
+// uselful string properties & methods
+/*
+let userName = ' Luan      gama      ';
+let phoneNumber = '123-456-789';
+
+// console.log(userName.length);
+//console.log(userName.length);
+//console.log(userName.charAt(0));
+//console.log(userName.indexof ("o"));
+//console.log(userName.lastIndexof ("o"));
+// userName = userName.trim();
+// userName = userName.toLocaleUpperCase();
+// userName = userName.toLowerCase();
+
+phoneNumber = phoneNumber.replaceAll('-', '');
+
+console.log(userName);
+console.log(phoneNumber);
+*/
+
+/*======================= AULA 11 =======================*/
+
+/*
+let fullName = "Luan Cerqueira";
+let firstName;
+let lastName;
+//firstName = fullName.slice(e, 3);
+//lastName = ful1Name.slice(4);
+
+firstName = fullName.slice(0, fullName.indexOf(' '));
+lastName = fullName.slice(fullName.indexOf(' ') + 1);
+
+console.log(firstName);
+console.log(lastName);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================= AULA 12 =======================*/
+/*======================= AULA 13 =======================*/
+/*======================= AULA 14 =======================*/
+/*======================= AULA 15 =======================*/
