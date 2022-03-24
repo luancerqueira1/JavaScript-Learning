@@ -254,31 +254,96 @@ console.log(lastName);
 */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*======================= AULA 12 =======================*/
+// method chaining = calling one method after another
+//                   in one continuous line of code
+/*
+let userName = 'luan';
+
+let letter = userName.charAt(0).toUpperCase().trim();
+
+console.log(letter)
+*/
+
+
 /*======================= AULA 13 =======================*/
-/*======================= AULA 14 =======================*/
-/*======================= AULA 15 =======================*/
+// if statement = a basic form of decision making
+//                if a condition is true, then do something
+//                if not, then don't do it!
+/*
+let age = 66
+
+ if (age >= 65) {
+  console.log("you are older");
+}
+else if (age >= 18) {
+  console.log("you are an adult!");
+}
+else if (age <= 0) {
+  console.log("not born");
+}
+else {
+  console.log("child");
+}
+
+
+let online = true;
+
+if (online){
+    console.log('you are onlie');
+}
+else {
+    console.log('you are offline');
+}
+*/
+
+/*====================== AULA 14 ======================*/
+/*
+document.getElementById('myButton').onclick = function () {
+
+    const myCheckBox = document.getElementById("myCheckBox");
+    const visaBtn = document.getElementById("visaBtn");
+    const mastercardBtn = document.getElementById("mastercardBtn");
+    const paypalBtn = document.getElementById("paypalBtn");
+
+
+    if (myCheckBox.checked) {
+        console.log('you are sybscribed');
+        document.getElementById('teste').innerHTML = "<h2>inscrito</h2>";
+    }
+    else {
+        document.getElementById("teste").innerHTML = '<h2>se inscreva</h2>';
+        console.log('you are not sybscribed');
+    }
+
+    if (visaBtn.checked) {
+        console.log('you are paying with visa');
+    }
+    else if (mastercardBtn.checked) {
+      console.log("you are paying with master card");
+    }
+    else if (paypalBtn.checked) {
+      console.log("you are paying with paypal");
+    }
+    else {
+        console.log('select a payment type')
+    }
+}
+*/
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================== AULA 15 ======================*/
