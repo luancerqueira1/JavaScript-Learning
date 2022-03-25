@@ -505,23 +505,22 @@ function happyBirthday(userName, age) {
 
 // nao funcionou essa porcaria
 
-let area;
-let width;
-let height;
+// let area;
+// let width;
+// let height;
 
-width = window.prompt("enter width");
-height = window.print("enter height");
+// width = window.prompt("enter width");
+// height = window.print("enter height");
 
-area = getArea(width, height);
+// area = getArea(width, height);
 
-console.log("the area is ", area);
+// console.log("the area is: ", area);
+// function getArea(width, height) {
+//   let result = (width * height);
+//   return result;
+// }
 
-function getArea(width, height){
-    let result = width * height;
-    return result;
-}
-
-
+// e esse funcionou como?
 
 // let area;
 // let width;
@@ -532,36 +531,83 @@ function getArea(width, height){
 
 // area = getArea(width, height);
 
-// console.log("The area is:", area);
+// console.log("The area is: ", area);
 // function getArea(width, height) {
 //   let result = width * height;
 //   return result;
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 25 ======================*/
+/*
+let adult = checkAge(18);
+
+console.log(adult)
+
+function checkAge(age){
+  
+  if (age >= 18) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+checkWinner();
+
+function checkWinner(win){
+  
+  win ? console.log('you win') : console.log('you lose');
+}
+*/
+
+/*====================== AULA 26 ======================*/
+
+// doSomething();
+
+// function doSomething(){
+//   for(var i = 1; i <= 3; i+= 1){
+//   }
+//  }
+//  console.log(i);
+
+/*====================== AULA 27 ======================*/
+//tenplate literals = delimited with (``)
+//                    instead of double or single quotes
+//                    allows embedded variables and expressions
+
+/*
+let userName = 'luan'
+let items = 3;
+let total = 75
+
+// console.log('hello', userName);
+// console.log('you have', items, 'items in your cart');
+// console.log('your totals is $:', total);
+
+// console.log(`hello ${userName}`);
+// console.log(`you have ${items} items in your cart`);
+// console.log(`your total is ${total} dolares`);
+
+let text = `hello ${userName} <br>
+you have ${items} items in your cart<br>
+your total is ${total} dolares <br>`;
+
+// console.log(text);
+document.getElementById('myLabel').innerHTML = text;
+*/
+
+/*====================== AULA 28 ======================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
