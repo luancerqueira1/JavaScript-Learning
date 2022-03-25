@@ -468,7 +468,7 @@ for (let i = 1; i <= 20; i += 1){
 */
 
 /*====================== AULA 22 ======================*/
-
+/*
 let symbol = window.prompt("enter a symbol");
 let rows = window.prompt('enter rows');
 let columns = window.prompt("enter columns");
@@ -479,40 +479,89 @@ for(let i = 1; i <= rows; i+=1){
     }
     document.getElementById("myRectangle").innerHTML += '<br>';
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 /*====================== AULA 23 ======================*/
+/*
+startProgram();
+
+function startProgram() {
+    let userName = "luan";
+    let age = 24;
+
+    happyBirthday(userName, age);
+}
+
+function happyBirthday(userName, age) {
+  console.log("Happy birthday to you!");
+  console.log("Happy birthday to you!");
+  console.log("Happy birthday dear", userName);
+  console.log("Happy birthday to you!");
+  console.log("You are " , age , " years old!");
+}    
+*/
+
 /*====================== AULA 24 ======================*/
+
+// nao funcionou essa porcaria
+
+let area;
+let width;
+let height;
+
+width = window.prompt("enter width");
+height = window.print("enter height");
+
+area = getArea(width, height);
+
+console.log("the area is ", area);
+
+function getArea(width, height){
+    let result = width * height;
+    return result;
+}
+
+
+
+// let area;
+// let width;
+// let height;
+
+// width = window.prompt("Enter width");
+// height = window.prompt("Enter height");
+
+// area = getArea(width, height);
+
+// console.log("The area is:", area);
+// function getArea(width, height) {
+//   let result = width * height;
+//   return result;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*====================== AULA 25 ======================*/
