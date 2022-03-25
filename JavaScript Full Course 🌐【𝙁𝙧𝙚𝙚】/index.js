@@ -331,19 +331,188 @@ document.getElementById('myButton').onclick = function () {
 }
 */
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 15 ======================*/
+// switch = statement that examines a value
+//        for a match against many case clauses.
+//       More efficient that many "else if" statements
+/*
+let grade = 'pizwdza';
+
+switch (grade) {
+    case 'A':
+        console.log('you did great!');
+        break;
+    case 'B':
+        console.log('you did  good');
+        break;
+    case 'C':
+        console.log('you did okay');
+        break;
+    case 'D':
+        console.log('you passed... barley');
+        break;
+    case 'F':
+        console.log('you faild');
+        break;
+    default:
+        console.log(grade, 'its not a grade');
+}
+
+let grade1 = "60";
+
+switch (true) {
+  case grade1 >= 90:
+    console.log("you did great!");
+    break;
+  case grade1 >= 80:
+    console.log("you did  good");
+    break;
+  case grade1 >= 70:
+    console.log("you did okay");
+    break;
+  case grade1 >= 60:
+    console.log("you passed... barley");
+    break;
+  case grade1 >= 50:
+    console.log("you faild");
+    break;
+  default:
+    console.log(grade1, "its not a grade");
+}
+*/
+
+/*====================== AULA 16 ======================*/
+/*
+let temp = 10;
+let sunny = false;
+
+if (temp > 0 && temp < 30 && sunny) {
+  console.log("the weather is good");
+} else {
+  console.log("the weather is bad");
+}
+
+if (temp <= 0 || temp >= 30) {
+    console.log('the weather is bad');
+}
+else {
+    console.log('the weather is good')
+}
+*/
+
+/*====================== AULA 17 ======================*/
+
+/*
+let temp = 15;
+let sunny = false;
+
+if (!(temp > 0)) {
+  console.log("It's cold outside");
+} else console.log("It's warm outside");
+
+if (!sunny) {
+  console.log("It's cloudy outside");
+} else {
+  console.log("It's sunny outside");
+}
+*/
+
+/*====================== AULA 18 ======================*/
+/*
+let userName = "";
+
+while(userName == "" || userName == null){
+    userName = window.prompt("Enter your name");
+}
+console.log("Hello", userName);
+*/
+
+/*====================== AULA 19 ======================*/
+/*
+let userName;
+
+do {
+  userName = window.prompt("Enter your name");
+} while (userName == "");
+
+console.log("Hello", userName);
+*/
+
+/*====================== AULA 20 ======================*/
+
+/*
+for (let i = 1; i <= 20; i += 1){
+    console.log(i);
+}
+ console.log('happy');
+*/
+
+/*====================== AULA 21 ======================*/
+
+/*
+//para no 13
+for (let i = 1; i <= 20; i += 1){
+    if (i == 13) {
+        break;
+    }
+    console.log(i)
+}
+
+//pula o 13 e continua
+for (let i = 1; i <= 20; i += 1){
+    if (i == 13) {
+        continue;
+    }
+    console.log(i)
+}
+*/
+
+/*====================== AULA 22 ======================*/
+
+let symbol = window.prompt("enter a symbol");
+let rows = window.prompt('enter rows');
+let columns = window.prompt("enter columns");
+
+for(let i = 1; i <= rows; i+=1){
+    for(let j = 1; j <= columns; j+=1){
+        document.getElementById('myRectangle').innerHTML += symbol;
+    }
+    document.getElementById("myRectangle").innerHTML += '<br>';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================== AULA 23 ======================*/
+/*====================== AULA 24 ======================*/
+/*====================== AULA 25 ======================*/
