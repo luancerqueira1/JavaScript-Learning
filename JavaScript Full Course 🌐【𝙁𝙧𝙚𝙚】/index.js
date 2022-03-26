@@ -678,7 +678,7 @@ document.getElementById('submitButton').onclick = function () {
 
 // fruits.push('lemon');    //adicionas mais elementos
 // fruits.pop('apple');    //remove elementos
-// fruits.unshift('mango');  //add element to beginning 
+// fruits.unshift('mango');  //add element to beginning
 // fruits.shift('apple')  // removes element from beginning
 
 // let length = fruits.length;
@@ -686,22 +686,104 @@ document.getElementById('submitButton').onclick = function () {
 
 // console.log(index);
 
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 32 ======================*/
+
+// let prices = [5, 15, 20, 25];
+
+// for (let i = 0; i < prices.length; i += 1){
+//   console.log(prices[i]);
+// }
+
+// for (let i = prices.length - 1; i >= 0; i-=1) {
+//   console.log(prices[i]);
+// }
+
+// for (let price of prices) {
+//   console.log(price);
+// }
+
 /*====================== AULA 33 ======================*/
+
+// let fruits = ['banana', 'mango', 'apple', 'orange'];
+
+// fruits = fruits.sort().reverse();
+
+// for (let fruit of fruits) {
+//   console.log(fruit);
+// }
+
 /*====================== AULA 34 ======================*/
+
+// 2d array = an array of arrays
+
+// let fruits =     ["banana", "mango",   "apple",  "orange"];
+// let vegetables = ["carrots", "onions", "potatos", "tomatos"];
+// let meats =      ["eggs",    "fish",    "chicken", "beef"];
+
+// let grocerylist = [fruits, vegetables, meats];
+
+// grocerylist[0][0] ='luan'
+
+// for (let list of grocerylist) {
+//   for (let food of list) {
+//     console.log(food);
+//   }
+// }
+
 /*====================== AULA 35 ======================*/
+
+// let userName = 'luan cerqueira'
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// let maximum = Math.max(...numbers)
+
+// console.log(...userName);
+// console.log(...numbers)
+// console.log(maximum);
+
+// let class1 = ['spogebob', 'patrick', 'sandy']
+// let class2 = ['squidward', 'mr.krabks', 'plankton']
+
+// class1.push(...class2)
+// console.log(...class1)
+
 /*====================== AULA 36 ======================*/
+
+// let a = 1;
+// let b = 2;
+// let c = 3;
+// let d = 4;
+// let e = 5;
+
+// console.log(soma/*<- mesmo nome*/(a, b, c, d));
+
+// function soma /*<- mesmo nome*/(...numbers1) {
+//   let total = 0;
+//   for (let number of numbers1) {
+//     total += number;
+//   }
+//   return total;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*====================== AULA 37 ======================*/
 /*====================== AULA 38 ======================*/
 
