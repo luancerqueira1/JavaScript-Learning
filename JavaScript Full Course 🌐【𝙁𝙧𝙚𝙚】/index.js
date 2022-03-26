@@ -598,6 +598,93 @@ document.getElementById('myLabel').innerHTML = text;
 */
 
 /*====================== AULA 28 ======================*/
+/*
+let myNum = 100;
+
+// myNum = myNum.toLocaleString('en-us'); //us english
+// myNum = myNum.toLocaleString("en-us", { style:'currency', currency:'usd'});
+// myNum = myNum.toLocaleString("en-us", { style:'currency', currency:'brl'});
+
+// myNum = myNum.toLocaleString(undefined, {style:'unit', unit:'celsius'});
+
+console.log(myNum);
+*/
+
+/*====================== AULA 29 ======================*/
+/*
+const answer = Math.floor(Math.random() * 10 + 1);
+let guesses = 0;
+
+document.getElementById('submitButton').onclick = function () {
+  
+  let guess = document.getElementById('guessField').value;
+  guesses += 1;
+
+  if (guess == answer) {
+    alert(`${answer} is the number. it took you ${guesses} guesses`);
+  }
+  else if (guess < answer) {
+    alert('too small');
+  }
+  else {
+    alert('to large');
+  }
+}
+
+*/
+
+/*====================== AULA 30 ======================*/
+//covert temperature
+
+// document.getElementById('submitButton').onclick = function() {
+
+//   let temp;
+
+//   if (document.getElementById('cButton').checked){
+//     temp = document.getElementById('textBox').value;
+//     temp = Number(temp);
+//     temp = toCelsius(temp);
+//     document.getElementById("tempLabel").innerHTML = temp + "°C";
+//   }
+//   else if (document.getElementById('fButton').checked) {
+//     temp = document.getElementById("textBox").value;
+//     temp = Number(temp);
+//     temp = toFahrenheit(temp);
+//     document.getElementById("tempLabel").innerHTML = temp + "°F";
+//   }
+//   else {
+//     document.getElementById("tempLabel").innerHTML = "<h3>select a unit</h3>";
+//   }
+// }
+
+
+
+// function toCelsius(temp) {
+//   return (temp - 32) * (5 / 9);
+// }
+
+// function toFahrenheit(temp) {
+//   return temp * 9 / 5 + 32;
+// }
+
+/*====================== AULA 31 ======================*/
+// array think of it as a variable
+// that can store multiple values
+
+// let fruits = ['apple', 'orange', 'banana'];
+
+// // fruits[2] = 'coconut';
+
+
+// fruits.push('lemon');    //adicionas mais elementos
+// fruits.pop('apple');    //remove elementos
+// fruits.unshift('mango');  //add element to beginning 
+// fruits.shift('apple')  // removes element from beginning
+
+// let length = fruits.length;
+// let index = fruits.indexOf('apple') //mostra a posiçao que ela está
+
+// console.log(index);
 
 
 
@@ -610,4 +697,11 @@ document.getElementById('myLabel').innerHTML = text;
 
 
 
+/*====================== AULA 32 ======================*/
+/*====================== AULA 33 ======================*/
+/*====================== AULA 34 ======================*/
+/*====================== AULA 35 ======================*/
+/*====================== AULA 36 ======================*/
+/*====================== AULA 37 ======================*/
+/*====================== AULA 38 ======================*/
 
