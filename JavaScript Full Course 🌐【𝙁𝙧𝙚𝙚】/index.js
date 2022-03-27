@@ -765,25 +765,153 @@ document.getElementById('submitButton').onclick = function () {
 //   return total;
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 37 ======================*/
+
+// sum(2, 3, displayDom);
+
+// function sum(x, y, callBack) {
+//   let result = x + y;
+//   callBack(result);
+// }
+
+// function displayConsole(output) {
+//   console.log(output);
+// }
+// function displayDom(output) {
+//   document.getElementById('myLabel').innerHTML = output;
+// }
+
 /*====================== AULA 38 ======================*/
 
+// let students = ['spongebob', 'patrick', 'squidward'];
+
+// students.forEach(capitalize);
+// students.forEach(print);
+
+// function capitalize(element, index, array) {
+//   array[index] = element[0].toUpperCase() + element.substring(1);
+// }
+
+// console.log(students[0]);
+
+// function print(element) {
+//   console.log(element);
+// }
+
+/*====================== AULA 39 ======================*/
+
+// let numbers = [1, 2, 3, 4, 5];
+// let squares = numbers.map(square);
+// let cubes = numbers.map(cube);
+
+// cubes.forEach(print);
+
+// function square(element) {
+//   return Math.pow(element, 2);
+// }
+// function cube(element) {
+//   return Math.pow(element, 3);
+// }
+// function print(element) {
+//   console.log(element);
+// }
+
+/*====================== AULA 40 ======================*/
+
+//array.filter() creates a new array with all elements
+// that pass the test provided by a function
+
+// let ages = [18, 16, 21, 17, 19, 90,10,44];
+// let adults = ages.filter(checkAge);
+
+// adults.forEach(print)
+
+// function checkAge(element) {
+//   return element >= 18;
+// }
+
+// function print(element) {
+//   console.log(element);
+// }
+
+/*====================== AULA 41 ======================*/
+
+// let prices = [5, 10, 15, 20, 25,30]
+// let total = prices.reduce(checkOut)
+
+// console.log(`the total is $${total}`);
+
+//                 /*total*/  /*elemento*/
+// function checkOut(luan1 ,    luan2) {
+//   return luan1 + luan2;
+// }
+
+/*====================== AULA 42 ======================*/
+
+// let grades = [100, 50, 90, 60, 80, 70]
+
+// grades = grades.sort(ascendingSort);
+// grades.forEach(print)
+
+// function descendingSort(x, y) {
+//   return y - x;
+// }
+// function ascendingSort(x, y) {
+//   return x - y;
+// }
+// function print(element) {
+//   console.log(element)
+// }
+
+/*====================== AULA 43 ======================*/
+
+// const greeting = function () {
+//   console.log('hello');
+// }
+// greeting();
+
+let count = 0
+
+// function decreaseCount() {
+//   count -= 1;
+//   document.getElementById('myLabel').innerHTML = count;
+// }
+// function increaseCount() {
+//   count += 1;
+//   document.getElementById('myLabel').innerHTML = count;
+// }
+
+
+document.getElementById("decreaseButton").onclick = function () {
+  count -= 1;
+  document.getElementById('myLabel').innerHTML = count;
+};
+document.getElementById("increaseButton").onclick = function () {
+  count += 1;
+  document.getElementById("myLabel").innerHTML = count;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================== AULA 44 ======================*/
+/*====================== AULA 45 ======================*/
+/*====================== AULA 46 ======================*/
+/*====================== AULA 47 ======================*/
