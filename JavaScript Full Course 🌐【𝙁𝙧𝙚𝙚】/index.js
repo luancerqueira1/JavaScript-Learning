@@ -882,36 +882,151 @@ let count = 0
 // }
 
 
-document.getElementById("decreaseButton").onclick = function () {
-  count -= 1;
-  document.getElementById('myLabel').innerHTML = count;
-};
-document.getElementById("increaseButton").onclick = function () {
-  count += 1;
-  document.getElementById("myLabel").innerHTML = count;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// document.getElementById("decreaseButton").onclick = function () {
+//   count -= 1;
+//   document.getElementById('myLabel').innerHTML = count;
+// };
+// document.getElementById("increaseButton").onclick = function () {
+//   count += 1;
+//   document.getElementById("myLabel").innerHTML = count;
+// };
 
 /*====================== AULA 44 ======================*/
+// arrow function compact alternative to a traditional function
+// =>
+
+
+// const greeting = function (userName) {
+//   console.log(userName)
+// }
+
+// greeting("luan");
+
+// const greeting1 = (userName) =>  {
+//   console.log(`hello ${userName}`);
+// };
+
+// greeting1("luan");
+
+// const percent = function (x, y) {
+//   return x / y * 100;
+// }
+// console.log(`${percent(34,100)}%`)
+
+
+// const percent1 = (x, y) => x / y * 100;
+// console.log(`${percent1(34, 100)}%`);
+
+
+
+
+// let grades = [100, 50, 90, 80, 70,200,300];
+
+// grades.sort(descending);
+// grades.forEach(cerqueira)
+
+
+// function descending(maior, menor) {
+//   return menor - maior
+// }
+// function cerqueira(luan) {
+//   console.log(luan)
+// }
+
+
+// let grades1 = [100, 400, 500, 700, 600, 200, 300];
+// grades1.sort((x, y) => y - x);
+// grades1.forEach((element) => console.log(element));
+
 /*====================== AULA 45 ======================*/
+
+// let cards = ['A', '2', '3','4', '5','6','7','8','9','10','j','K','Q']
+
+// shuffle(cards)
+
+// // console.log(cards)
+// cards.forEach(card => console.log(card))
+
+// function shuffle(array) {
+//   let currentIndex = array.length;
+
+//   while (currentIndex != 0) {
+//     let randomIndex = Math.floor(Math.random() * array.length)
+//     currentIndex -= 1
+    
+//     let temp = array[currentIndex]
+//     array[currentIndex] = array[randomIndex]
+//     array[randomIndex] = temp
+//   }
+//   return array
+// }
+
 /*====================== AULA 46 ======================*/
+
+// let userName = 'Luan'
+// let userInbox = 2
+
+// login()
+
+// function login() {
+//   displayUsername()
+//   displayUserInbox()
+
+//   function displayUsername() {
+//     console.log(`welcome ${userName}`)
+//   }
+//   function displayUserInbox() {
+//     console.log(`you have ${userInbox} new messeges`)
+//   }
+// }
+
 /*====================== AULA 47 ======================*/
+
+// const store = new Map([
+//   ['t-shirt', 20],
+//   ['jeans', 30],
+//   ['socks', 10],
+//   ['underwear', 50]
+// ])
+
+// // let shoppingCart = 0
+
+// // shoppingCart += store.get('t-shirt')
+// // shoppingCart += store.get('jeans')
+// store.get('t-shirt')
+
+// store.set('hat', 40) //adiciona novo par
+// store.delete('hat')  //deleta um par
+// console.log(store.size) //tanto de pares
+// console.log(store.has('jeans')) //verifica se tem par
+
+// // console.log(shoppingCart)
+
+// store.forEach((valor,item) => console.log(`${item} $${valor}`))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================== AULA 48 ======================*/
+/*====================== AULA 49 ======================*/
