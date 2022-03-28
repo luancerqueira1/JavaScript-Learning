@@ -1004,29 +1004,156 @@ let count = 0
 
 // store.forEach((valor,item) => console.log(`${item} $${valor}`))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 48 ======================*/
+// Obejto grupo de propriedades e metodos
+// Propriedades => o que um objeto tem
+// Metodos é o que o obejto pode fazer
+
+// const car1 = {
+//   model: 'mustang',
+//   color: 'red',
+//   year: '2022',
+  
+//   drive : function () {
+//     console.log(`you drive the car ${this.model}`)
+//   },
+//   break : function () {
+//     console.log(`you step on the breaks `)
+//   }
+// }
+
+// const car2 = {
+//   model: "corvette",
+//   color: "blue",
+//   year: "2021",
+
+//   drive: function () {
+//     console.log(`you drive the car ${car2.model}`);
+//   },
+//   break: function () {
+//     console.log("you step on the breaks");
+//   },
+// };
+
+// car1.drive()
+// car2.drive()
+
 /*====================== AULA 49 ======================*/
+
+// class Player{
+//   score = 0;
+  
+//     pause(){
+//       console.log("You paused the game");
+//     }
+//     exit(){
+//       console.log("You exited the game");
+//     }
+// }
+// const player1 = new Player();
+// const player2 = new Player();
+// const player3 = new Player();
+// const player4 = new Player();
+                
+// player1.score += 1
+
+// console.log(player1.score)
+
+
+/*====================== AULA 50 ======================*/
+
+// class student{
+
+//   constructor(name,age, gpa,nota,nomedomeio) {
+//     this.name = name;
+//     this.nomedomeio = nomedomeio;
+//     this.gpa = gpa;
+//     this.nota = nota;
+//     this.age = age;
+//   }
+//   study() {
+//     console.log(`${this.name} is studying`)
+//   }
+// }
+
+// const student1 = new student('spongebob', 24, 3.2 ,7,'gama')
+// const student2 = new student('patrick', 20, 3.2 ,2,'strela')
+// const student3 = new student('sandy', 25, 3.2 ,2,'cheks')
+
+// console.log(student1.name)
+// console.log(student1.age)
+// console.log(student1.gpa)
+// console.log(student1.nota)
+// console.log(student1.nomedomeio);
+// student1.study()
+
+// console.log(student2.name)
+// console.log(student2.age)
+// console.log(student2.gpa)
+// console.log(student2.nota)
+// console.log(student2.nomedomeio);
+// student2.study()
+
+// console.log(student3.name)
+// console.log(student3.age)
+// console.log(student3.gpa)
+// console.log(student3.nota)
+// console.log(student3.nomedomeio);
+// student3.study()
+
+/*====================== AULA 51 ======================*/
+
+// class car {
+//   static numberOfCars = 0
+
+//   constructor(model) {
+//     this.model = model;
+//     car.numberOfCars +=1
+//   }
+//   static startRace() {
+//     console.log('3...2...1...Go!')
+//   }
+// } 
+
+// const car1 = new car("Mustang");
+// const car2 = new car("Corvette");
+// const car3 = new car("BMW");
+
+// console.log(car.numberOfCars)
+// car.startRace()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================== AULA 52 ======================*/
+/*====================== AULA 53 ======================*/
+/*====================== AULA 54 ======================*/
+/*====================== AULA 55 ======================*/
+/*====================== AULA 56 ======================*/
+/*====================== AULA 57 ======================*/
+/*====================== AULA 58 ======================*/
+/*====================== AULA 59 ======================*/
+/*====================== AULA 60 ======================*/
+/*====================== AULA 61 ======================*/
