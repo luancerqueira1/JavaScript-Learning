@@ -1213,36 +1213,90 @@ let count = 0
 // console.log(fish.age);
 // console.log(fish.swimSpeed);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 54 ======================*/
+
+// class Car {
+//   constructor(power) {
+//     this._gas = 50
+//     this._power = power
+//   }
+//   get power() {
+//     return`${this._power}hp`
+//   }
+//   get gas() {
+//     return`${this._gas}L (${this._gas / 50 * 100}%)`
+//   }
+//   set gas(value) {
+//     if (value > 50) {
+//       value= 50
+//     }
+//     else if (value < 0){
+//       value= 0
+//     }
+//     this._gas= value
+//   }
+// }
+
+// let car = new Car(400)
+
+// car.gas = 10
+
+// console.log(car.power)
+// console.log(car.gas)
+
 /*====================== AULA 55 ======================*/
+
+class Car{
+  constructor(model, year, color, posuo) {
+    this.model = model;
+    this.year = year;
+    this.color = color;
+    this.posuo = posuo;
+  }
+}
+  
+const car1 = new Car("Mustang", 2023, "red",'tenho');
+const car2 = new Car("Corvette", 2024, "blue");
+const car3 = new Car("Lambo", 2022, "yellow", 'vou comprar');
+
+
+displayInfo(car2)
+changeColor(car2, "pink");
+displayInfo(car2)
+posuir(car2, 'tenho')
+displayInfo(car2)
+
+function displayInfo(car) {
+  console.log(car.model)
+  console.log(car.year)
+  console.log(car.color)
+  console.log(car.posuo)
+}
+
+function changeColor(car,color) {
+  car.color = color
+}
+
+function posuir(car, posuo) {
+  car.posuo = posuo
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*====================== AULA 56 ======================*/
 /*====================== AULA 57 ======================*/
 /*====================== AULA 58 ======================*/
