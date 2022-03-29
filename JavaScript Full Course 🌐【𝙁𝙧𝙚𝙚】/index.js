@@ -1173,7 +1173,7 @@ let count = 0
 
 /*====================== AULA 53 ======================*/
 // super = Refers to the parent class.
-//         Commonly used to invoke constructor of a parent class 
+//         Commonly used to invoke constructor of a parent class
 
 // class Animal{
 //   constructor(name, age) {
@@ -1246,60 +1246,171 @@ let count = 0
 
 /*====================== AULA 55 ======================*/
 
-class Car{
-  constructor(model, year, color, posuo) {
-    this.model = model;
-    this.year = year;
-    this.color = color;
-    this.posuo = posuo;
-  }
-}
+// class Car{
+//   constructor(model, year, color, posuo) {
+//     this.model = model;
+//     this.year = year;
+//     this.color = color;
+//     this.posuo = posuo;
+//   }
+// }
   
-const car1 = new Car("Mustang", 2023, "red",'tenho');
-const car2 = new Car("Corvette", 2024, "blue");
-const car3 = new Car("Lambo", 2022, "yellow", 'vou comprar');
+// const car1 = new Car("Mustang", 2023, "red",'tenho');
+// const car2 = new Car("Corvette", 2024, "blue");
+// const car3 = new Car("Lambo", 2022, "yellow", 'vou comprar');
 
 
-displayInfo(car2)
-changeColor(car2, "pink");
-displayInfo(car2)
-posuir(car2, 'tenho')
-displayInfo(car2)
+// displayInfo(car2)
+// changeColor(car2, "pink");
+// displayInfo(car2)
+// posuir(car2, 'tenho')
+// displayInfo(car2)
 
-function displayInfo(car) {
-  console.log(car.model)
-  console.log(car.year)
-  console.log(car.color)
-  console.log(car.posuo)
-}
+// function displayInfo(car) {
+//   console.log(car.model)
+//   console.log(car.year)
+//   console.log(car.color)
+//   console.log(car.posuo)
+// }
 
-function changeColor(car,color) {
-  car.color = color
-}
+// function changeColor(car,color) {
+//   car.color = color
+// }
 
-function posuir(car, posuo) {
-  car.posuo = posuo
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function posuir(car, posuo) {
+//   car.posuo = posuo
+// }
 
 /*====================== AULA 56 ======================*/
+
+// class Car{
+
+//   constructor(model, year, color, posuo) {
+//     this.model = model;
+//     this.year = year;
+//     this.color = color;
+//     this.posuo = posuo;
+//   }
+
+//   drive() {
+//     console.log(`you drive the ${this.model}`)
+//   }
+// }
+
+// const car1 = new Car("Mustang", 2023, "red",'tenho');
+// const car2 = new Car("Corvette", 2024, "blue", 'nao tenho');
+// const car3 = new Car("Lambo", 2022, "yellow", 'vou comprar');
+// const car4 = new Car("ferrari", 2020, "white", 'vou comprar');
+
+// const cars = [car1,car2,car3,car4]
+
+// // console.log(cars[0].model)
+// // console.log(cars[1].model)
+// // console.log(cars[2].model)
+
+// // cars[0].drive()
+// // cars[1].drive()
+// // cars[2].drive()
+
+// startRace(cars)
+
+// function startRace(cars) {
+//   for (const car of cars) {
+//     car.drive()
+//   }
+// }
+
 /*====================== AULA 57 ======================*/
+
+// class Card{
+//   constructor(value, suit) {
+//     this.value = value
+//     this.suit = suit
+//   }
+// }
+
+// let card1 = new Card('A', 'hearts');
+// let card2 = new Card('A', 'spades');
+// let card3 = new Card('A', 'diamonds');
+// let card4 = new Card('A', 'clubs');
+// let card5 = new Card('2', 'hearts');
+// let card6 = new Card('2', 'spades');
+// let card7 = new Card('2', 'diamonds');
+// let card8 = new Card('2', 'clubs');
+
+// let cards = [card1, card2, card3, card4, card5, card6, card7, card8];
+// console.log(cards[0].value + cards[0].suit)
+
+// //other option
+//  new Card("A", "hearts");
+//  new Card("A", "spades");
+//  new Card("A", "diamonds");
+//  new Card("A", "clubs");
+//  new Card("2", "hearts");
+//  new Card("2", "spades");
+//  new Card("2", "diamonds");
+//  new Card('2, clubs');
+   
+// let cards2 = [
+//   new Card("A", "hearts"),
+//   new Card("A", "spades"),
+//   new Card("A", "diamonds"),
+//   new Card("A", "clubs"),
+//   new Card("2", "hearts"),
+//   new Card("2", "spades"),
+//   new Card("2", "diamonds"),
+//   new Card('2',' clubs'),
+// ];
+
+// cards2.forEach(card => console.log(`${card.value} ${card.suit}`))
+
 /*====================== AULA 58 ======================*/
+
+// error = object with a description of
+// something went wrong
+// throw = executes a user-defined error
+
+try {
+  let x = window.prompt("Enter a #");
+  x = Number(x);
+
+  if (isNaN(x)) throw "That wasn't a number!";
+  if (x == "") throw "That was empty!";
+
+  console.log(`${x} is a number`);
+}
+catch (error) {
+  console.log(error);
+}
+finally {
+  console.log('this always executes')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*====================== AULA 59 ======================*/
 /*====================== AULA 60 ======================*/
 /*====================== AULA 61 ======================*/
