@@ -1113,7 +1113,7 @@ let count = 0
 //   static startRace() {
 //     console.log('3...2...1...Go!')
 //   }
-// } 
+// }
 
 // const car1 = new car("Mustang");
 // const car2 = new car("Corvette");
@@ -1122,33 +1122,125 @@ let count = 0
 // console.log(car.numberOfCars)
 // car.startRace()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 52 ======================*/
+
+// class Animal {
+//   alive = true;
+
+//   eat() {
+//     console.log(`this ${this.name} is eating`);
+//   }
+//   sleep() {
+//     console.log(`this ${this.name} is sleeping`);
+//   }
+// }
+
+// class Rabbit extends Animal{
+
+//   name = 'rabbit'
+
+//   run() {
+//     console.log(`this ${this.name} is running`)
+//   }
+// }
+
+// class Fish extends Animal {
+
+//   name = "fish";
+
+//   swim() {
+//     console.log(`this ${this.name} is swimming`);
+//   }
+// }
+
+// class Hawk extends Animal {
+ 
+//   name = "hawk";
+
+//   fly() {
+//     console.log(`this ${this.name} is flying`);
+//   }
+// }
+
+// const rabbit = new Rabbit()
+// const fish = new Fish()
+// const hawk = new Hawk()
+
+// console.log(rabbit.alive)
+// rabbit.sleep()
+// rabbit.eat()
+// rabbit.run()
+
 /*====================== AULA 53 ======================*/
+// super = Refers to the parent class.
+//         Commonly used to invoke constructor of a parent class 
+
+// class Animal{
+//   constructor(name, age) {
+//     this.name = name
+//     this.age = age
+//   }
+// }
+// class Rabbit extends Animal{
+//   constructor(name, age, runSpeed) {
+//     super(name,age)
+//     this.runSpeed = runSpeed
+//   }
+// }
+// class Fish extends Animal {
+//   constructor(name, age, swimSpeed) {
+//     super(name, age);
+//     this.swimSpeed = swimSpeed;
+//   }
+// }
+
+// class Hawk extends Animal {
+//   constructor(name, age, flySpeed) {
+//     super(name, age);
+//     this.flySpeed = flySpeed;
+//   }
+// }
+
+// const rabbit = new Rabbit('rabbit', 1,40)
+// const fish = new Fish("fish", 3, 80);
+// const hawk = new Hawk("Hawk", 6, 200);
+
+// console.log(rabbit.name)
+// console.log(rabbit.age)
+// console.log(rabbit.runSpeed)
+
+// console.log(fish.name)
+// console.log(fish.age);
+// console.log(fish.swimSpeed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*====================== AULA 54 ======================*/
 /*====================== AULA 55 ======================*/
 /*====================== AULA 56 ======================*/
