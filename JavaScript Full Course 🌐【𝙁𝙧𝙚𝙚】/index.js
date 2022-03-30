@@ -1477,37 +1477,102 @@ document.getElementById('submitButton').onclick = function () {
 
 /*====================== AULA 62 ======================*/
 
-const myLabel = document.getElementById('myLabel')
+// const myLabel = document.getElementById('myLabel')
 
-update()
-setInterval(update)
+// update()
+// setInterval(update)
 
-function update() {
+// function update() {
   
-  let date = new Date()
-  myLabel.innerHTML = formatTime(date)
+//   let date = new Date()
+//   myLabel.innerHTML = formatTime(date)
 
-  function formatTime(date) {
-    let hours = date.getHours()
-    let minutes = date.getMinutes()
-    let seconds = date.getSeconds()
-    let amOrPm = hours >= 12 ? "pm" : "am";
+//   function formatTime(date) {
+//     let hours = date.getHours()
+//     let minutes = date.getMinutes()
+//     let seconds = date.getSeconds()
+//     let amOrPm = hours >= 12 ? "pm" : "am";
 
-    hours = (hours % 12) || 12
+//     hours = (hours % 12) || 12
 
-    hours = formatZeros(hours)
-    minutes = formatZeros(minutes);
-    seconds = formatZeros (seconds);
+//     hours = formatZeros(hours)
+//     minutes = formatZeros(minutes);
+//     seconds = formatZeros (seconds);
 
-    return `${hours}:${minutes}:${seconds} ${amOrPm}`
-  }
-  function formatZeros(time) {
-    time = time.toString()
-    return time.lenght < 2 ? "0" + time : time
-  }
-}
+//     return `${hours}:${minutes}:${seconds} ${amOrPm}`
+//   }
+//   function formatZeros(time) {
+//     time = time.toString()
+//     return time.length < 2 ? '0' + time : time;
+//   }
+// }
+
+/*====================== AULA 63 ======================*/
+
+// console.time() = Starts a timer you can use to
+//                  track how long an operation takes
+//                    Give each timer a unique name.
+
+//start
+// console.time("Response time");
+
+// //alert("CLICK THE OK BUTTON!");
+// setTimeout(() => console.log("HELLO!"), 3000);
+
+// //end
+// console.timeEnd ("Response time");
 
 
+/*====================== AULA 64 ======================*/
+
+// const promise = new Promise((resolve, reject) => {
+  
+//   let fileLoaded = false
+
+//   if (fileLoaded) {
+//     resolve('file loaded')
+//   }
+//   else {
+//     reject('file not loaded')
+//   }
+// })
+
+// promise.then(value => console.log(value))
+//   .catch(error => console.log(error))
+
+// const wait = time => new Promise(resolve => {
+//   setTimeout(resolve,time)
+// })
+
+// wait(3000).then(()=> console.log('thanks por esperar'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================== AULA 65 ======================*/
+/*====================== AULA 66 ======================*/
+/*====================== AULA 67 ======================*/
+/*====================== AULA 68 ======================*/
+/*====================== AULA 69 ======================*/
 
 
 
