@@ -870,7 +870,7 @@ document.getElementById('submitButton').onclick = function () {
 // }
 // greeting();
 
-let count = 0
+// let count = 0
 
 // function decreaseCount() {
 //   count -= 1;
@@ -1370,47 +1370,147 @@ let count = 0
 // something went wrong
 // throw = executes a user-defined error
 
-try {
-  let x = window.prompt("Enter a #");
-  x = Number(x);
+// try {
+//   let x = window.prompt("Enter a #");
+//   x = Number(x);
 
-  if (isNaN(x)) throw "That wasn't a number!";
-  if (x == "") throw "That was empty!";
+//   if (isNaN(x)) throw "That wasn't a number!";
+//   if (x == "") throw "That was empty!";
 
-  console.log(`${x} is a number`);
-}
-catch (error) {
-  console.log(error);
-}
-finally {
-  console.log('this always executes')
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//   console.log(`${x} is a number`);
+// }
+// catch (error) {
+//   console.log(error);
+// }
+// finally {
+//   console.log('this always executes')
+// }
 
 /*====================== AULA 59 ======================*/
+
+// let item = 'crypto'
+// let price = 420
+
+// let timer1 = setTimeout(firstMessege,3000,item ,price)
+// let timer2 = setTimeout(secondMessege, 6000);
+// let timer3 = setTimeout(thirdMessege, 10000);
+
+// function firstMessege(item,price) {
+//   alert(`buy this ${item} for ${price}`)
+// }
+
+// function secondMessege() {
+//   alert(`this is not a scam`)
+// }
+
+// function thirdMessege() {
+//   alert(`do it!`)
+// }
+
+// document.getElementById('myButton').onclick = function(){
+//   clearTimeout(timer1)
+//   clearTimeout(timer2)
+//   clearTimeout(timer3)
+//   alert('thanks for buying')
+// }
+
 /*====================== AULA 60 ======================*/
+
+// let count = 0
+// let max = window.prompt('count up to what # ?')
+// max = Number(max)
+
+// const myTimer = setInterval(countUp, 1000)
+
+// function countUp() {
+//   count += 1
+//   console.log(count)
+//   if (count >= max) {
+//     clearInterval(myTimer)
+//   }
+// }
+
 /*====================== AULA 61 ======================*/
+
+// the date object is used to work with dates & times
+
+// let date = new Date()
+//let date = new Date(0);
+//let date = new Date(2023, 0, 1, 2, 3, 4, 5);
+//let date = new Date("January 1, 2023 00:00:00");
+            
+// let dayOfMonth = date.getDate();
+// let dayOfWeek = date.getDate();
+// let mounth = date.getMonth();
+// let hour = date.getHours();
+// let minuts = date.getMinutes();
+
+// date.setFullYear(2025)
+// date.setMonth(1)
+// date.setDate(30)
+
+// date = date.toLocaleString() // mostra só o essencial
+
+
+// document.getElementById("myLabel").innerHTML = formatTime(date);
+// document.getElementById('myLabel2').innerHTML = dayOfMonth
+// document.getElementById('myLabel3').innerHTML = year
+
+// function formatDate(date) {
+//   let year = date.getFullYear()
+//   let month = date.getMonth() +1
+//   let day = date.getDate()
+
+//   return(`${month}/${month}/${day}`)
+// }
+
+// function formatTime(date) {
+//   let hours = date.getHours()
+//   let minutes = date.getMinutes()
+//   let seconds = date.getSeconds()
+//   let amOrPm = hours >= 12 ? "pm" : "am"
+  
+//   hours = (hours % 12) || 12
+
+//   return(`${hours}:${minutes}:${seconds} ${amOrPm}`)
+// }
+
+/*====================== AULA 62 ======================*/
+
+const myLabel = document.getElementById('myLabel')
+
+update()
+setInterval(update)
+
+function update() {
+  
+  let date = new Date()
+  myLabel.innerHTML = formatTime(date)
+
+  function formatTime(date) {
+    let hours = date.getHours()
+    let minutes = date.getMinutes()
+    let seconds = date.getSeconds()
+    let amOrPm = hours >= 12 ? "pm" : "am";
+
+    hours = (hours % 12) || 12
+
+    hours = formatZeros(hours)
+    minutes = formatZeros(minutes);
+    seconds = formatZeros (seconds);
+
+    return `${hours}:${minutes}:${seconds} ${amOrPm}`
+  }
+  function formatZeros(time) {
+    time = time.toString()
+    return time.lenght < 2 ? "0" + time : time
+  }
+}
+
+
+
+
+
+
+
+
