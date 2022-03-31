@@ -1546,33 +1546,174 @@ document.getElementById('submitButton').onclick = function () {
 
 // wait(3000).then(()=> console.log('thanks por esperar'))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 65 ======================*/
+
+// async function loadFile() {
+//    let fileLoaded = true;
+
+//    if (fileLoaded) {
+//      return("file loaded");
+//    } else {
+//      throw("file not loaded");
+//    }
+// }
+
+// loadFile().then((value) => console.log(value))
+//   .catch((error) => console.log(error));// async function loadFile() {
+//    let fileLoaded = true;
+
+//    if (fileLoaded) {
+//      return("file loaded");
+//    } else {
+//      throw("file not loaded");
+//    }
+// }
+
+// loadFile().then((value) => console.log(value))
+//   .catch((error) => console.log(error));
+
 /*====================== AULA 66 ======================*/
+
+// async function loadFile() {
+//    let fileLoaded = false;
+
+//    if (fileLoaded) {
+//      return("file loaded");
+//    } else {
+//      throw("file not loaded");
+//    }
+// }
+// async function startProcess() {
+//   try {
+//     let messege = await loadFile();
+//     console.log(messege);
+//   }
+//   catch(error) {
+//     console.log(error)
+//   }
+// }
+
+// startProcess()
+
 /*====================== AULA 67 ======================*/
+
+// import {PI , getCircumference, getArea} from './math.util.js'
+// console.log(PI)
+
+// let circumference = getCircumference(10)
+// console.log(circumference)
+
+// let area = getArea(10)
+// console.log(area)
+
+/*------------------------------------------------*/
+
+// import * as MathUtil from "./math.util.js";
+// console.log(MathUtil.PI);
+
+// let circumference = MathUtil.getCircumference(10);
+// console.log(circumference);
+
+// let area = MathUtil.getArea(10);
+// console.log(area);
+
 /*====================== AULA 68 ======================*/
+//DOM
+
+// console.dir(document.document)
+// console.log(document.title)
+// console.log(document.URL)
+
+// document.title = "aqui e o titulo"
+// document.location = 'http://www.google.com'
+
+// document.body.style.backgroundColor='skyblue'
+
 /*====================== AULA 69 ======================*/
+
+// let element = document.getElementById('myTitle')
+
+// element.style.backgroundColor='lightgreen'
+
+
+// let fruits = document.getElementsByName('fruits')
+
+// fruits.forEach(fruit => {
+//   if (fruit.checked) {
+//     console.log(fruit.value);
+//   }
+// })
+
+// let vegetables = document.getElementsByTagName('li')
+// vegetables[1].style.backgroundColor = 'lightblue'
+
+// let desserts = document.getElementsByClassName('desserts')
+// desserts[0].style.backgroundColor = 'pink'
+
+// /*------------------------------------------------*/
+// //querryselector seleciona o primeiro elemento
+// let elementId = document.querySelector('#myTitle')
+// elementId.style.backgroundColor = "gold";
+
+// let dessertsClass = document.querySelector('.desserts')
+// dessertsClass.style.backgroundColor = "lightgreen";
+
+// let dessertstagname = document.querySelector('li')
+// dessertstagname.style.backgroundColor = "red";
+
+// let dessertsatribute = document.querySelectorAll('[for]')
+// dessertsatribute.forEach(dessertsatribute => {
+//   dessertsatribute.style.backgroundColor = "coral";
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================== AULA 70 ======================*/
+/*====================== AULA 71 ======================*/
+/*====================== AULA 72 ======================*/
+/*====================== AULA 73 ======================*/
+/*====================== AULA 74 ======================*/
+/*====================== AULA 75 ======================*/
+/*====================== AULA 76 ======================*/
+/*====================== AULA 77 ======================*/
+/*====================== AULA 78 ======================*/
+/*====================== AULA 79 ======================*/
+
+
+  
+
+
+
+
+
+
+
+
 
 
 
