@@ -2,12 +2,12 @@
 /* body {
     background-color: rgba(255, 217, 0, 0.644);
 } */
-
+/* 
 #countLabel {
     display: block;
     text-align: center;
     font-size: 50px;
-}
+} */
 
 /*====================== AULA 61 ======================*/
 
@@ -21,3 +21,10 @@
     background-color: rgb(60, 255, 0);
 } */
 
+/*====================== AULA 73 ======================*/
+
+#myDiv{
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+}

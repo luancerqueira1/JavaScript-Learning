@@ -1666,37 +1666,100 @@ document.getElementById('submitButton').onclick = function () {
 //   dessertsatribute.style.backgroundColor = "coral";
 // });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 70 ======================*/
+
+// let element = document.querySelector("#vegetables");
+// let parent = element.parentElement;
+// parent.style.backgroundColor = "lightgreen";
+
+// .firstElementChild
+// .lastElementChild
+// .parentElement
+// .nextElementSibling
+// .previousElementSibling
+// .children[]
+// Array.from(.children)
+
+
 /*====================== AULA 71 ======================*/
+
+// add/change HTML elements
+//.innerHTML (vulnerable to XSS attacks)
+//.textContent (more secure)
+
+// const nameTag = document.createElement('h1')
+// nameTag.innerHTML = window.prompt('enter your name')
+// document.body.append(nameTag)
+// /*------------------------------------------------*/
+//  //much safer
+// const nameTag = document.createElement('h1')
+// nameTag.textContent = window.prompt('enter your name')
+// document.body.append(nameTag)
+
+// const myList = document.querySelector('#fruit')
+// const listItem = document.createElement('li')
+// listItem.textContent = 'manga'
+// myList.append(listItem)
+// myList.prepend(listItem)
+// myList.insertBefore(listItem, myList.getElementsByTagName("li")[0]);
+
+
 /*====================== AULA 72 ======================*/
+
+// const title = document.getElementById('myTitle')
+
+// title.style.backgroundColor = '#222222'
+// title.style.color = "rgb(50,200,250";
+// title.style.fontFamily = 'consolas'
+// title.style.textAlign = 'center'
+// title.style.border='.2rem solid'
+
+
 /*====================== AULA 73 ======================*/
+
+// const element = document.getElementById('myButton')
+// const elemento = document.body
+// const element = document.getElementById("myText");
+// const element = document.getElementById("myDiv");
+// element.onmouseover = doSomething
+
+// element.onclick = doSomething
+// elemento.onload = doSomething
+// element.onchange = doSomething
+// element.onmouseout = doSomethingElse
+// element.onmousedown = doSomething
+// element.onmouseup = doSomethingElse
+
+
+// function doSomething() {
+//   // alert('you did something')
+//   element.style.backgroundColor='blue'
+// }
+
+// function doSomethingElse() {
+//    element.style.backgroundColor = "lightgreen";
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*====================== AULA 74 ======================*/
 /*====================== AULA 75 ======================*/
 /*====================== AULA 76 ======================*/
