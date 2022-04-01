@@ -1740,29 +1740,90 @@ document.getElementById('submitButton').onclick = function () {
 //    element.style.backgroundColor = "lightgreen";
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 74 ======================*/
+
+// const innerDiv = document.getElementById('innerDiv')
+// const outerDiv = document.getElementById('outerDiv')
+
+// innerDiv.addEventListener('mouseover', changeRed)
+// innerDiv.addEventListener('mouseout', changeGreen)
+
+// function changeRed() {
+//   innerDiv.style.backgroundColor= 'red'
+// }
+
+// function changeGreen() {
+//   innerDiv.style.backgroundColor= 'lightblue'
+// }
+// /*------------------------------------------------*/
+// innerDiv.addEventListener("click", changeBlue);
+// outerDiv.addEventListener("click", changeBlue,true) ;
+
+// function changeBlue() {
+//   alert(`you selected ${this.id}`)
+//   this.style.backgroundColor='blue'
+// }
+
 /*====================== AULA 75 ======================*/
+
+// const myButton = document.querySelector('#myButton')
+// const myImg= document.querySelector('#myImg')
+
+// myButton.addEventListener('click', () => {
+//   if (myImg.style.display == 'none') {
+//     myImg.style.display = 'block'
+//   }
+//   else {
+//     myImg.style.display= 'none'
+//   }
+// })
+
 /*====================== AULA 76 ======================*/
+
+// const myDiv = document.getElementById('myDiv')
+// window.addEventListener('keydown', move)
+// let x = 0
+// let y = 0
+
+// function move(event) {
+
+//   switch (event.key) {
+//     case 'ArrowDown':
+//       y += 5
+//       myDiv.style.top = y + 'px'
+//       break
+//     case 'ArrowUp':
+//       y -= 5
+//       myDiv.style.top = y + 'px'
+//       break
+//     case 'ArrowRight':
+//       x += 5
+//       myDiv.style.left = x + 'px'
+//       break
+//     case 'ArrowLeft':
+//       x -= 5
+//       myDiv.style.left = x + 'px'
+//       break
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*====================== AULA 77 ======================*/
 /*====================== AULA 78 ======================*/
 /*====================== AULA 79 ======================*/
