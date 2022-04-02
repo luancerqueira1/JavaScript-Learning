@@ -1764,6 +1764,7 @@ document.getElementById('submitButton').onclick = function () {
 //   this.style.backgroundColor='blue'
 // }
 
+
 /*====================== AULA 75 ======================*/
 
 // const myButton = document.querySelector('#myButton')
@@ -1777,6 +1778,7 @@ document.getElementById('submitButton').onclick = function () {
 //     myImg.style.display= 'none'
 //   }
 // })
+
 
 /*====================== AULA 76 ======================*/
 
@@ -1806,6 +1808,7 @@ document.getElementById('submitButton').onclick = function () {
 //       break
 //   }
 // }
+
 
 /*====================== AULA 77 ======================*/
 // const myButton = document.getElementById('myButton')
@@ -1850,27 +1853,178 @@ document.getElementById('submitButton').onclick = function () {
 //   }
 // }
 
+
 /*====================== AULA 78 ======================*/
 
+// const canvas = document.getElementById('myCanvas')
+// const context = canvas.getContext('2d')
 
+// draw lines
+// context.strokeStyle = "purple"
+// context.lineWidth = 10;
+// context.beginPath();
+// context.moveTo(0, 0);
+// context.lineTo(250, 250);
+// context.lineTo(250, 500);
+// context.moveTo(500, 0);
+// context.lineTo(250, 250);
+// context.stroke();
 
+//draw triangle
+// context.fillStyle = 'skyblue'
+// context.lineWidth = 3;
+// context.beginPath();
+// context.moveTo(250, 0);
+// context.lineTo(0, 250);
+// context.lineTo(500, 250);
+// context.lineTo(250, 0);
+// context.stroke();
+// context.fill();
 
+//draw rectangle
+// context.fillStyle= 'black'
+// context.fillRect (0, 0, 250, 250);
+// context.strokeStyle = "black";
+// context.strokeRect(0, 0, 250, 250);
 
+// context.fillStyle = "red";
+// context.fillRect(0, 250, 250, 250);
+// context.strokeStyle ="black";
+// context.strokeRect(0, 250, 250, 250);
 
+// context.fillStyle = 'green';
+// context.fillRect(250, 250, 250, 250);
+// context.strokeStyle = "black";
+// context.strokeRect(0, 250, 250, 250);
 
+// context.fillStyle = 'blue';
+// context.fillRect(250, 0, 250, 250);
+// context.strokeStyle = "black";
+// context.strokeRect(0, 250, 250, 250);
+                    
+//draw circle
+//(x, y, r, sAngle, eAngle, counterclockwise)
+// context.fillStyle= 'lightblue'
+// context.beginPath();
+// context.arc(250, 250, 200, 0, 2 * Math.PI);
+// context.stroke();
+// context.fill()
 
-
-
-
-
-
-
-
-
-
+//draw text
+// context.font = '50px MV Boli'
+// context.fillStyle = 'grey'
+// context.textAlign='center'
+// context.fillText('you win', canvas.width /2,canvas.height /2, 100, 100)
 
 
 /*====================== AULA 79 ======================*/
+
+// const myButton = document.querySelector('#myButton')
+
+// console.dir(window)
+// console.log(window.innerWidth)
+// console.log(window.innerHeight)
+// console.log(window.scrollX)
+// console.log(window.scrollY)
+
+// console.log(window.location.href)
+//window.location.href = "https://google.com"
+//console.log (window.location.hostname);
+//console.log(window.location.pathname);
+
+// myButton.addEventListener('click', () => window.open())
+// myButton.addEventListener('click', () => window.open('https://luancerqueira1.github.io/fylo-dark-theme-landing-page-master/'))
+// myButton.addEventListener('click', () => window.print())
+
+// window.alert('hello ')
+// window.confirm('press ok to  continue')
+
+// let age = window.prompt('enter your age')
+
+// if (age < 18) {
+//   window.alert('you must be 18 to visit this site')
+// }
+// else {
+//   window.alert('you good')
+// }
+
+
+/*====================== AULA 80 ======================*/
+// cookie = a small text file stored on your computer
+//          used to remember information about the user
+//          saved in name=value pairs
+
+// console.log(navigator.cookieEnabled)
+// document.cookie = "firstName=luangama; expires=Sun 1 January 2030 12:00:00 UTC; path=/";
+
+// console.log(document.cookie)
+
+setCookie('firstName', 'luan', 365)
+setCookie('lastName', 'gama', 365)
+
+console.log(getCookie('firstName'))
+console.log(getCookie('lastName'))
+
+
+
+// deleteCoockie('firstName')
+// deleteCoockie('lastName')
+// deleteCoockie( 'email')
+
+// console.log(document.cookie)
+
+const firstText = document.querySelector("#firstText");
+const lastText = document.querySelector("#lastText");
+const submitBtn = document.querySelector("#submitBtn");
+const cookieBtn = document.querySelector("#cookieBtn");
+
+submitBtn.addEventListener()
+
+
+function setCookie(name, value, daysToLive) {
+  const date = new Date()
+  date.setTime(date.getTime() + (daysToLive * 24 * 60 * 1000))
+  let expires = 'expires=' + date.toUTCString()
+  document.cookie = `${name} = ${value}; ${expires}; path=/`
+}
+
+function deleteCoockie(name) {
+  setCookie(name,null,null)
+}
+
+function getCookie(name) {
+  const cDcoded = decodeURIComponent(document.cookie)
+  const cArray = cDcoded.split('; ')
+  let result= null
+
+  cArray.forEach(element => {
+    if (element.indexOf(name) == 0){
+      result = element.substring(name.lenght +1)
+    }
+  })
+  return result
+}
+
+
+
+
+
+
+
+
+
+
+
+/*====================== AULA 81 ======================*/
+/*====================== AULA 82 ======================*/
+/*====================== AULA 83 ======================*/
+/*====================== AULA 84 ======================*/
+/*====================== AULA 85 ======================*/
+/*====================== AULA 86 ======================*/
+/*====================== AULA 87 ======================*/
+
+
+
 
 
   

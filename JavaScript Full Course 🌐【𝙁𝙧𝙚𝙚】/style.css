@@ -64,9 +64,25 @@ position: relative;
 
 /*====================== AULA 77 ======================*/
 
-#myDiv {
+/* #myDiv {
     background-color: lightgreen;
     width: 100px;
     height: 100px;
     position: relative;
-}
+} */
+
+/*====================== AULA 78 ======================*/
+/* 
+#myCanvas {
+    border: 1px solid black;
+    background-color: skyblue;
+} */
+
+
+/*====================== AULA 79 ======================*/
+/* #myDiv {
+    width: 1000px;
+    height: 1000px;
+    border: 2px solid black;
+    background-color: lightblue;
+} */
