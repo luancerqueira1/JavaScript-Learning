@@ -1807,25 +1807,69 @@ document.getElementById('submitButton').onclick = function () {
 //   }
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 77 ======================*/
+// const myButton = document.getElementById('myButton')
+// const myAnimation = document.getElementById('myDiv')
+
+// myButton.addEventListener('click', begin)
+
+// function begin() {
+//   let timerId = null
+//   let x = 0
+//   let y = 0
+  
+//   timerId = setInterval(frame, 3)
+  
+//   function frame(){
+//     if (x >= 500 || y >=500) {
+//       clearInterval(timerId)
+//     }
+//     else {
+//       x += 1;
+//       y+=1
+//       myAnimation.style.left = x + 'px'
+//       myAnimation.style.top = y + 'px'
+//     }
+//   }
+// }
+/*------------------------------------------------*/
+// function begin() {
+//   let timerId = null
+//   let degress =0
+  
+//   timerId = setInterval(frame, 3)
+  
+//   function frame(){
+//     if (degress>= 360) {
+//       clearInterval(timerId)
+//     }
+//     else {
+//       degress += 1
+//       myAnimation.style.transform='rotatex('+degress+'deg)'
+//     }
+//   }
+// }
+
 /*====================== AULA 78 ======================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*====================== AULA 79 ======================*/
 
 
