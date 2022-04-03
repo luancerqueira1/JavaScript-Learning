@@ -141,7 +141,7 @@ position: relative;
 
 /*====================== AULA 83 ======================*/
 
-.cell{
+/* .cell{
     width: 75px;
     height: 75px;
     border: 2px solid;
@@ -161,8 +161,31 @@ position: relative;
     grid-template-columns: repeat(3,auto);
     width: 225px;
     margin: auto;
+} */
+
+/*====================== AULA 84 ======================*/
+#gameContainer {
+    text-align: center;
 }
 
+#gameBoard {
+    border: 3px solid;
+}
+
+#scoreText {
+    font-family: cursive;
+    font-size: 100px;
+}
+
+#resetBtn {
+    font-family: cursive;
+    font-size: 22px;
+    width: 100px;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
 
 
 
