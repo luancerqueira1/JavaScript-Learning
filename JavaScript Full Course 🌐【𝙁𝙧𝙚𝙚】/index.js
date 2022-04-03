@@ -2015,65 +2015,204 @@ document.getElementById('submitButton').onclick = function () {
 
 /*====================== AULA 81 ======================*/
 
-const timeDisplay = document.querySelector('#timeDisplay')
-const startBtn = document.querySelector('#startBtn')
-const pauseBtn = document.querySelector('#pauseBtn')
-const resetBtn = document.querySelector('#resetBtn')
+// const timeDisplay = document.querySelector('#timeDisplay')
+// const startBtn = document.querySelector('#startBtn')
+// const pauseBtn = document.querySelector('#pauseBtn')
+// const resetBtn = document.querySelector('#resetBtn')
 
-let startTime = 0;
-let elapsedTime = 0;
-let currentTime = 0;
-let paused = true;
-let intervalId;
-let hrs = 0;
-let mins = 0;
-let secs = 0;
+// let startTime = 0;
+// let elapsedTime = 0;
+// let currentTime = 0;
+// let paused = true;
+// let intervalId;
+// let hrs = 0;
+// let mins = 0;
+// let secs = 0;
 
-startBtn.addEventListener('click', () => {
-  if (paused) {
-    paused = false
-    startTime = Date.now() - elapsedTime
-    intervalId = setInterval(updateTime, 75)
-  }
-})
+// startBtn.addEventListener('click', () => {
+//   if (paused) {
+//     paused = false
+//     startTime = Date.now() - elapsedTime
+//     intervalId = setInterval(updateTime, 75)
+//   }
+// })
 
-pauseBtn.addEventListener("click", () => {
-  if (!paused) {
-    paused = true;
-    elapsedTime = Date.now() - startTime;
-    clearInterval(intervalId);
-  }
-});
+// pauseBtn.addEventListener("click", () => {
+//   if (!paused) {
+//     paused = true;
+//     elapsedTime = Date.now() - startTime;
+//     clearInterval(intervalId);
+//   }
+// });
 
-resetBtn.addEventListener('click', () => {
-  paused = true
-  clearInterval(intervalId)
-  startTime = 0;
-  elapsedTime = 0;
-  currentTime = 0;
-  hrs = 0;
-  mins = 0;
-  secs = 0;
-  timeDisplay.textContent = '00:00:00'
-})
+// resetBtn.addEventListener('click', () => {
+//   paused = true
+//   clearInterval(intervalId)
+//   startTime = 0;
+//   elapsedTime = 0;
+//   currentTime = 0;
+//   hrs = 0;
+//   mins = 0;
+//   secs = 0;
+//   timeDisplay.textContent = '00:00:00'
+// })
 
+// function updateTime() {
+//   elapsedTime = Date.now() - startTime
 
-function updateTime() {
-  elapsedTime = Date.now() - startTime
-
-  secs = Math.floor((elapsedTime / 1000) % 60) 
-  mins = Math.floor((elapsedTime / (1000 * 60)) % 60) 
-  hrs = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60) 
+//   secs = Math.floor((elapsedTime / 1000) % 60)
+//   mins = Math.floor((elapsedTime / (1000 * 60)) % 60)
+//   hrs = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60)
  
-  secs = pad(secs)
-  mins = pad(mins)
-  hrs = pad(hrs)
+//   secs = pad(secs)
+//   mins = pad(mins)
+//   hrs = pad(hrs)
   
-  timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
+//   timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
 
-  function pad(unit){
-    return (("0") + unit).length > 2 ? unit : "0" + unit
+//   function pad(unit){
+//     return (("0") + unit).length > 2 ? unit : "0" + unit
+//   }
+// }
+
+/*====================== AULA 82 ======================*/
+
+// const playerText = document.querySelector("#playerText")
+// const computerText = document.querySelector("#computerText");
+// const resultText = document.querySelector("#resultText");
+// const choiceBtn = document.querySelectorAll(".choiceBtn");
+// let player
+// let computer
+// let result
+
+// choiceBtn.forEach(button => button.addEventListener('click', () => {
+  
+//   player = button.textContent
+//   computerTurn()
+//   playerText.textContent = `player : ${player}`
+//   computerText.textContent = `computer: ${computer}`;
+//   resultText.textContent = checkWinner()
+
+// }))
+
+// function computerTurn() {
+//   const randNum = Math.floor(Math.random() * 3 + 1)
+
+//   switch (randNum) {
+//     case 1:
+//       computer = 'rock'
+//       break
+//     case 2:
+//       computer = 'paper'
+//       break
+//     case 3:
+//       computer = 'scissors'
+//       break
+//   }
+// }
+
+// function checkWinner() {
+//   if (player == computer) {
+//     return 'draw'
+//   }
+//   else if (computer == 'rock') {
+//     return(player == 'paper') ? 'you win' : 'you lose'
+//   }
+//   else if (computer == 'paper') {
+//     return(player == 'scissors') ? 'you win' : 'you lose'
+//   }
+//     else if (computer == 'scissors') {
+//     return(player == 'rock') ? 'you win' : 'you lose'
+//   }
+// }
+
+/*====================== AULA 83 ======================*/
+
+const cells = document.querySelectorAll(".cell")
+const statusText = document.querySelector("#statusText");
+const restartBtn = document.querySelector("#restartBtn");
+const winconditions = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+]
+
+let options = ['', '', '', '', '', '', '', '', '']
+let currentPlayer = 'x'
+let running = false
+
+initializeGame()
+
+function initializeGame() {
+  cells.forEach(cell => cell.addEventListener('click', cellClicked))
+  restartBtn.addEventListener('click', restartGame)
+  statusText.textContent = `${currentPlayer}'s turn`;
+  running=  true
+}
+
+function cellClicked() {
+  const cellIndex = this.getAttribute('cellIndex')
+
+  if (options[cellIndex] != '' || !running) {
+    return
   }
+  updateCell(this, cellIndex)
+  checkWinner()
+}
+
+function updateCell(cell, index) {
+  options[index] = currentPlayer
+  cell.textContent =  currentPlayer
+}
+
+function changePlayer() {
+  currentPlayer = (currentPlayer == "x") ? "o" : "x"
+  statusText.textContent = `${currentPlayer}'s turn`
+}
+
+function checkWinner() {
+  let roundWon = false
+
+  for (let i = 0; i < winconditions.length; i++){
+    const condition = winconditions[i];
+    const cellA = options[condition[0]];
+    const cellB = options[condition[1]];
+    const cellC = options[condition[2]];
+
+    if (cellA == '' || cellB == '' || cellC == '') {
+      continue
+    }
+    if (cellA == cellB && cellB == cellC) {
+      roundWon = true
+      break
+    }
+  }
+  if (roundWon) {
+    statusText.textContent = `${currentPlayer} wins`
+    running = false
+  }
+  else if (!options.includes('')) {
+    statusText.textContent = `draw`;
+    running = false
+  }
+  else {
+    changePlayer()
+  }
+}
+
+
+function restartGame() {
+  currentPlayer = 'x'
+  options = ["", "", "", "", "", "", "", "", ""]
+  statusText.textContent = `${currentPlayer}'s turn`
+  cells.forEach(cell => cell.textContent = '')
+  running = true
+
 }
 
 
@@ -2098,8 +2237,13 @@ function updateTime() {
 
 
 
-/*====================== AULA 82 ======================*/
-/*====================== AULA 83 ======================*/
+
+
+
+
+
+
+
 /*====================== AULA 84 ======================*/
 /*====================== AULA 85 ======================*/
 /*====================== AULA 86 ======================*/

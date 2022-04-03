@@ -89,7 +89,7 @@ position: relative;
 
 /*====================== AULA 81 ======================*/
 
-.timerBtn{
+/* .timerBtn{
     width: 80px;
     height: 30px;
     border: 2px solid;
@@ -112,4 +112,84 @@ position: relative;
     border: 2px solid;
     border-radius: 25px;
     background-color: #222;
+} */
+
+/*====================== AULA 82 ======================*/
+
+/* #gameDiv {
+    font-family:  cursive;
+    border:  3px solid ;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: lightblue;
+    text-align: center;
 }
+
+.choiceBtn {
+    line-height: 30px;
+    width: 150px;
+}
+
+#playerText {
+    color: #298029;
+}
+
+#computerText {
+    color: red;
+} */
+
+
+/*====================== AULA 83 ======================*/
+
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0  2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#gameContainer {
+    font-family: cursive;
+    text-align: center;
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    width: 225px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
