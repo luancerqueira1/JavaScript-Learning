@@ -2218,7 +2218,7 @@ document.getElementById('submitButton').onclick = function () {
 /*====================== AULA 84 ======================*/
 
 
-// nao funcionou 
+// nao funcionou
 
 // const gameBoard = document.querySelector("#gameBoard");
 // const ctx = gameBoard.getContext("2d")
@@ -2251,7 +2251,7 @@ document.getElementById('submitButton').onclick = function () {
 // gameStart()
 
 
-// function gameStart() { 
+// function gameStart() {
 //   running = true
 //   scoreText.textContent = score
 //   createFood()
@@ -2259,7 +2259,7 @@ document.getElementById('submitButton').onclick = function () {
 //   nextTick()
 // };
 
-// function nextTick() { 
+// function nextTick() {
 //   if (running){
 //     setTimeout(() => {
 //       clearBoard()
@@ -2275,10 +2275,10 @@ document.getElementById('submitButton').onclick = function () {
 //   }
 // };
 
-// function clearBoard() { 
+// function clearBoard() {
 //   ctx.fillStyle = boardBackground
 //   ctx.fillRect(0, 0, gameWidth, gameHeight)
-// };  
+// };
 
 // function createFood() {
 //   function randomFood(min , max) {
@@ -2290,12 +2290,12 @@ document.getElementById('submitButton').onclick = function () {
 
 // }
  
-// function drawFood() { 
+// function drawFood() {
 //   ctx.fillStyle = foodColor
 //   ctx.fillRect(foodX, foodY, unitSize, unitSize)
 // };
 
-// function moveSnake() { 
+// function moveSnake() {
 //   const head = {
 //     x: snake[0].x + xVelocity,
 //     y: snake[0].y + yVelocity
@@ -2313,7 +2313,7 @@ document.getElementById('submitButton').onclick = function () {
 //   }
 // };
 
-// function drawSnake() { 
+// function drawSnake() {
 //   ctx.fillStyle = snakeColor
 //   ctx.strokeStyle = snakeBorder
 //   snake.forEach(snakePart => {
@@ -2322,7 +2322,7 @@ document.getElementById('submitButton').onclick = function () {
 //   })
 // };
 
-// function changeDirection(event) { 
+// function changeDirection(event) {
 //   const keyPressed = event.keyCode
 //   const LEFT = 37
 //   const UP = 38
@@ -2354,7 +2354,7 @@ document.getElementById('submitButton').onclick = function () {
 //   }
 // };
 
-// function checkGameOver() { 
+// function checkGameOver() {
 //    switch (true) {
 //      case snake[0].x < 0:
 //        running = false;
@@ -2376,7 +2376,7 @@ document.getElementById('submitButton').onclick = function () {
 //    }
 // };
 
-// function displayGameOver() { 
+// function displayGameOver() {
 //     ctx.fillStyle = "black";
 //     ctx.textAlign = "center";
 //     ctx.fillText("GAME OVER!", gameWidth / 2, gameHeight / 2);
@@ -2398,34 +2398,180 @@ document.getElementById('submitButton').onclick = function () {
 // };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*====================== AULA 85 ======================*/
-/*====================== AULA 86 ======================*/
-/*====================== AULA 87 ======================*/
+
+const gameBoard = document.querySelector('#gameBoard')
+const ctx = gameBoard.getContext('2d')
+const scoreText = document.querySelector('#scoreText')
+const resetBtn = document.querySelector("#resetBtn");
+const gameWidth = gameBoard.width
+const gameHeight = gameBoard.height
+const boardBackground = 'forestgreen'
+const paddle1Color = 'lightblue'
+const paddle2Color = 'red'
+const paddleBorder = 'black'
+const ballColor = 'yellow'
+const ballBorderColor = 'black'
+const ballRadius = 12.5
+const paddleSpeed = 50
+let intervalID 
+let ballSpeed = 1
+let ballX = gameWidth / 2
+let ballY = gameHeight / 2
+let ballXDirection = 0
+let ballYDirection = 0
+let player1Score = 0
+let player2Score = 0
+let paddle1 = {
+  width: 25,
+  height: 100,
+  x: 0,
+  y:0
+}
+let paddle2 = {
+  width: 25,
+  height: 100,
+  x: gameWidth - 25,
+  y: gameHeight - 100
+}
+
+window.addEventListener('keydown', changeDirection)
+resetBtn.addEventListener('click', resetGame)
+
+gameStart()
+drawPaddles();
+
+
+function gameStart() {
+  createBall()
+  nextTick()
+}
+
+function nextTick() {
+  intervalID = setTimeout(() => {
+    clearBoard()
+    drawPaddles()
+    moveBall()
+    drawBall(ballX, ballY)
+    checkCollision()
+    nextTick()
+  }, 10)
+}
+
+function clearBoard() {
+  ctx.fillStyle = boardBackground
+  ctx.fillRect(0,0, gameWidth, gameHeight)
+}
+
+function drawPaddles() {
+  ctx.strokeStyle = paddleBorder
+
+  ctx.fillStyle = paddle1Color
+  ctx.fillRect(paddle1.x, paddle1.y, paddle1.width, paddle1.height)
+  ctx.strokeRect(paddle1.x, paddle1.y, paddle1.width, paddle1.height)
+
+  ctx.fillStyle = paddle2Color
+  ctx.fillRect(paddle2.x, paddle2.y, paddle2.width, paddle2.height)
+  ctx.strokeRect(paddle2.x, paddle2.y, paddle2.width, paddle2.height)
+}
+
+function createBall() {
+  ballSpeed = 1
+  if (Math.round(Math.random()) == 1) {
+    ballXDirection = 1
+  }
+  else {
+    ballXDirection = -1
+  }
+  if (Math.round(Math.random()) == 1) {
+    ballYDirection = 1
+  }
+  else {
+    ballYDirection = -1
+  }
+  ballX = gameWidth / 2
+  ballY = gameHeight / 2
+  drawBall(ballX, ballY)
+}
+
+function moveBall() {
+  
+}
+
+function drawBall(ballX,ballY) {
+  ctx.fillStyle = ballColor
+  ctx.fillRect = ballBorderColor
+  ctx.linewidth = 2
+  ctx.beginPath()
+  ctx.arc(ballX, ballY, ballRadius, 0, 2 * Math.PI)
+  ctx.stroke()
+  ctx.fill()
+}
+
+function checkCollision() {
+  
+}
+
+function changeDirection(event) {
+  const keyPressed = event.keyCode
+  const paddle1Up = 87;
+  const paddle1Down = 83;
+  const paddle2Up = 38;
+  const paddle2Down = 40;
+
+  switch (keyPressed) {
+    case (paddle1Up):
+      if (paddle1.y > 0) {
+        paddle1.y -= paddleSpeed;
+      }
+      break;
+    case (paddle1Down):
+      if (paddle1.y < gameHeight - paddle1.height) {
+        paddle1.y += paddleSpeed;
+      }
+      break;
+    case (paddle2Up):
+      if (paddle2.y > 0) {
+        paddle2.y -= paddleSpeed;
+      }
+      break;
+    case (paddle2Down):
+       if (paddle2.y < gameHeight - paddle2.height) {
+         paddle2.y += paddleSpeed;
+       }
+      break;
+  }
+}
+
+function updateScore() {
+  
+}; 
+
+function resetGame() {
+  
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
