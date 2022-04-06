@@ -189,4 +189,94 @@
 // }
 
 
+/*=============== Video 21 ===============*/
+
+// for (var i = 0; i < 10; i++) {
+//     console.log("Repetindo for: " + i);
+// }
+
+// var arr = [1,2,3,4,5,1]
+
+// for (var j = 0; j < arr.length; j++) {
+//   console.log(arr[j]);
+// }
+// console.log(arr.length);
  
+
+/*=============== Video 22 ===============*/
+
+// for (let i = 10; i > 0; i--){
+//     console.log(i)
+
+//     if (i == 5) {
+//         break;
+//     }
+// }
+// console.log('deu break')
+
+// var x = 10;
+
+// while (x < 100) {
+//     x += 10;
+    
+//     if (x === 60 || x === 90) {
+//         console.log("continue");
+//         continue;
+//     }
+//     console.log('testando continue' + x);
+// }
+
+/*=============== Video 23 ===============*/
+
+//  FUNÇOES
+
+// primeirafuncao()
+
+// function primeirafuncao() {
+//     console.log('luan')
+// }
+
+// function sayName(name) {
+//     console.log(`meu nome é ${name}`)
+// }
+
+// sayName('luan')
+// sayName('pedro')
+// sayName('xavier')
+
+// let nameBancoDeDados = 'guaxinin'
+// sayName(nameBancoDeDados)
+
+// function soma(a, b) {
+//     let soma = a * b
+//     return soma
+// }
+
+// let soma1 = soma(5,5)
+// console.log(soma1)
+// console.log(soma(5,2))
+
+/*=============== Video 24 ===============*/
+
+let lista = ['laranja', 'maçã', 'pera', 'manga']
+
+let listaUl = document.createElement('ul')
+
+let body = document.getElementsByTagName('body')
+
+// console.log(body[0])
+body[0].appendChild(listaUl)
+
+let listaNoBody = document.getElementsByTagName('ul')
+console.log(listaNoBody[0])
+
+for (let i = 0; i < lista.length; i++){
+
+    let liFor = document.createElement('li')
+
+    let textoLi = document.createTextNode(lista[i])
+
+    liFor.appendChild(textoLi)
+    
+    listaNoBody[0].appendChild(liFor)
+}
