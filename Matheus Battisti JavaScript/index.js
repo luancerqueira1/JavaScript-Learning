@@ -336,16 +336,16 @@
 
 // //replace
 // let meuNovoNome = meuNome.replace('luan', 'naul')
-// /*-----------------------------------------------------*/ 
+// /*-----------------------------------------------------*/
 // console.log(meuNome.replace('luan','naul'))
 
 
-/*=============== Video 28 ===============*/
-let frase = 'ESTA E A FRASE QUE VAMOS MANIPULAR'
-let frase2 = 'esta e a frase que vamos manipular'
+/*=============== Video 29 ===============*/
+// let frase = 'ESTA E A FRASE QUE VAMOS MANIPULAR'
+// let frase2 = 'esta e a frase que vamos manipular'
 
-console.log(frase.toLowerCase())
-console.log(frase2.toUpperCase())
+// console.log(frase.toLowerCase())
+// console.log(frase2.toUpperCase())
 
 //trim
 // let nome = '         luan        '
@@ -357,6 +357,76 @@ console.log(frase2.toUpperCase())
 // console.log(tags.split(", "));
 
 //lastindexof
-let frase3 = "esta e a frase que vamos manipular";
-console.log(frase3.lastIndexOf('vamos'))
+// let frase3 = "esta e a frase que vamos manipular";
+// console.log(frase3.lastIndexOf('vamos'))
+
+
+/*=============== Video 30 && 31===============*/
+// // Array
+
+// let arr = [1, 2, 3, 4, 5,2,'luan']
+
+// // Length  = quantos tem
+// console.log(arr.length)
+
+// // push  = adiciona
+// arr.push('gama')
+// console.log(arr.length)
+
+// // Pop = remove no fim do array
+// arr.pop()
+// console.log(arr)
+
+// // unshift  =  adicionar no começo
+// arr.unshift('cer')
+// arr.unshift('teste')
+// console.log(arr);
+
+// //shift =
+// arr.shift()
+// console.log(arr)
+
+// //acessar o ultimo elemento
+// console.log(arr[arr.length - 1])
+
+// //isArray
+// console.log(Array.isArray(6))
+// console.log(Array.isArray(arr))
+ 
+// //splice = adiciona elemento no meio
+// let arr = [1,2,3,4,5,6,'luan']
+
+// arr.splice(2, 1,100)
+// console.log(arr)
+
+// //indexof = acha em que posiçao o elemento está
+// console.log(arr.indexOf('luan'))
+
+// //join = junta tudo
+// let arr2 = ['o', 'rato', 'roeu','my','blouse']
+// console.log(arr2.join(' '))
+
+// //reverse = reverter a mísera
+// console.log(arr2.reverse().join(' '))
+
+
+/*=============== Video 32 ===============*/
+// // Objects
+// let pessoa = {
+//     nome: 'luan',
+//     idade: 24,
+
+//     falar: function () {
+//         console.log('ola meu caro friend')
+//     },
+//     soma: function (a, b) {
+//         return a + b
+//     }
+// }
+
+// console.log(pessoa)
+// console.log(pessoa.nome)
+// pessoa.falar()
+// let soma = pessoa.soma(3, 3)
+// console.log(soma)
 
