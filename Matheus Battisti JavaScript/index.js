@@ -258,25 +258,105 @@
 
 /*=============== Video 24 ===============*/
 
-let lista = ['laranja', 'maçã', 'pera', 'manga']
+// let lista = ['laranja', 'maçã', 'pera', 'manga']
 
-let listaUl = document.createElement('ul')
+// let listaUl = document.createElement('ul')
 
-let body = document.getElementsByTagName('body')
+// let body = document.getElementsByTagName('body')
 
-// console.log(body[0])
-body[0].appendChild(listaUl)
+// // console.log(body[0])
+// body[0].appendChild(listaUl)
 
-let listaNoBody = document.getElementsByTagName('ul')
-console.log(listaNoBody[0])
+// let listaNoBody = document.getElementsByTagName('ul')
+// console.log(listaNoBody[0])
 
-for (let i = 0; i < lista.length; i++){
+// for (let i = 0; i < lista.length; i++){
 
-    let liFor = document.createElement('li')
+//     let liFor = document.createElement('li')
 
-    let textoLi = document.createTextNode(lista[i])
+//     let textoLi = document.createTextNode(lista[i])
 
-    liFor.appendChild(textoLi)
+//     liFor.appendChild(textoLi)
     
-    listaNoBody[0].appendChild(liFor)
-}
+//     listaNoBody[0].appendChild(liFor)
+// }
+
+
+/*=============== Video 25 ===============*/
+// let x = 0
+// let y = 1
+
+// console.log(x)
+// escopo()
+
+// function escopo() {
+//     let z = 3
+    
+//     console.log(z)
+//     console.log(x)
+// }
+
+// // console.log(z)
+// escopo2()
+
+// function escopo2() {
+//     let z = 10
+
+//     console.log(z)
+// }
+
+
+/*=============== Video 27 ===============*/
+//parsefloat 10.0
+
+// console.log(Number.parseFloat('12.999'))
+// console.log(parseFloat('12.999'))
+// //parseInt
+// console.log(parseInt('12.999')) //inteiro
+// console.log(parseInt('12')) //inteiro
+// //toFixed
+// console.log(12.0987.toFixed(1)) //inteiro
+// //isNaN
+// console.log(isNaN('teste'))
+// console.log(isNaN(12))
+// console.log(isNaN('12'))
+// // max value    min value
+// console.log(Number.MAX_VALUE)
+// console.log(Number.MIN_VALUE)
+
+
+/*=============== Video 28 ===============*/
+// //length
+// let meuNome = 'luan   gama   cerqueira'
+// console.log(meuNome.length);
+
+// //indexof
+// console.log(meuNome[5])
+// console.log(meuNome.indexOf('gama'))
+
+// //replace
+// let meuNovoNome = meuNome.replace('luan', 'naul')
+// /*-----------------------------------------------------*/ 
+// console.log(meuNome.replace('luan','naul'))
+
+
+/*=============== Video 28 ===============*/
+let frase = 'ESTA E A FRASE QUE VAMOS MANIPULAR'
+let frase2 = 'esta e a frase que vamos manipular'
+
+console.log(frase.toLowerCase())
+console.log(frase2.toUpperCase())
+
+//trim
+// let nome = '         luan        '
+// console.log(nome.trim())
+
+//slpit
+// console.log(frase.split(" "));
+// var tags = "PHP, Javascript, HTML, CSS";
+// console.log(tags.split(", "));
+
+//lastindexof
+let frase3 = "esta e a frase que vamos manipular";
+console.log(frase3.lastIndexOf('vamos'))
+
