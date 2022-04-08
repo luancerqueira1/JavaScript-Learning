@@ -430,3 +430,132 @@
 // let soma = pessoa.soma(3, 3)
 // console.log(soma)
 
+
+/*=============== Video 33 ===============*/
+
+
+//  let pessoa = {
+//     nome: 'luan',
+//     idade: 24,
+
+//     falar: function () {
+//         console.log('ola meu caro friend')
+//      },
+//      dizerNome: function() {
+//         console.log('meu nome é' +  this.nome)
+//      },
+//      fazerAniversario: function () {
+//         this.idade += 1
+//     },
+// }
+
+// pessoa.dizerNome()
+// console.log(pessoa.idade)
+// pessoa.fazerAniversario()
+// pessoa.fazerAniversario()
+// console.log(pessoa.idade)
+
+
+/*=============== Video 35 ===============*/
+// //tag
+// let titulo = document.getElementsByTagName('h1')[0]
+// console.log(titulo)
+
+
+// let lis = document.getElementsByTagName('li')
+// console.log(lis[1])
+
+// //id
+// let paragrafo = document.getElementById('paragrafo')
+// console.log(paragrafo)
+
+// //class
+// let itensDaLista = document.getElementsByClassName('item');
+// console.log(itensDaLista);
+
+
+/*=============== Video 36 ===============*/
+//querySelector e querySelectorAll
+
+// let itensquery = document.querySelectorAll('.lista2 li')
+// console.log(itensquery)
+
+// let itensquery2 = document.querySelectorAll('.lista2 .item')
+// console.log(itensquery2)
+
+// let itensquery3 = document.querySelector(".lista");
+// console.log(itensquery3);
+
+// let span = document.querySelector("#paragrafo span");
+// console.log(span);
+
+
+/*=============== Video 37 ===============*/
+
+// let title = document.querySelector("#title")
+
+// //innerHtml
+// title.innerHTML = 'titulo de teste'
+
+// //textContent
+// let title2 = document.querySelector("#title2")
+// title2.textContent = 'testando com o textcontent'
+// /*------------------------------------------------- */
+// let title3 = document.querySelector("#title3").textContent = 'funciona merda';
+
+
+/*=============== Video 38 ===============*/
+
+// let novoParagrafo = document.createElement('p')
+// let texto = document.createTextNode('este é o conteudo para colocar dentro do paragrafo que criamos')
+// let texto2 = document.createTextNode('este é o conteudo para colocar dentro do paragrafo que Luan criou da cabeça dele vê se pode isso')
+
+// novoParagrafo.appendChild(texto)
+// console.log(novoParagrafo)
+
+// let vaiNessa = document.querySelector('#vaiNessa')
+// vaiNessa.appendChild(texto2)
+
+// let body = document.querySelector('body')
+// body.appendChild(novoParagrafo)
+
+
+/*=============== Video 39 ===============*/
+// //remover filho do elemento
+// let container = document.querySelector('#container')
+// let p = document.querySelector('#container p')
+
+// container.removeChild(p)
+
+// //remover o elemento em sí
+// let subtitle = document.querySelector(".subtitle");
+// subtitle.remove()
+
+
+/*=============== Video 39 ===============*/
+// Inserindo elementos = appendChild e insertBefore
+
+let elemento = document.createElement('div')
+elemento.classList = 'div-criada' //adiciona uma classe
+
+console.log(elemento)
+
+let container = document.querySelector('#container')
+container.appendChild(elemento)
+
+//inssertbefore
+//criando e adicionando a classe
+let elemento2 = document.createElement('div')
+elemento2.classList = 'div-before'
+
+let elemento3 = document.querySelector('#container .div-before')
+
+console.log(elemento2)
+
+
+
+container.insertBefore(elemento2,elemento3)
+
+
+
+
