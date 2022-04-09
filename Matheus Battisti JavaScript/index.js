@@ -533,29 +533,186 @@
 
 
 /*=============== Video 39 ===============*/
-// Inserindo elementos = appendChild e insertBefore
 
-let elemento = document.createElement('div')
-elemento.classList = 'div-criada' //adiciona uma classe
+// // Inserindo elementos = appendChild e insertBefore
 
-console.log(elemento)
+// let elemento = document.createElement('div')
+// elemento.classList = 'div-criada' //adiciona uma classe
 
-let container = document.querySelector('#container')
-container.appendChild(elemento)
+// console.log(elemento)
 
-//inssertbefore
-//criando e adicionando a classe
-let elemento2 = document.createElement('div')
-elemento2.classList = 'div-before'
+// let container = document.querySelector('#container')
+// container.appendChild(elemento)
 
-let elemento3 = document.querySelector('#container .div-before')
+// //inssertbefore
+// //criando e adicionando a classe
+// let elemento2 = document.createElement('div')
+// elemento2.classList = 'div-before'
 
-console.log(elemento2)
+// let elemento3 = document.querySelector('#container .div-before')
 
-
-
-container.insertBefore(elemento2,elemento3)
+// console.log(elemento2)
 
 
 
+// container.insertBefore(elemento2,elemento3)
 
+
+/*=============== Video 41 ===============*/
+
+// let elemento = document.createElement('h3')
+
+// elemento.classList = 'testando-classe';
+
+// let texto = document.createTextNode('este é o texto')
+
+// elemento.appendChild(texto)
+
+// console.log(elemento)
+
+// //selecionar o elemnto que quero trocar
+// let title = document.querySelector('#title')
+// console.log(title)
+
+// //selecionar o pai do elemnto
+// // let body = document.querySelector("body");
+// /*------------------------------------------ */
+// let pai = title.parentNode;
+
+// //trocar ps elementos
+// pai.replaceChild(elemento,title)
+
+
+/*=============== Video 42 ===============*/
+//Adicionando atributo (setAttribu
+
+// let title = document.querySelector('#title')
+
+// title.setAttribute('class', 'testando-atributo')
+// console.log(title)
+
+// let btn = document.querySelector('#btn')
+// btn.setAttribute('disabled' ,'disabled')
+
+// let subtitle = document.querySelector(".subtitle");
+// subtitle.setAttribute('id', 'subtitulo')
+
+// //remover atributo
+// let lista = document.querySelector(".lista");
+// lista.removeAttribute('class')
+
+
+/*=============== Video 43 ===============*/
+
+// let title = document.querySelector('#title');
+
+// title.style.backgroundColor = 'lightblue';
+// title.style.color = "crimson";
+
+// let lista = document.querySelector("ul");
+// lista.style.cssText = "color:blue; background-color:pink;font-family:Segoe UI";
+
+
+/*=============== Video 44 ===============*/
+
+// console.log(document.body);
+// console.log(document.head);
+// console.log(document.links[0]);
+// document.links[0].textContent = "Twitter";
+// console.log(document.URL);
+// console.log(document.title);
+// document.title = 'video 44'
+
+
+/*=============== Video 45 ===============*/
+//callback
+
+
+// function exibir(num) {
+// console.log(`a operacao é ${num}` )
+// }
+
+// function soma(a , b, callback) {
+//     let op = a + b;
+//     callback(op);
+// }
+// function multiplicacao(a , b, cb) {
+//     let op = a * b
+//     cb(op)
+// }
+
+// soma(2, 2, exibir);
+// multiplicacao(2, 4,exibir);
+
+
+/*=============== Video 46 ===============*/
+
+// //setTimeout
+// setTimeout(function () {
+//     alert('testandooo....');
+// }, 2000 + 2000); // uma vez e acabou
+
+// //setInterval
+// setInterval(function () {
+//     alert('elertando')
+// },1000) //LOOOOOOOP Infinitooo
+
+/*=============== Video 47 ===============*/
+//clearTimeout
+
+// let x = 0
+
+// let myTimer = setTimeout(function () {
+//     console.log('o x é 0')
+// }, 1500)
+
+// x = 5
+// console.log(x)
+
+// if (x > 0) {
+//     clearTimeout(myTimer)
+//     console.log('o x passou de 0')
+// }
+
+// //clearInterval
+// let myInterval = setInterval(function () {
+//     console.log('imprimindo interval')
+// }, 1000)
+
+// setTimeout(function () {
+//     console.log('parrando de imprimir por')
+//     clearInterval(myInterval)
+// },3000)
+
+
+/*=============== Video 48 ===============*/
+//onload
+// window.onload = function () {
+//     console.log('carregou o DOM')
+// }
+// console.log('carregou o Js')
+
+
+/*=============== Video 49 ===============*/
+//click
+// let btn = document.querySelector('#btn')
+// console.log(btn)
+
+// btn.addEventListener("click", function () {
+//     console.log('clicou')
+//     this.style.backgroundColor='blue'
+// });
+
+// let title = document.querySelector("#title");
+
+// title.addEventListener("click", function () {
+//   console.log("clicou");
+//   this.style.backgroundColor = "blue";
+// });
+
+let title = document.querySelector("#title");
+    
+title.addEventListener("click", function () {
+  let subtitle = document.querySelector("#subtitle");
+subtitle.style.color='red'
+});
