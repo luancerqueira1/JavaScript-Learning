@@ -710,9 +710,49 @@
 //   this.style.backgroundColor = "blue";
 // });
 
-let title = document.querySelector("#title");
-    
-title.addEventListener("click", function () {
-  let subtitle = document.querySelector("#subtitle");
-subtitle.style.color='red'
+// var clique = document.querySelector("#clique");
+
+// clique.addEventListener("click", function () {
+//   var subtitle = document.querySelector(".subtitle");
+
+//   subtitle.style.backgroundColor = "lightblue";
+// });
+
+// //bouble click = DBL
+// let clique2 = document.querySelector('#clique2')
+// clique2.style.backgroundColor='red'
+
+// clique2.addEventListener('dblclick', function () {
+//   let titulo = document.querySelector("#title");
+
+//   titulo.style.backgroundColor="blue"
+// })
+
+
+/*=============== Video 50 ===============*/
+//Mouseover &&❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+let titulo = document.querySelector("#title");
+  
+titulo.addEventListener('mouseover',function () {
+  this.style.backgroundColor='yellow'
+})
+
+// mouseout
+titulo.addEventListener("mouseout", function () {
+  this.style.backgroundColor = "purple";
 });
+
+// afetar outro elemento com mouseover
+let titulo2 = document.querySelector("#title2");
+
+titulo2.addEventListener("mouseover", function () {
+  let legenda = document.querySelector('#legenda')
+
+  legenda.classList.remove('hide')
+});
+titulo2.addEventListener("mouseout", function () {
+  let legenda = document.querySelector('#legenda')
+
+  legenda.classList.add('hide')
+});
+//❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
