@@ -730,29 +730,48 @@
 
 
 /*=============== Video 50 ===============*/
-//Mouseover &&❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
-let titulo = document.querySelector("#title");
+// //Mouseover &&❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+// let titulo = document.querySelector("#title");
   
-titulo.addEventListener('mouseover',function () {
-  this.style.backgroundColor='yellow'
-})
+// titulo.addEventListener('mouseover',function () {
+//   this.style.backgroundColor='yellow'
+// })
 
-// mouseout
-titulo.addEventListener("mouseout", function () {
-  this.style.backgroundColor = "purple";
-});
+// // mouseout
+// titulo.addEventListener("mouseout", function () {
+//   this.style.backgroundColor = "purple";
+// });
 
-// afetar outro elemento com mouseover
-let titulo2 = document.querySelector("#title2");
+// // afetar outro elemento com mouseover
+// let titulo2 = document.querySelector("#title2");
 
-titulo2.addEventListener("mouseover", function () {
-  let legenda = document.querySelector('#legenda')
+// titulo2.addEventListener("mouseover", function () {
+//   let legenda = document.querySelector('#legenda')
 
-  legenda.classList.remove('hide')
-});
-titulo2.addEventListener("mouseout", function () {
-  let legenda = document.querySelector('#legenda')
+//   legenda.classList.remove('hide')
+// });
+// titulo2.addEventListener("mouseout", function () {
+//   let legenda = document.querySelector('#legenda')
 
-  legenda.classList.add('hide')
-});
-//❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+//   legenda.classList.add('hide')
+// });
+// //❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+
+
+/*=============== Video 51 ===============*/
+//keydown
+// document.addEventListener('keydown', function (event) {
+//   console.log(event.key)
+
+//   if (event.key === 'Enter') {
+//     console.log('pertei enter')
+//   }
+// })
+
+// //keyup
+// document.addEventListener("keyup", function (e) {
+
+//   if (e.key === "Enter") {
+//     console.log('soltei o  enter');
+//   }
+// });
