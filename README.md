@@ -1,3 +1,3 @@
 # JavaScript Learning
  
-Tentando aprender # JavaScript
+Tentando aprender JavaScript
