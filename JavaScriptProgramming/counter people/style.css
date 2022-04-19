@@ -1,0 +1,36 @@
+body {
+font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;
+text-align: center;
+}
+
+.container {
+	background-color: rgb(93, 111, 196);
+	width: 500px;
+	margin: 0 auto;
+}
+
+h1 {
+margin-top: 10px;
+margin-bottom: 10px;
+}
+h2 {
+font-size: 50px;
+margin-top: 0;
+margin-bottom: 20px;
+}
+button {
+	border:  1px solid gray;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: rgb(233, 236, 55);
+}
+
+#incrementBtn{
+	background: rgb(243, 207, 2);
+}
+
+#saveBtn {
+	background-color: red;
+}
