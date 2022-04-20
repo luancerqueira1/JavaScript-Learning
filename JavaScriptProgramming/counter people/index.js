@@ -90,8 +90,57 @@
 // let welcomeEl = document.getElementById("welcome-el");
 // let theName = "luan"
 // let greeting = "Welcome Again "
-// welcomeEl.innerText =  greeting  + theName 
+// welcomeEl.innerText =  greeting  + theName
 // welcomeEl.innerText +=  "👋🏻"
+
+// /*📌==========================================================📌*/
+// let firstName = 'luan'
+// let lastName = 'cerqueira'
+// let fullName = firstName + ' ' + lastName
+// console.log(fullName)
+
+/*------------------------------------------------------------------*/
+// let myPoints = 3
+
+// function add3Points() {
+// 	myPoints += 3
+// 	console.log(myPoints)
+// }
+// function remove1Points() {
+// 	myPoints -= 1
+// 	console.log(myPoints)
+// }
+// add3Points()
+// add3Points()
+// add3Points()
+// remove1Points()
+// remove1Points()
+
+/*------------------------------------------------------------------*/
+//  // Try to predict what each of the lines will log out
+// console.log("2"+ 2) // 22
+// console.log(11+ 7) // 18
+// console.log(6 + "5") //65
+// console.log("My points: " + 5 + 9) // my points: 59
+// console.log(2 + 2) // 4
+// console.log("11"+ "14") // 1114
+
+/*------------------------------------------------------------------*/
+// When the user clicks the purchase button, render out
+// "Something went wrong, please try again" in the paragraph
+// that has the id="error".
+
+let errorMessage = document.getElementById('error');
+function purchase() {
+	errorMessage.innerHTML = "Something went wrong  please try again";
+}
+
+
+
+
+
+
+
 
 // /*📌==========================================================📌*/
 //                    /*🧿The project 🧿*/
