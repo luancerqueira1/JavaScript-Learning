@@ -87,22 +87,27 @@
 //and the greeting we want to render on the page
 //Render the welcome message using welcomeEl.innerText
 
-let welcomeEl = document.getElementById("welcome-el")
-let theName = "luan"
-let greeting = "Welcome Again "
-welcomeEl.innerText =  greeting  + theName 
-welcomeEl.innerText +=  "👋🏻"
+// let welcomeEl = document.getElementById("welcome-el");
+// let theName = "luan"
+// let greeting = "Welcome Again "
+// welcomeEl.innerText =  greeting  + theName 
+// welcomeEl.innerText +=  "👋🏻"
 
+// /*📌==========================================================📌*/
+//                    /*🧿The project 🧿*/
+// let count = 0;
+// let saveEl = document.getElementById("save-el");
+// let countEl = document.getElementById("count-el");
 
-/*📌==========================================================📌*/
-let count = 0;
-let countEl = document.getElementById("count-el");
+// function increment() {
+// 	count +=  1 
+// 	countEl.textContent = count;
+// }
 
-function increment() {
-	count +=  1 
-	countEl.textContent = count;
-}
+// function save() {
+// 	let countStr = count + " ➡️ "
+// 	saveEl.textContent += countStr
+// 	countEl.textContent = 0
+// 	count = 0 
+// }
 
-function save() {
-	console.log(count)
-}
