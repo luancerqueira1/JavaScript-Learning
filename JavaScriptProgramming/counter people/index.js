@@ -135,13 +135,6 @@ function purchase() {
 	errorMessage.innerHTML = "Something went wrong  please try again";
 }
 
-
-
-
-
-
-
-
 // /*📌==========================================================📌*/
 //                    /*🧿The project 🧿*/
 // let count = 0;

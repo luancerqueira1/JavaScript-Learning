@@ -1,3 +1,8 @@
+body {
+	font-size: 20px;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+}
 /* div {
 	margin-top: 2rem;
 }
@@ -8,3 +13,19 @@ button{
 #sum-el {
 	margin-top: 2rem;
 } */
+.container2{
+	background-color: #016f32;
+	color: beige;
+	text-align: center;
+	padding: 2rem;
+}
+.container2 h1 {
+	color: goldenrod;
+}
+.container2 button{
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: #016f32;
+	background-color: goldenrod;
+	border: navajowhite;
+}
