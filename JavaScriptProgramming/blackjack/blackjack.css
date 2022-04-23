@@ -29,3 +29,13 @@ button{
 	background-color: goldenrod;
 	border: navajowhite;
 }
+
+.container2 button{
+	width: 15rem;
+	margin-top: .5rem;
+	transition: 260ms ease-in-out;
+}
+
+.container2 button:hover {
+	transform: scale(1.06);
+}
