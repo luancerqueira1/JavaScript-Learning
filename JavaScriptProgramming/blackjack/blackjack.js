@@ -72,6 +72,78 @@
 // console.log(11 <= 11) // true
 // console.log(3 <= 2) // false
 
+// //arrays
+// let arrayslists = ['nothing1', 'nada2', 3, 'afff4', 'just5']
+// console.log(arrayslists)
+// console.log(arrayslists.length)
+
+// let aboutMe = ["luan", 24, true]
+// aboutMe.push(5)  //adiciona um item no final do array
+// aboutMe.pop()
+// console.log(aboutMe)
+
+// Push the newMessage to the messages array, and then log out the array
+//  let messages =[
+// 	"Hey, how's it going?",
+// 	"I'm great, thank you! How about you?",
+// 	 "All good. Been working on my portfolio lately.",
+// 	"oi"
+// ]
+// for (let i = 0; i < messages.length; i += 1){
+// 	console.log(messages[i])
+// }
+
+// console.log(messages)
+// let newMessage = "Same here!"
+// messages.push(newMessage)
+// console.log(messages)
+
+/*📌==========================================================📌*/
+//        START 		FINISH		 STEP SIZE
+// for (let count = 1; count <= 11; count += 1){
+// 	console.log(count[i])
+// }
+
+/*📌==========================================================📌*/
+//Create a for loop that counts from 10 to 100in steps of 10
+// Use console.log to log out the numbers
+// for (let i = 10; i <= 100; i += 10){
+// 	console.log(i)
+// }
+
+// let carta = [7, 3, 9]			//i++
+// for (i = 0; i < carta.length; i += 1){
+// 	console.log(carta[i])
+// }
+
+/*📌==========================================================📌*/
+// let sentence = ["Hello", "my", "name", "is", "luan"];
+// let greetingEl = document.getElementById("greeting-el");
+
+// for (let i = 0; i < sentence.length; i += 1){
+// 	greetingEl.textContent += sentence[i] + " "; 
+// }
+
+/*📌==========================================================📌*/
+let player1Time = 100
+let player2Time = 100
+
+function getFastestRace() {
+	if (player1Time < player2Time) {
+		return player1Time
+	} else if (player2Time < player1Time) {
+		return player2Time
+	} else {
+		return "empate"
+	}
+}
+let fastestrace = getFastestRace()
+
+console.log(fastestrace)
+
+
+
+
 /*📌==========================================================📌*/
 //Write the conditional according to these rules:
 // if less than or equal to 20 -> "Do you want to draw a new card?
@@ -96,7 +168,10 @@ function startGame() {
 }
 
 function renderGame() {
-	cardsEl.textContent = "cards: " + cards[0]+ " " + cards[1]
+	cardsEl.textContent = "cards: "
+	for (let i = 0; i < cards.length; i++){
+		cardsEl.textContent += cards[i] + " "
+	}
 	sumEl.textContent = "sum: " + sum
 	if(sum <= 20) {
 		message = "Do you want to draw a new card?";
@@ -111,9 +186,10 @@ function renderGame() {
 }
 
 function newCard() {
-	let card = 10
+	let card = 1
 	sum += card
-
+	cards.push(card)
+	console.log(cards)
 	renderGame()
 }
 
