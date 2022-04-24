@@ -153,38 +153,144 @@
 // /*📌==========================================================📌*/
 //RAMDOM
 
-let flooreNumber = Math.floor(3.4466) 
-console.log(flooreNumber)
+// let flooreNumber = Math.floor(3.4466)
+// console.log(flooreNumber)
 
-function rollDice() {
-	let randomNumber = Math.floor(Math.random() * 6) + 1 
-	return randomNumber
-}
-console.log(rollDice());
+// function rollDice() {
+// 	let randomNumber = Math.floor(Math.random() * 6) + 1
+// 	return randomNumber
+// }
+// console.log(rollDice());
+
+// /*📌==========================================================📌*/
+ // Create two boolean variables, likesDocumentaries and likesStartups
+//Use an OR statement (||) to call recommendMovie() if either of those variables are true
+// let likesDocumentaries = true
+// let likesStartups = false
+
+// if (likesDocumentaries === true || likesStartups === true) {
+// 	recommendMovie()
+// }
+// function recommendMovie() {
+// 	console.log("show")
+// }
+
+// /*📌==========================================================📌*/
+// let hasCompletedCourse = true
+// let givesCertificate = true
+
+// if (hasCompletedCourse === true && givesCertificate === true) {
+//     generateCertificate();
+// }
+// function generateCertificate() {
+// 	console.log("aloha")
+// }
+
+/*📌==========================================================📌*/
+// Objects store data in-depth - composite / complex data type
+//key-value pairs
+// let couse = {
+// 	title: "learn css grid for free",
+// 	lessons: 16,
+// 	creator: "per harald borgen",
+// 	length: 63,
+// 	level: 2,
+// 	isFree: true,
+// 	tags: ["html", "css"]
+// }
+
+// console.log(couse.length)
+// console.log(couse.tags)
+
+// let castle = {
+//   title: "live like a king",
+//   price: 190,
+//   isSuperHost: true,
+//   images: ["img/castle1.png", "img/castle2.png"],
+// };
+// console.log(castle.price)
+// console.log(castle.images)
+/*📌==========================================================📌*/
+// Create a person object that contains three keys: name, age, and county.
+// Use yourself as an example to set the values for name, age, and country
+//Create a function, logData(), that uses the person object to create a
+// string in the following format:
+// "Per is 35 years old and lives in Norway"
+// Call the logData () function to verify that it works
+
+// let person = {
+// 	name: "luan",
+// 	age: 24,
+// 	country: "brasil"
+// }
+// logData();
+
+// function logData() {
+// 	console.log(
+//     person.name + " is " + person.age + " years and lives in " + person.country
+//   );
+// }
+/*📌==========================================================📌*/
+// less than 6 years old -> free
+// 6 to 17 years old -> child discount
+// 18 to 26 years old -> student discount
+// 27 to 66 years old -> full price
+// over 66 years old -> senior citizen discount
+
+// Create a conditional statement (if/else/else if) that logs out the discount
+// the passenger will get based upon the value of the age variable
+// let age = 27;
+
+// if (age < 6) {
+// 	console.log("free")
+// }else if(age < 18){
+// 	console.log("child discount")
+// }else if(age < 27){
+// 	console.log("student discount");
+// }else if(age < 67 ){
+// 	console.log("full price");
+// } else {
+// 	console.log("senior citizen discount");
+// }
 
 
 /*📌==========================================================📌*/
-//Write the conditional according to these rules:
-// if less than or equal to 20 -> "Do you want to draw a new card?
-// else if exactly 21 -> "Wohoo! You've got Blackjack!
-// else -> "You're out of the game!
-
-
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard;
+                          //THE GAME
+let player = {
+	name: "luan",
+	Chips: 200,
+}
+let cards = []
+let sum = 0;
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+let playerEl = document.getElementById("player-el")
+
+playerEl.textContent = player.name + ": $" + player.Chips
 
 function getRandomCard() {
+	let randonNumber = Math.floor(Math.random() * 13) + 1
+	if (randonNumber > 10) {
+		return 10
+	}else if(randonNumber === 1){
+		return 11
+	} else {
+		return randonNumber
+	}
 }
 
+getRandomCard()
+
 function startGame() {
+	isAlive = true
+	let firstCard = getRandomCard();
+	let secondCard = getRandomCard();
+	cards = [firstCard , secondCard]
+	sum = firstCard + secondCard
 	renderGame()
 }
 
@@ -207,12 +313,14 @@ function renderGame() {
 }
 
 function newCard() {
-	let card = getRandomCard();
-	sum += card
-	cards.push(card)
-	console.log(cards)
-	renderGame()
+	if (isAlive === true && hasBlackJack === false) {
+    let card = getRandomCard();
+    sum += card;
+    cards.push(card);
+    renderGame();
+	}
 }
+	
 
 
 
