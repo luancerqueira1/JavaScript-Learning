@@ -210,6 +210,7 @@
 // };
 // console.log(castle.price)
 // console.log(castle.images)
+
 /*📌==========================================================📌*/
 // Create a person object that contains three keys: name, age, and county.
 // Use yourself as an example to set the values for name, age, and country
@@ -230,6 +231,7 @@
 //     person.name + " is " + person.age + " years and lives in " + person.country
 //   );
 // }
+
 /*📌==========================================================📌*/
 // less than 6 years old -> free
 // 6 to 17 years old -> child discount
@@ -253,7 +255,77 @@
 // 	console.log("senior citizen discount");
 // }
 
+/*📌==========================================================📌*/
+/* Use a for loop to log the following to the console:
+The 5 largest countries in the world:
+- China
+- India
+- United States
+Indinesia
+Pakistan
+*/
 
+//	pop() = Remove an item from the end of an array
+// push()= Add items to the end of an arra
+// shift(): Remove an item from the beginning of an array
+//unshift(): Add items to the beginning of an array
+
+// let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"];
+
+// for (let i = 0; i < largeCountries.length; i++){
+// 	console.log("- " + largeCountries[i])
+// }
+
+/*📌==========================================================📌*/
+// You need to help me fixup the largeCountries array so that
+// China and Pakistan are added back into their respective places
+// Use push() & pop () and their counterparts unshift() & shift()
+// Google how to use unshift() and shift()
+
+// let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"];
+// largeCountries.pop()
+// largeCountries.push("Pakistan")
+// largeCountries.shift()
+// largeCountries.unshift("China");
+// console.log(largeCountries)
+
+/*📌==========================================================📌*/
+// let dayOvMonth = 31
+// let weekDay = "friday"
+
+// if (dayOvMonth === 31 && weekDay === "friday"){
+// 	console.log("😱")
+// }
+
+/*📌==========================================================📌*/
+//create a function that reuturns a random item from the array
+
+// let hands = ["rock", "paper", "scissors"]
+
+// function getHand() {
+// 	let randomIndex = Math.floor(Math.random() * 3);
+// 	return hands[randomIndex]
+// }
+// console.log(getHand())
+
+/*📌==========================================================📌*/
+// Create a function that puts the apples onto the appleShelf
+// and the oranges onto the orangeShelf. Use a for loop,
+// a conditional statement, and the textContent property.
+
+// let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"];
+// let appleShelf = document.getElementById("apple-shelf");
+// let orangeShelf = document.getElementById("orange-shelf");
+ 
+// function sortFruits() {
+// 	for (let i = 0; i < fruit.length; i++)
+// 		if (fruit[i] === "🍎") {
+// 			appleShelf.textContent += "🍎";
+// 		} else if (fruit[i] === "🍊") {
+// 			orangeShelf.textContent += "🍊";
+// 		}
+// }
+// sortFruits()
 /*📌==========================================================📌*/
                           //THE GAME
 let player = {
