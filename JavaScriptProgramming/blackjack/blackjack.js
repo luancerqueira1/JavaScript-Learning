@@ -121,27 +121,46 @@
 // let greetingEl = document.getElementById("greeting-el");
 
 // for (let i = 0; i < sentence.length; i += 1){
-// 	greetingEl.textContent += sentence[i] + " "; 
+// 	greetingEl.textContent += sentence[i] + " ";
 // }
 
-/*📌==========================================================📌*/
-let player1Time = 100
-let player2Time = 100
+// /*📌==========================================================📌*/
+// let player1Time = 100
+// let player2Time = 100
+// let fastestrace = getFastestRace();
+// let totalTime = totalRaceTime();
 
-function getFastestRace() {
-	if (player1Time < player2Time) {
-		return player1Time
-	} else if (player2Time < player1Time) {
-		return player2Time
-	} else {
-		return "empate"
-	}
+
+// function getFastestRace() {
+// 	if (player1Time < player2Time) {
+// 		return player1Time
+// 	} else if (player2Time < player1Time) {
+// 		return player2Time
+// 	} else {
+// 		return "empate"
+// 	}
+// }
+
+// totalRaceTime();
+
+// function totalRaceTime() {
+// 	return player1Time + player2Time
+	
+// }
+
+// console.log(totalTime);
+
+// /*📌==========================================================📌*/
+//RAMDOM
+
+let flooreNumber = Math.floor(3.4466) 
+console.log(flooreNumber)
+
+function rollDice() {
+	let randomNumber = Math.floor(Math.random() * 6) + 1 
+	return randomNumber
 }
-let fastestrace = getFastestRace()
-
-console.log(fastestrace)
-
-
+console.log(rollDice());
 
 
 /*📌==========================================================📌*/
@@ -151,8 +170,8 @@ console.log(fastestrace)
 // else -> "You're out of the game!
 
 
-let firstCard = 10;
-let secondCard = 4;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard;
 let hasBlackJack = false
@@ -162,6 +181,8 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+function getRandomCard() {
+}
 
 function startGame() {
 	renderGame()
@@ -186,12 +207,14 @@ function renderGame() {
 }
 
 function newCard() {
-	let card = 1
+	let card = getRandomCard();
 	sum += card
 	cards.push(card)
 	console.log(cards)
 	renderGame()
 }
+
+
 
 
 
