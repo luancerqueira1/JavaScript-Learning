@@ -64,48 +64,109 @@
 // localStorage.clear()
 
 // /*📌==========================================================📌*/
-let myLeads = `["www.awesomelead.com"]`
- console.log(myLeads);
-// 1. Turn the myLeads string into an array
-myLeads = JSON.parse(myLeads);
-console.log(myLeads);
-// 2. Push a new value to the array
-myLeads.push("www.luan.com");
-console.log(myLeads);
-// 3. Turn the array into a string again
-myLeads = JSON.stringify(myLeads);
-// 4. Console.log the string using typeof to verify that it's a string
-console.log(typeof myLeads)
+// let myLeads = `["www.awesomelead.com"]`
+//  console.log(myLeads);
+// // 1. Turn the myLeads string into an array
+// myLeads = JSON.parse(myLeads);
+// console.log(myLeads);
+// // 2. Push a new value to the array
+// myLeads.push("www.luan.com");
+// console.log(myLeads);
+// // 3. Turn the array into a string again
+// myLeads = JSON.stringify(myLeads);
+// // 4. Console.log the string using typeof to verify that it's a string
+// console.log(typeof myLeads)
+
+// /*📌==========================================================📌*/
+//FALSY
+//0
+//""
+//null -> HOW YOU AS A DEVELOPER SIGNILIZE EMPITNESS
+//undefined -> HOW JAVASCIPT SIGNILIZES EMPTINESS
+//NaN
+
+// console.log(Boolean("")) // false
+// console.log(Boolean ("0") ) // true
+// console.log(Boolean (100) ) // true
+// console.log(Boolean (null)) // false
+// console.log( Boolean ([0]) ) //true
+// console.log(Boolean(-0)) // false
+
+// /*📌==========================================================📌*/
+// let welcome = document.getElementById("welcome-el")
+
+// function greetUser( greeting, nome, emoji) {
+// 	welcome.textContent = `${greeting} ${nome} ${emoji}`
+// }
+// greetUser("Helou","Luan", "😱")
+
+///*📌==========================================================📌*/
+// // Create a function, add (), that adds two numbers together and returns the sum
+// 			//PARAMETERS -> DENTRO DA FUNÇAO
+// function add(a,b) {
+// 	return a + b
+// }
+// 					//ARGUMENTS
+// console.log( add (3,4) )     // should log 7
+// console.log(add (9, 102))    // should log 111
+
+
+///*📌==========================================================📌*/
+ // Create a function, getFirst (arr), that returns the first item in the array
+// Call it with an array as an argument to verify that it works
+
+// let arr = ["luan", "gama"]
+// function getFirst(arr) {
+// 	return arr[0]
+// }
+// let firstCard = getFirst([10,20,5])
+// console.log(firstCard)
 
 
 
 // /*📌==========================================================📌*/
-// let myLeads = ["www.google.com"];
-// myLeads = JSON.stringify(myLeads)
-// console.log(typeof myLeads)
+let myLeads = [];
+const inputEl = document.getElementById("input-el");
+const saveBtn = document.getElementById("input-btn");
+const ulEl = document.getElementById("ul-el");
+const deleteBtn = document.getElementById("delete-btn");
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+const tabBtn = document.getElementById("tab-btn");
+const tabs = [
+	{url:"www.google.com/"}
+]
 
-// const inputEl = document.getElementById("input-el");
-// let saveBtn = document.getElementById("input-btn");
-// const ulEl = document.getElementById("ul-el");
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
+  render(myLeads);
+}
 
-// localStorage.setItem("myLeads", "www.google.com" )
+function render(leads) {
+  let listItems = "";
+  for (let i = 0; i < leads.length; i++) {
+    //listItems +="<li> <a href= '" + myLeads[i] + "' target='_blank'> " + myLeads[i] + "</a> </li>";
+    listItems += `<li> 
+		<a href= '${leads[i]}' target='_blank'>  ${leads[i]} <a>
+	</li>`;
+  }
+  ulEl.innerHTML = listItems;
+}
 
-// saveBtn.addEventListener("click", function () {
-// 	myLeads.push(inputEl.value)
-// 	inputEl.value = ""
-// 	renderLeads()
-// });
+deleteBtn.addEventListener("dblclick", function () {
+	localStorage.clear()
+	myLeads = []
+	render(myLeads);
+})
 
-// function renderLeads() {
-//   let listItems = "";
-//   for (let i = 0; i < myLeads.length; i++) {
-//    //listItems +="<li> <a href= '" + myLeads[i] + "' target='_blank'> " + myLeads[i] + "</a> </li>";
-// 	listItems +=
-// 	`<li> 
-// 		<a href= '${myLeads[i]}' target='_blank'>  ${myLeads[i]} <a>
-// 	</li>`;
+saveBtn.addEventListener("click", function () {
+	myLeads.push(inputEl.value)
+	inputEl.value = ""
+	localStorage.setItem("myLeads", JSON.stringify(myLeads))
+	render(myLeads)
+});
 
-//   }
-//   ulEl.innerHTML = listItems;
-// }
+tabBtn.addEventListener("click", function () {
+	console.log(tabs[0].url)
+})
+
 

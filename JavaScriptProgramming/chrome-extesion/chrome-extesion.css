@@ -6,7 +6,7 @@
 	width: 200px;
 	text-align: center;
 	margin: 20px auto;
-	color: white;
+	color: white;aw
 } */
 
 body {
@@ -24,15 +24,23 @@ body {
 	width:25rem;
 	height: 2rem;
 }
-.container #input-btn { 
+button { 
 	margin-top: .6rem;
 	background-color: #5f9341;
 	color: #fff;
-	border: none;
+	border: 1px solid #5f9341;
 	width: 10rem;
 	height: 3rem;
 	font-weight: bold;
 }
+#delete-btn {
+	width: 10rem;
+	height: 3rem;
+	font-weight: bold;
+	background-color: white;
+	color: #5f9341;
+}
+
 .container ul {
 	margin-top: 20px;
 	list-style: none;
