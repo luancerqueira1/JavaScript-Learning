@@ -23,7 +23,7 @@
 /*📌==========================================================📌*/
 // // Use .innerHTML to render a Buy! button inside the div container
 // const contain = document.getElementById("container3");
-// contain.innerHTML = "<button onclick='buy()'>buy!</button>" 
+// contain.innerHTML = "<button onclick='buy()'>buy!</button>"
 
 
 // function buy(){
@@ -31,22 +31,39 @@
 // }
 
 /*📌==========================================================📌*/
-let myLeads = ["1dwwd", "2dwd2wd", "3dwdwd1"];
+// template strings/literals
+const recipient = "James"
+let sender = "luan"
+// Refactor the email string to use template strings
+const email = 
+`Hey ${recipient}!
+How is it going? 
+Cheers ${sender}`;
+console.log (email)
+
+
+/*📌==========================================================📌*/
+let myLeads = [];
 const inputEl = document.getElementById("input-el");
 let saveBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 
-
-
 saveBtn.addEventListener("click", function () {
-	myLeads.push( inputEl.value)
-	console.log(myLeads)
+	myLeads.push(inputEl.value)
+	renderLeads()
+	inputEl.value = ""
 });
 
-let listItems = "";
-for (let i = 0; i < myLeads.length; i++) {
-	listItems += "<li>" + myLeads[i] + "</li>"
-	console.log(listItems)
-	
+function renderLeads() {
+  let listItems = "";
+  for (let i = 0; i < myLeads.length; i++) {
+   //listItems +="<li> <a href= '" + myLeads[i] + "' target='_blank'> " + myLeads[i] + "</a> </li>";
+	listItems +=
+	`<li> 
+		<a href= '${myLeads[i]}' target='_blank'>  ${myLeads[i]} <a>
+	</li>`;
+
+  }
+  ulEl.innerHTML = listItems;
 }
-ulEl.innerHTML = listItems;
+

@@ -1,8 +1,20 @@
+/*===========================================*/
+/* .container2 #box {
+	cursor: pointer;
+	background-color: lightseagreen;
+	padding: 40px;
+	width: 200px;
+	text-align: center;
+	margin: 20px auto;
+	color: white;
+} */
+
 body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
+	min-width: 400px;
 }
 .container{
 	margin: 1rem 0;
@@ -21,13 +33,14 @@ body {
 	height: 3rem;
 	font-weight: bold;
 }
-/*===========================================*/
-/* .container2 #box {
-	cursor: pointer;
-	background-color: lightseagreen;
-	padding: 40px;
-	width: 200px;
-	text-align: center;
-	margin: 20px auto;
-	color: white;
-} */
+.container ul {
+	margin-top: 20px;
+	list-style: none;
+	padding-left: 8px;
+}
+.container  li {
+	margin-top: 5px;
+}
+.container a {
+	color: #5f9341;
+}
