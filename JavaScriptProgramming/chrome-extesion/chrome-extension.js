@@ -122,51 +122,165 @@
 // let firstCard = getFirst([10,20,5])
 // console.log(firstCard)
 
+// /*📌==========================================================📌*/
+                //FINALS CHALLENGES  
+//  // SETTING THE STAGE
+// const player = "per"
+// const opponent = "Nick"
+// const game = "Amazing Fighter"
+// let points = 0
+// let  hasWon = false
+// //PLAYING THE GAME
+// points += 100
+// hasWon = true
+// // ANNOUNCING THE WINNER
+// if (hasWon) {
+//   console.log(`${player}  got ${points} points and won the ${game} game!`)
+// } else {
+//   console.log(`The winner is ${ opponent }! ${ player } lost the game`)
+// }
+// // Go through all variables and decide if they should be let or const
+// // Change the console logs to use template strings instead of double quotes
+/*--------------------------------------------------------------------------- */ 
+// // Create a function that takes a single parameter, an array,
+// // and logs all the items of the array to the console.
+// // Call the function while passing in myCourses as an argument
+
+//  let myCourses = [
+//   "Learn CSS Animations",
+//   "UI Design Fundamentals",
+//   "Intro to Clean Code",
+// ];
+
+// function meusCursos(a) {
+//   for (i = 0; i < a.length; i++) {
+//     console.log(a[i])
+//   }
+// }
+// meusCursos(myCourses)
+
+/*--------------------------------------------------------------------------- */ 
+// // Save a value to localStorage
+// // Delete your code and refresh the page
+// // Fetch your value from localStorage and log it out
+
+// localStorage.setItem("myCredits", "100")
+// let myCredits = localStorage.getItem("myCredits")
+// console.log(myCredits)
+  
+/*--------------------------------------------------------------------------- */ 
+//  let data = [{
+//     player: "Jane",
+//     score: 52
+//   },
+//   {
+//     player: "Mark",
+//     score: 41
+//   }
+// ]
+// // Fetch the button from the DOM, store it in a variable
+// // Use addEventListener() to listen for button clicks
+// // Log Jane's score when the button is clicked (via data)
+
+// let scoreBtn = document.getElementById("score-btn");
+
+// scoreBtn.addEventListener("click", function () {
+//   console.log(data[0].score)
+// })
+/*--------------------------------------------------------------------------- */
+  //ERRO
+// // The generateSentence (desc, arr) takes two parameterer: a description and an array.
+// // It should return a string based upon the description and array.
+// // Example 1: if you pass in "largest countries", and ["China", "India", "USA"],
+// // it should return the string: "The 3 largest countries are China, India, USA"
+// // Example 2: If you pass in "best fruits" and ["Apples", "Bananas"], it should return:
+// // "The 2 best fruits are Apples, Bananas"
+// // Use both a for loop and a template string to solve the challenge
+// function generateSentence(desc, arr) {
+//   let baseString = `the ${arr.lenght} ${desc} are`
+//   const lastIndex = arr.lenght - 1
+//   for (i = 0; i < arr.length; i++){
+//     if (i === lastIndex) {
+//       baseString += arr[i];
+//     } else {
+//       baseString += arr[i] += ", "
+//     }
+//   }
+//   return  baseString
+// }
+// const sentence = generateSentence("highet mountains", ["mount everest " , "k2"])
+// console.log(sentence)
+/*--------------------------------------------------------------------------- */
+// //nem fiz pq nao entendi nada (com foto ainda)
+
+// // Create a function that renders the three team images.
+// // Use a for loop, template strings (), plus equals (+=)
+// // .innerHTML to solve the challenge.
+// const imgs = [
+// "hip1.jpg",
+// "hip2.png",
+// "hip3.jpg"
+// ]
+
+// const container = document.getElementById("container10")
+
+// function renderImages () {
+//   let imgsDOM = ""
+//   for (let i = 0; i < imgs.length; i++) {
+//     imgsDOM += `<img class="team-img" src="${imgs[i]}">`
+//   }
+//   container.innerHTML = imgsDOM
+// }
+// renderImages()
+
+
+
 
 
 // /*📌==========================================================📌*/
-let myLeads = [];
-const inputEl = document.getElementById("input-el");
-const saveBtn = document.getElementById("input-btn");
-const ulEl = document.getElementById("ul-el");
-const deleteBtn = document.getElementById("delete-btn");
-const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
-const tabBtn = document.getElementById("tab-btn");
-const tabs = [
-	{url:"www.google.com/"}
-]
+// let myLeads = [];
+// const inputEl = document.getElementById("input-el");
+// const saveBtn = document.getElementById("input-btn");
+// const ulEl = document.getElementById("ul-el");
+// const deleteBtn = document.getElementById("delete-btn");
+// const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+// const tabBtn = document.getElementById("tab-btn");
 
-if (leadsFromLocalStorage) {
-  myLeads = leadsFromLocalStorage;
-  render(myLeads);
-}
 
-function render(leads) {
-  let listItems = "";
-  for (let i = 0; i < leads.length; i++) {
-    //listItems +="<li> <a href= '" + myLeads[i] + "' target='_blank'> " + myLeads[i] + "</a> </li>";
-    listItems += `<li> 
-		<a href= '${leads[i]}' target='_blank'>  ${leads[i]} <a>
-	</li>`;
-  }
-  ulEl.innerHTML = listItems;
-}
+// tabBtn.addEventListener("click", function () {
+//     chrome.tabs.query({ active: true, currentWindow: true}, function (tabs){
+//      myLeads.push(tabs[0].url);
+//      localStorage.setItem("myleads", JSON.stringify(myLeads));
+//      render(myLeads);
+// 	 });
+// });
 
-deleteBtn.addEventListener("dblclick", function () {
-	localStorage.clear()
-	myLeads = []
-	render(myLeads);
-})
+// if (leadsFromLocalStorage) {
+//   myLeads = leadsFromLocalStorage;
+//   render(myLeads);
+// };
 
-saveBtn.addEventListener("click", function () {
-	myLeads.push(inputEl.value)
-	inputEl.value = ""
-	localStorage.setItem("myLeads", JSON.stringify(myLeads))
-	render(myLeads)
-});
+// function render(leads) {
+//   let listItems = "";
+//   for (let i = 0; i < leads.length; i++) {
+//     //listItems +="<li> <a href= '" + myLeads[i] + "' target='_blank'> " + myLeads[i] + "</a> </li>";
+//     listItems += `<li> 
+// 		<a href= '${leads[i]}' target='_blank'>  ${leads[i]} <a>
+// 	  </li>`;
+//   }
+//   ulEl.innerHTML = listItems;
+// }
 
-tabBtn.addEventListener("click", function () {
-	console.log(tabs[0].url)
-})
+// deleteBtn.addEventListener("dblclick", function () {
+// 	localStorage.clear()
+// 	myLeads = []
+// 	render(myLeads);
+// })
 
+// saveBtn.addEventListener("click", function () {
+// 	myLeads.push(inputEl.value)
+// 	inputEl.value = ""
+// 	localStorage.setItem("myLeads", JSON.stringify(myLeads))
+// 	render(myLeads)
+// });
 
