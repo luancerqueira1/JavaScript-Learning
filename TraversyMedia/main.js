@@ -149,15 +149,86 @@
 // console.log(addNums2(5,5))
 
 //Constructor function
-function Pessoa(firstName, lastName,dob) {
-	this.firstName = firstName
-	this.lastName = lastName
-	this.dob = new Date(dob)
-	this.getBirthYear = function () {
-		return this.dob.getFullYear()
+// function Pessoa(firstName, lastName,dob) {
+// 	this.firstName = firstName
+// 	this.lastName = lastName
+// 	this.dob = new Date(dob)
+// 	this.getBirthYear = function () {
+// 		return this.dob.getFullYear()
+// 	}
+// 	this.getFullName = function () {
+// 		return `${this.firstName} ${this.lastName}`
+// 	}
+// }
+
+// //instantiate object
+// const person1 = new Pessoa('luan', 'cerqueira', '08-13-1997')
+// console.log(person1.getBirthYear());
+// console.log(person1.getFullName());
+
+// THE Dom
+
+// //Single element
+// document.getElementById('my-form')
+// document.querySelector('.container')
+
+// // Multiple elements
+// document.getElementsByClassName('item')
+// document.querySelectorAll('.item')
+// document.getElementsByTagName('li')
+
+// const items = document.querySelectorAll('.item')
+// items.forEach((item) => console.log(item))
+
+// Methods
+// const ul = document.querySelector('.items')
+// ul.remove() // remove all
+// ul.lastElementChild.remove() //remove last child
+// ul.firstElementChild.textContent = 'hello'
+// ul.children[1].innerText = "luan"
+// ul.lastElementChild.innerHTML = '<h4>Hello</h4>'
+
+// const btn = document.querySelector('.btn')
+// btn.style.background = 'blue'
+
+// Events
+// const btn = document.querySelector('.btn')
+// btn.addEventListener('click', (e) => {
+// 	e.preventDefault()
+// 	document.querySelector('#my-form').style.background = '#ccc'
+// 	document.querySelector('body').classList.add('bg-dark')
+// 	document.querySelector('.items').lastElementChild.innerHTML = '<h1 style="color:black">hellou</h1>'
+// })
+
+// const btn = document.querySelector('.btn')
+// btn.addEventListener('mouseover', (e) => {
+// 	e.preventDefault()
+// 	document.querySelector('#my-form').style.background = '#ccc'
+// 	document.querySelector('body').classList.add('bg-dark')
+// 	document.querySelector('.items').lastElementChild.innerHTML = '<h1 style="color:black">hellou</h1>'
+// })
+
+const myForm = document.querySelector('#my-form')
+const nameImput = document.querySelector('#name')
+const emailImput = document.querySelector('#email')
+const msg = document.querySelector('.msg')
+const userList = document.querySelector('#users')
+
+myForm.addEventListener('submit', onSubmit)
+function onSubmit(e) {
+	e.preventDefault()
+	if (nameImput.value === '' || emailImput.value === '') {
+		msg.classList.add('error')
+		msg.innerHTML = 'please enter inputs fields'
+		setTimeout(() => msg.remove(),3000)
+	} else {
+		const li = document.createElement('li')
+		li.appendChild(document.createTextNode(`${nameImput.value} : ${emailImput.value}`))
+
+		userList.appendChild(li)
+
+		//clear fiels
+		nameImput.value = ''
+		emailImput.value = ''
 	}
 }
-
-//instantiate object
-const person1 = new Pessoa("luan", "cerqueira", "13-08-1997")
-console.log(person1.getBirthYear())
