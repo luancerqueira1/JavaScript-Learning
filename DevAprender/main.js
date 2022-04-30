@@ -82,12 +82,65 @@
 // let podeAplicar = maiorDeIdade && possue
 // console.log(podeAplicar)
 
-//oparadores logicos &&
-let maiorDeIdaden = true;
-let possuen = false;
-let podeAplicarn = maiorDeIdaden || possuen;
-console.log("pode aplicar " + podeAplicarn);
+// //oparadores logicos &&
+// let maiorDeIdaden = true;
+// let possuen = false;
+// let podeAplicarn = maiorDeIdaden || possuen;
+// console.log("pode aplicar " + podeAplicarn);
 
-//oparadores logicos (!)
-let candidato = !podeAplicarn
-console.log("candidato rescusado " + candidato)
+// //oparadores logicos (!)
+// let candidato = !podeAplicarn
+// console.log("candidato rescusado " + candidato)
+
+
+ 					/*FALSY*/
+// undefined
+// null
+// 0
+// false
+// ''
+// NaN
+
+//           /*TROCAR VALORES DE UMA VARIAVEL*/
+// let a = "vermelho"
+// let b = "azul"
+
+// let c = a
+// a = b
+// b = c
+// console.log(a)
+// console.log(b)
+
+// //if else
+// let hora = 10
+// if (hora >= 6 && hora < 12 ) {
+// 	console.log('bom dia')
+// } else if (hora >= 12 && hora < 18) {
+// 	console.log('boa tarde')
+// } else {
+// 	console.log('boa noite')
+// }
+
+// // Switch case
+// let permissao;
+
+// switch (permissao) {
+// 	case 'comum':
+// 		console.log("usuario comum")
+// 		break
+// 	case 'premium':
+// 		console.log("usuario premium")
+// 		break
+// 	case 'vip':
+// 		console.log("usuario vip")
+// 		break
+// 	default:
+// 		console.log('usuario nao encontrado')
+// }
+
+// FOR
+for (let i = 0; i < 10; i++){
+	if (i % 2 !== 0) {
+		console.log(i)
+	}
+}
