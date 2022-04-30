@@ -138,9 +138,26 @@
 // 		console.log('usuario nao encontrado')
 // }
 
-// FOR
-for (let i = 0; i < 10; i++){
-	if (i % 2 !== 0) {
-		console.log(i)
-	}
-}
+// // FOR
+// for (let i = 0; i < 10; i++){
+// 	if (i % 2 !== 0) {
+// 		console.log(i)
+// 	}
+// }
+
+// // While loop
+// let i = 5
+
+// while (i >= 1) {
+// 	if (1 % 2 !== 0) {
+// 		console.log(i)
+// 	}
+// 	--i
+// }
+
+// DO WHILE
+let i = 0
+do {
+	console.log("digitando")
+	i++
+}while(i < 10)
