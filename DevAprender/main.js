@@ -155,9 +155,94 @@
 // 	--i
 // }
 
-// DO WHILE
-let i = 0
-do {
-	console.log("digitando")
-	i++
-}while(i < 10)
+// // DO WHILE
+// let i = 0
+// do {
+// 	console.log("digitando")
+// 	i++
+// }while(i < 10)
+
+// // For In
+// let pessoa = {
+// 	nome: "luan",
+// 	idade : 24
+// }
+
+// for (let chave in pessoa){
+// 	console.log(pessoa)
+// }
+
+// const cores = ["red", "blue", "green"]
+
+// for (let indice in cores) {
+// 	console.log(cores[indice])
+// }
+
+// // For-of
+// const cores = ["red", "blue", "green"]
+// for (cor of cores) {
+// 	console.log(cor)
+// }
+
+// //Escreva uma funçao que usa dois numeros e retorna o maior numero entre eles
+// let num1 = 9
+// let num2 = 9
+
+// function maiorNumero() {
+// 	if (num1 > num2) {
+// 		return num1
+// 	} else {
+// 		return num2
+// 	}
+// 	// return num1 > num2 ? num1 : num2
+// }
+// console.log(maiorNumero())
+
+//divisivel por 3 -> fizz
+//divisivel por 5 -> buzz
+//divivisivel por 3 e 5 -> fizzbuzz
+//nao divisivel por 3 ou 5 -> o proprio numero
+// nao é um numero -> nao é um numero
+
+// const resultado = fizzBuzz(15)
+// console.log(resultado)
+
+// function fizzBuzz(entrada) {
+// 	if (typeof entrada !== "number") {
+// 		return "nao é um numero"
+// 	}
+// 	if (entrada % 3 === 0 && entrada % 5 === 0) {
+//       return "fizzbuzz";
+//    }
+// 	if (entrada % 3 === 0) {
+// 		return 'fizz'
+// 	}
+// 	if (entrada % 5 === 0) {
+// 		return'buzz'
+// 	}
+
+// 	return entrada
+// }
+
+// //velocidade maxima de ate 70
+// //a cada 5km acima do limite voce ganha 1 ponto
+// //math.floor
+// //caso pontos maior que 12 -> carteira suspendida
+
+// verificarVelocidade(1)
+
+// function verificarVelocidade(velocidade) {
+// 	const velocidadeMaxima = 70
+// 	const kmPorPonto = 5
+// 	if (velocidade <= velocidadeMaxima) {
+// 		console.log('ok')
+// 	} else {
+// 		const kmPorPonto = Math.floor(((velocidade - velocidadeMaxima) / kmPorPonto))
+// 		if (pontos >= 12) {
+// 			console.log('carteira suspensa')
+// 		} else {
+// 			console.log(`${kmPorPonto} na carteira`)
+// 		}
+// 	}
+	
+// }
