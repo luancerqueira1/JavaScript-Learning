@@ -288,29 +288,239 @@
 // 	console.log(multiplos3 + multiplos5)
 // }
 
-//media de nota escolar
+// //media de nota escolar
 
-const array = [70, 10, 80]
+// const array = [70, 10, 80]
 
-console.log(mediaDoAluno(array))
-function mediaDoAluno(notas) {
-	const media = calcularMedia(notas)
+// console.log(mediaDoAluno(array))
+// function mediaDoAluno(notas) {
+// 	const media = calcularMedia(notas)
 
-	if (media < 59)
-		return 'F'
-	if (media < 69)
-		return 'D'
-	if (media < 79)
-		return 'C'
-	if (media < 89)
-	return 'A'
+// 	if (media < 59)
+// 		return 'F'
+// 	if (media < 69)
+// 		return 'D'
+// 	if (media < 79)
+// 		return 'C'
+// 	if (media < 89)
+// 	return 'A'
+// }
+
+
+// function calcularMedia(arr) {
+// 	let soma = 0;
+//     for (let valor of arr) {
+//       soma += valor;
+//     }
+//    return soma / arr.length;
+// }
+
+
+// exibir(10)
+// function exibir(linhas) {
+// 	for (let linha = 1; linha <= linhas; linha++) {
+// 		let padrao = ''
+// 		for (let i = 0; i < linha; i++){
+// 			padrao += "*";
+// 		}
+// 		console.log(padrao)
+// 	}
+// }
+
+
+// exibirprimo(15)
+// function exibirprimo(limite) {
+// 	for (let numero = 2; numero <= limite; numero++){
+// 		if (numeroPrimo(numero)) console.log(numero);
+// 	}
+// }
+
+// function numeroPrimo(numero) {
+// 		for (let divisor = 2; divisor < numero; divisor++) {
+//       if (numero % divisor === 0) {
+//         return false
+//       }
+// 	}
+// 	return true
+// }
+
+// //camel case
+// function criarCelular(marcaCelular, tamanhoTela, CapacidadeBateria) {
+// 	return {
+// 		marcaCelular,
+// 		tamanhoTela,
+// 		CapacidadeBateria,
+// 		ligar() {
+// 			console.log("fazendo ligaçao")
+// 		}
+// 	}
+// }
+
+// const celular1 = criarCelular('motorola', 5.2, 5000)
+// console.log(celular1)
+
+// //pascal case
+// function Celular(marcaCelular,tamanhoTela,CapacidadeBateria) {
+// 	this.marcaCelular = marcaCelular,
+// 	this.tamanhoTela = tamanhoTela,
+// 	this.CapacidadeBateria = CapacidadeBateria
+// 	this.ligar = function () {
+// 		console.log('ligar')
+// 	}
+// }
+
+// const celular = new Celular('moto g', 5.5, 4500)
+// console.log(celular)
+
+// //made by me
+// function Pessoa(nome, idade, altura,estaVivo) {
+// 	this.nome = nome,
+// 	this.idade = idade,
+// 	this.altura = altura
+// 	this.estaVivo = estaVivo
+// }
+
+// const pessoa1 = new Pessoa("luan", 24, 1.75, true)
+// console.log(pessoa1)
+
+// const mouse = {
+//   cor: "red",
+//   marcar: "dazz",
+// };
+// mouse.velocidade = 5000;
+// mouse.trocarDPI = function () {
+//   console.log("mudando DPI ");
+// };
+// delete mouse.velocidade;
+// delete mouse.trocarDPI;
+// console.log(mouse);
+
+// const celular = {
+//       marcacelular:'ASUS',
+//       tamanhoTela:{
+//              vertical: 155,
+//              horizontal: 75
+//       },
+//       ligar: function (){
+//              console.log("Fazendo Ligação...");
+//       }
+// }
+
+// const novoObjeto = Object.assign({
+// 	bateria : 5000 // Adicoona mais coisas no objeto
+// }, celular) // Clona objeto
+// console.log(novoObjeto)
+
+
+// // 	MATH
+// console.log(Math.random())
+// console.log(Math.max(2,3,7,9))
+// console.log(Math.min(9,4,3,1))
+// console.log(Math.floor(2.99))
+
+// const mensagem = '   minha primeira mensagem'
+// console.log(mensagem.includes ('primeira'))
+// console.log(mensagem.includes('vermelho'))
+// console.log(mensagem.startsWith('verde'))
+// console.log(mensagem.endsWith('mensagem'))
+// console.log(mensagem.indexOf ('primeira'))
+// console.log(mensagem.replace('minha','sua'))
+// console.log(mensagem.trim())
+// console.log(mensagem.split(' '))
+
+
+// const mensagem = `minha 'vigessima' mensagem`
+// console.log(mensagem)
+
+
+// //  DATE
+// const data1 = new Date()
+// let anoatual = data1.getFullYear()
+// console.log(anoatual)
+// console.log(data1)
+
+
+// let endereco = {
+// 	rua: 'mestre campos',
+// 	cidade: 'euclides da cunha',
+// 	cep: 48500000,
+// }
+// exibirEndereco(endereco)
+// function exibirEndereco(endereco) {
+// 	for (let chave in endereco) {
+// 		console.log(chave, endereco[chave])
+// 	}
+// }
+
+
+// function Endereco(rua, cidade, cep) {
+// 	this.rua = rua,
+// 	this.cidade = cidade,
+// 	this.cep = cep
+// }
+
+// let endereco1 = new Endereco('mestre campos','euclides',48500000)
+// let endereco2 = new Endereco('mestre campos','euclides',48500000)
+
+// console.log(saoIguais(endereco1, endereco2))
+// console.log(temMemoriaIgual())
+
+// function saoIguais(endereco1, endereco2) {
+// 	return endereco1.rua === endereco2.rua &&
+// 			 endereco1.cidade === endereco2.cidade &&
+// 			 endereco1.cep === endereco2.cep
+// }
+// function temMemoriaIgual() {
+//   //ver se vem do mesmo lugar // const ou let
+//   return endereco1 === endereco2;
+// }
+
+// let postagem = {
+// 	titulo: 'bem vinds',
+// 	mensagem: 'muito feliz por te ver aqui',
+// 	autor: 'android',
+// 	visualizacoes: 1200,
+// 	comentarios: [{ autor: 'luan', mensagem: 'aff' },
+// 					  { autor: 'zé', mensagem: 'bom dia' }],
+// 	estaoAoVivo: true
+// }
+
+// console.log(postagem)
+
+// //constructor function
+// function Postagem(titulo, mensagem, autor) {
+// 	this.titulo = titulo
+// 	this.mensagem = mensagem
+// 	this.autor = autor
+// 	this.visualizacoes = 0
+// 	this.comentarios = []
+// 	this.estaoAoVivo = false
+// }
+// let mensagem1 = new Postagem('boas vindas','ahauhsuaush','luan')
+// console.log(mensagem1)
+
+//						faixa de preço
+//opcao 1
+let faixas = [
+	{toolTip:'ate 700 ',minimo: 0, maximo: 700},
+	{toolTip:'de 700 ate 1000',minimo: 700, maximo: 1000},
+	{toolTip:'de 1000 ate 1200 ',minimo: 1000, maximo: 1200}
+]
+
+//opçao 2 factory function
+function criarFaixaPreco(toolTip,minimo,maximo) {
+	return {
+		toolTip,
+		minimo,
+		maximo
+	}
 }
 
-function calcularMedia(arr) {
-	let soma = 0;
-    for (let valor of arr) {
-      soma += valor;
-    }
-   return soma / arr.length;
-}
+let faixa1 = [
+  criarFaixaPreco("ate 700", 1, 100),
+  criarFaixaPreco("de 700 ate 1000", 100, 1000),
+  criarFaixaPreco("de 1000 ate 1200", 1000, 2000),
+];
 
+console.log(faixas)
+console.log(faixa1)
