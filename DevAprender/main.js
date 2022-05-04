@@ -500,27 +500,111 @@
 // console.log(mensagem1)
 
 //						faixa de preço
-//opcao 1
-let faixas = [
-	{toolTip:'ate 700 ',minimo: 0, maximo: 700},
-	{toolTip:'de 700 ate 1000',minimo: 700, maximo: 1000},
-	{toolTip:'de 1000 ate 1200 ',minimo: 1000, maximo: 1200}
-]
+// //opcao 1
+// let faixas = [
+// 	{toolTip:'ate 700 ',minimo: 0, maximo: 700},
+// 	{toolTip:'de 700 ate 1000',minimo: 700, maximo: 1000},
+// 	{toolTip:'de 1000 ate 1200 ',minimo: 1000, maximo: 1200}
+// ]
 
-//opçao 2 factory function
-function criarFaixaPreco(toolTip,minimo,maximo) {
-	return {
-		toolTip,
-		minimo,
-		maximo
-	}
-}
+// //opçao 2 factory function
+// function criarFaixaPreco(toolTip,minimo,maximo) {
+// 	return {
+// 		toolTip,
+// 		minimo,
+// 		maximo
+// 	}
+// }
 
-let faixa1 = [
-  criarFaixaPreco("ate 700", 1, 100),
-  criarFaixaPreco("de 700 ate 1000", 100, 1000),
-  criarFaixaPreco("de 1000 ate 1200", 1000, 2000),
-];
+// let faixa1 = [
+//   criarFaixaPreco("ate 700", 1, 100),
+//   criarFaixaPreco("de 700 ate 1000", 100, 1000),
+//   criarFaixaPreco("de 1000 ate 1200", 1000, 2000),
+// ];
 
-console.log(faixas)
-console.log(faixa1)
+// console.log(faixas)
+// console.log(faixa1)
+
+// ARRAYS Adicionando
+
+// const arr = [1, 2, 3, 4, 5,4]
+// // No inicio
+// arr.unshift(0)
+// console.log(arr);
+// // meio
+// arr.splice(2, 0,'A')
+// console.log(arr);
+// // Final
+// arr.push('B')
+// console.log(arr)
+
+// // ARRAYS Removendo
+// const arr2 = [1, 2, 3, 4, 5, 6];
+// // No inicio
+// arr2.shift()
+// console.log(arr2);
+// // No final
+// arr2.pop()
+// console.log(arr2);
+
+// const numeros = [1, 2, 3, 4]
+// console.log(numeros.indexOf(2));
+
+
+// const marcas = [
+//   { id: 1, nome: "a" },
+//   { id: 2, nome: "b" },
+// ];
+// const marca = marcas.find(function (marca) {
+//   return marca.nome === "a";
+// });
+// console.log(marca);
+
+// // JAVASCRIPT AULA 58 ESVAZIANDO UM ARRAY
+// let numeros=[1,2,3,4,5,6];
+// let outros=numeros;
+// // Solução1
+// // numeros = []
+// // console.log(outros);
+ 
+// // Solução2
+// // numeros.length=0;
+// // console.log(numeros);
+// // console.log(outros);
+          
+// // Solução3
+// numeros.splice(0, numeros.length);
+// console.log(numeros);
+// console.log(outros);
+
+// // Combinando arrays
+// const primeiro = [1, 2, 3, 4, 5]
+// const segundo = [6, 7, 8, 9]
+// // Combinar
+// // const combinando = primeiro.concat(segundo)
+// /*--------------------------------------------- */
+// const combinando = [...primeiro,...segundo];
+// console.log(combinando)
+// // Dividir
+// const cortado = combinando.slice(1,3)
+// console.log(cortado);
+
+// const numeros = [1,2,3,4,5];
+// const combinado = numeros.join('.');
+// console.log(combinado);
+// const frase="olá bem vindo ao curso";
+// const resultado = frase.split(' ');
+// console.log(resultado);
+// console.log(resultado.join('-'));
+
+
+
+
+
+
+
+
+
+
+
+
