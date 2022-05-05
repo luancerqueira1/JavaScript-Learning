@@ -600,13 +600,13 @@
 
 // The last challenge
 
-function funcao (){ 
-	nomeConvidado = document.getElementById('convidado').value
-	convidadosCristian = ['luan']
+function funcao() { 
+	nomeConvidado = document.getElementById("convidado").value;
+	convidadosCristian = ['luan','andre']
 	if (convidadosCristian.includes(nomeConvidado)) {
-		document.getElementById("quem-convidou").innerText = 'voce pode';
+		document.getElementById("verificar").innerText = "voce pode";
 	} else {
-		document.getElementById("quem-convidou").innerText = "voce NAO";
+		document.getElementById("verificar").innerText = "voce NAO";
 	}
 }
 
