@@ -598,7 +598,17 @@
 // console.log(resultado.join('-'));
 
 
+// The last challenge
 
+function funcao (){ 
+	nomeConvidado = document.getElementById('convidado').value
+	convidadosCristian = ['luan']
+	if (convidadosCristian.includes(nomeConvidado)) {
+		document.getElementById("quem-convidou").innerText = 'voce pode';
+	} else {
+		document.getElementById("quem-convidou").innerText = "voce NAO";
+	}
+}
 
 
 
