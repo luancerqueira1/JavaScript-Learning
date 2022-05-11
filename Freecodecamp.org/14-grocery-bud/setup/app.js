@@ -16,7 +16,13 @@ let editID = ''
 // Submit Form
 form.addEventListener('submit', addItem)
 // clear itens
-clearBtn.addEventListener('click', clearitens())
+clearBtn.addEventListener('click', clearItems)
+
+const deleteBtn = document.querySelector("delete-btn");
+console.log(deleteBtn);
+
+
+
 // ****** FUNCTIONS **********
 function addItem(e) {
 	e.preventDefault()
@@ -38,6 +44,11 @@ function addItem(e) {
               <button type="button" class="delete-btn"><i class="fas fa-trash"></i> 
               </button>
             </div>`;
+		const deleteBtn = element.querySelector('.delete-btn')
+		const editBtn = element.querySelector('.edit-btn')
+
+		deleteBtn.addEventListener('click', deleteItem)
+		editBtn.addEventListener('click', editItem)
 		// apend child 
 		list.appendChild(element)
 		// display alert
@@ -66,14 +77,43 @@ function displayAlert(text,action) {
 	},2000)
 }
 //clear itens
-function clearitens() {
-	const itens = document.querySelectorAll('.grocery-item')
-	if (itens.length > 0) {
-		itens.forEach(function (item) {
-			list.replaceChild(item)
-		})
-	}
+function clearItems() {
+  const items = document.querySelectorAll(".grocery-item");
+  if (items.length > 0) {
+    items.forEach(function (item) {
+      list.removeChild(item);
+    });
+  }
+	container.classList.remove("show-container")
+	displayAlert("empty list", "danger")
+	setBackToDefault()
+	// localStorage.removeItem('list')
 }
+//edit functions 
+function editItem(e) {
+	const element = e.currentTarget.parentElement.parentElement
+	//set edit item
+	editElement = e.currentTarget.parentElement.previousElementSibling
+	//set form value
+	grocery.value = editElement.innerHTML
+	editFlag = true
+	editID = element.dataset.id
+	submitBtn.textContent = "edit"
+}
+//delete functions 
+function deleteItem(e) {
+	const element = e.currentTarget.parentElement.parentElement
+	const id = element.dataset.id
+	list.removeChild(element)
+	if (list.children.length === 0) {
+		container.classList.remove("show-container")
+	}
+	displayAlert('item removed', 'danger')
+	setBackToDefault()
+	//remove local storage
+	// remoFromLocalStorage(id)
+}
+
 // set back to defalt
 function setBackToDefault(){
 	grocery.value = ''
@@ -82,8 +122,11 @@ function setBackToDefault(){
 	submitBtn.textContent = 'submit'
 }
 // ****** LOCAL STORAGE **********
-function addToLocalStorage(id,value) {
-	console.log('ok aded local');
+function addToLocalStorage(id, value) {
+	
 }
 
+function remoFromLocalStorage(id) {
+	
+}
 // ****** SETUP ITEMS **********
