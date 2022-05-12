@@ -17,9 +17,8 @@ let editID = ''
 form.addEventListener('submit', addItem)
 // clear itens
 clearBtn.addEventListener('click', clearItems)
-
-const deleteBtn = document.querySelector("delete-btn");
-console.log(deleteBtn);
+//load items
+window.addEventListener('DOMContentLoaded',setupItems)
 
 
 
@@ -30,27 +29,7 @@ function addItem(e) {
 	const id = new Date().getTime().toString()
 
 	if (value && !editFlag) {
-		const element = document.createElement('article')
-		// Add clas
-		element.classList.add('grocery-item')
-		// add ID
-		const attr = document.createAttribute("data-id")
-		attr.value = id
-		element.setAttributeNode(attr)
-		element.innerHTML = `<p class="title">${value}</p>
-            <div class="btn-container">
-              <button type="button" class="edit-btn"><i class="fas fa-edit"></i> 
-              </button>
-              <button type="button" class="delete-btn"><i class="fas fa-trash"></i> 
-              </button>
-            </div>`;
-		const deleteBtn = element.querySelector('.delete-btn')
-		const editBtn = element.querySelector('.edit-btn')
-
-		deleteBtn.addEventListener('click', deleteItem)
-		editBtn.addEventListener('click', editItem)
-		// apend child 
-		list.appendChild(element)
+		createListItem(id,value)
 		// display alert
 		displayAlert("item aded to the list", "success");
 		// show container 
@@ -60,7 +39,11 @@ function addItem(e) {
 		// set back to defalt
 		setBackToDefault()
 	} else if (value && editFlag) {
-		
+		editElement.innerHTML = value
+		displayAlert('value changed', 'success')
+		//edit local storage
+		editLocalStorage(editID,value)
+		setBackToDefault()
 	} else {
 		displayAlert('Enter a value','danger')
 	}
@@ -76,6 +59,7 @@ function displayAlert(text,action) {
    	alerta.classList.remove(`alert-${action}`);
 	},2000)
 }
+
 //clear itens
 function clearItems() {
   const items = document.querySelectorAll(".grocery-item");
@@ -87,8 +71,9 @@ function clearItems() {
 	container.classList.remove("show-container")
 	displayAlert("empty list", "danger")
 	setBackToDefault()
-	// localStorage.removeItem('list')
+	localStorage.removeItem('list')
 }
+
 //edit functions 
 function editItem(e) {
 	const element = e.currentTarget.parentElement.parentElement
@@ -100,6 +85,7 @@ function editItem(e) {
 	editID = element.dataset.id
 	submitBtn.textContent = "edit"
 }
+
 //delete functions 
 function deleteItem(e) {
 	const element = e.currentTarget.parentElement.parentElement
@@ -111,7 +97,7 @@ function deleteItem(e) {
 	displayAlert('item removed', 'danger')
 	setBackToDefault()
 	//remove local storage
-	// remoFromLocalStorage(id)
+	removeFromLocalStorage(id)
 }
 
 // set back to defalt
@@ -121,12 +107,72 @@ function setBackToDefault(){
 	editID = ''
 	submitBtn.textContent = 'submit'
 }
+
 // ****** LOCAL STORAGE **********
 function addToLocalStorage(id, value) {
-	
+	const grocery = {
+		id,
+		value
+	}
+	let items = getLocalStorage()
+	items.push(grocery)
+	localStorage.setItem('list',JSON.stringify(items))
 }
 
-function remoFromLocalStorage(id) {
+function removeFromLocalStorage(id) {
+	let items = getLocalStorage()
 	
+	items = items.filter(function (item) {
+		if (item.id !== id) {
+			return item
+		}
+	})
+	localStorage.setItem("list", JSON.stringify(items));
+}
+function editLocalStorage(id, value) {
+	let items = getLocalStorage()
+	items = items.map(function (item) {
+		if (item.id === id) {
+			item.value = value
+		}
+		return item
+	})
+	localStorage.setItem("list", JSON.stringify(items));
+}
+function getLocalStorage() {
+	return localStorage.getItem("list") ? JSON.parse(localStorage.getItem("list")) : [];
 }
 // ****** SETUP ITEMS **********
+function setupItems() {
+	let items = getLocalStorage()
+	if (items.length > 0) {
+		items.forEach(function (item) {
+			createListItem(item.id,item.value)
+		})
+		container.classList.add('show-container')
+	}
+}
+
+function createListItem(id,value) {
+	const element = document.createElement("article");
+  // Add clas
+  element.classList.add("grocery-item");
+  // add ID
+  const attr = document.createAttribute("data-id");
+  attr.value = id;
+  element.setAttributeNode(attr);
+  element.innerHTML = `<p class="title">${value}</p>
+            <div class="btn-container">
+              <button type="button" class="edit-btn"><i class="fas fa-edit"></i> 
+              </button>
+              <button type="button" class="delete-btn"><i class="fas fa-trash"></i> 
+              </button>
+            </div>`;
+  const deleteBtn = element.querySelector(".delete-btn");
+  const editBtn = element.querySelector(".edit-btn");
+
+  deleteBtn.addEventListener("click", deleteItem);
+  editBtn.addEventListener("click", editItem);
+  // apend child
+  list.appendChild(element);
+}
