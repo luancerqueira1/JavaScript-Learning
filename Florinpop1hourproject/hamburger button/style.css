@@ -1,0 +1,40 @@
+
+button {
+	background-color: blue;
+	border: none;
+	color: #fff;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: .5rem;
+	font-size: 1.3rem;
+}
+button.active{
+	z-index: 2;
+	right: 40px;
+}
+nav {
+	background-color: blue;
+	position: fixed;
+	height: 100vw;
+	top: 0;
+	right: 0;
+	padding: 2rem;
+	transform: translateX(100%);
+	overflow: hidden;
+	transition: all 300ms ease;
+}
+nav.active {
+	transform: translateX(0);
+}
+nav ul {
+	padding: 0;
+	list-style:  none;
+}
+nav ul li {
+	padding: 2rem 0;
+}
+nav li a{
+	color: #fff;
+	text-decoration: none;
+}
