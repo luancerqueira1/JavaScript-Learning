@@ -28,6 +28,10 @@ body {
 .quiz-header {
 	padding: 4rem;
 }
+h2 {
+	padding: 1rem;
+	text-align: center;
+}
 
 ul {
 	list-style: none;
@@ -39,6 +43,7 @@ ul li {
 }
 ul li label {
 	cursor: pointer;
+	user-select: none;
 }
 
 button {
