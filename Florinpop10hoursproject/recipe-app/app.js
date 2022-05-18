@@ -1,7 +1,10 @@
 
 
-const meals = document.getElementById('meals')
+const meals = document.getElementById('meals');
+const favoritecontainer = document.getElementById("fav-meals");
 
+const searchTerm = document.getElementById("search-term")
+const searchBtn = document.getElementById("search")
 getRandomMeal();
 fetchFavMeals();
 
@@ -28,7 +31,12 @@ async function getMealById(id) {
 
 
 async function getMealBySearch(term) {
-	const meals = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + term);
+	const resp = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + term);
+
+	const respData = await resp.json();
+	const meals = await respData.meals;
+
+	return meals;
 }
 
 function addMeal(mealData, random = false) {
@@ -59,6 +67,9 @@ function addMeal(mealData, random = false) {
 			addMealLs(mealData.idMeal);
       	btn.classList.add("active");
 		}
+		//clean the container 
+		favoritecontainer.innerHTML = ''
+			fetchFavMeals();
    });
 	
 	meals.appendChild(meal);
@@ -84,16 +95,46 @@ function getMealsLs() {
 }
 
 async function fetchFavMeals() {
-	const mealIds = getMealsLs();
+  //clean container
+	favoritecontainer.innerHTML = "";
+	
+  const mealIds = getMealsLs();
 
-	const meals = [];
+  const meals = [];
 
-	for (let i = 0; i < mealIds.length; i++){
-		const mealId = mealIds[i];
-		meal = await getMealById(mealId);
-		meals.push(meal);
-	}
-	console.log(meals);
+  for (let i = 0; i < mealIds.length; i++) {
+    const mealId = mealIds[i];
+    meal = await getMealById(mealId);
 
-	// to the screen
+    addMealFav(meal);
+    meals.push(meal);
+  }
 }
+
+
+function addMealFav(mealData) {
+	
+	const favMeal = document.createElement("li");
+
+  favMeal.innerHTML = `
+					<img src="${meal.strMealThumb}" 
+					alt="${mealData.strMeal}">
+					<span>${mealData.strMeal}</span>
+					<button class="clear"><i class="fas fa-window-close"></i></button>
+				`;
+	const btn = favMeal.querySelector('.clear');
+	btn.addEventListener('click', () => {
+		removeMealLs(mealData.idMeal);
+
+		fetchFavMeals();
+	})
+
+	
+  favoritecontainer.appendChild(favMeal);
+}
+
+searchBtn.addEventListener('click', async () => {
+	const search = searchTerm.value;
+
+	console.log(getMealBySearch(search)); 
+})
