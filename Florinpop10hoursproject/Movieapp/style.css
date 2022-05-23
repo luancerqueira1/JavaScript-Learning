@@ -52,7 +52,30 @@ header{
 	width: 200px;
 	overflow: hidden;
 	margin: 1rem;
+	transition: all 300ms ease-in-out;
+	position: relative;
 }
+
+.movie:hover .overview{
+	transform: translate(0);
+
+}
+
+.overview{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: .5rem;
+	max-height: 100%;
+	overflow: auto;
+	color: #373b69;
+	background: rgb(241, 241, 241);
+	transform-origin: bottom;
+	transition: transform 300ms ease-in;
+	transform: translateY(100%);
+}
+
 
 .movie img {
 	max-width: 100%;
@@ -84,3 +107,6 @@ header{
 .movie-info span.red{
 	color: red;
 }
+
+
+
