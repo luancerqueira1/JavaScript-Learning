@@ -39,13 +39,11 @@ input:focus{
 	padding: 1rem 2rem;
 	color: #eee;
 	box-shadow: 0px 4px 10px #00000081;
+	max-width: 60rem;
 }
 
 .avatar-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
+	margin-top: 1rem;
 }
 
 
@@ -67,10 +65,25 @@ input:focus{
 }
 
 .user-info li {
-	margin-left: 1.5rem;
+	margin-right: 1.5rem;
 }
 
 .user-info strong {
 	margin-left: .4rem;
+}
+
+.repo {
+	background-color: #2a2a72;
+	border-radius: 5px;
+	display: inline-block;
+	color: #eee;
+	text-decoration: none;
+	padding: .2rem .8rem;
+	margin: 0 .5rem .5rem 0;
+	transition: background 200ms ease-in;
+}
+
+.repo:hover {
+	background-color: #36368a;
 }
 

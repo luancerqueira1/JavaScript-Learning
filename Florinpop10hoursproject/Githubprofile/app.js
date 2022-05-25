@@ -11,7 +11,16 @@ async function getUser(username) {
   const resp = await fetch(APIURL + username);
   const respData = await resp.json();
 
-  createUserCard(respData);
+	createUserCard(respData);
+	
+	getRepos(username);
+}
+
+async function getRepos(username) {
+	 const resp = await fetch(APIURL + username + '/repos');
+	const respData = await resp.json();
+	
+	addReposToCard(respData);
 }
 
 function createUserCard(user) {
@@ -29,13 +38,29 @@ function createUserCard(user) {
 				<li>${user.following}<strong>Folllowing </strong></li>
 				<li>${user.public_repos}<strong>Repositiry </strong></li>
 			</ul>
-			<ul id="repos">
-			</ul>
+			
+			<div id="repos">
+			</div>
 		</div>
 	</div>	
 	`;
 
   main.innerHTML = cardHTML;
+}
+
+function addReposToCard(repos) {
+	const reposEl = document.getElementById('repos');
+
+	repos.sort((a,b) => b.stargazers_count - a.stargazers_count).slice(0,9).forEach(repo => {
+		const repoEl = document.createElement("a");
+		repoEl.classList.add('repo');
+
+		repoEl.href = repo.html_url;
+		repoEl.target = "_blank"
+		repoEl.innerText = repo.name;
+
+		reposEl.appendChild(repoEl);
+	});
 }
 
 
