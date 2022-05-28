@@ -12,8 +12,8 @@ const lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
 const numbers = '0123456789';
 const symbols = '_-.,';
 
-function getLowercase() {
-	return lowerLetters[Math.floor(Math.random() * upperLetters.length)];
+function getLowerCase() {
+	return lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
 }
 
 
@@ -34,12 +34,26 @@ function getSymbol() {
 	
 }
 
+
 function generatePassword() {
 	const len = lenEl.value;
 
 	let password = '';
 
-	for (let i= 0; i < len; i++) {
+	if (upperEl.checked) {
+    password += getUppperCase();
+  }
+  if (lowerEl.checked) {
+    password +=getLowerCase();
+  }
+  if (numberEl.checked) {
+     password +=getNumber();
+  }
+  if (symbolEl.checked) {
+     password +=getSymbol();
+  }
+
+	for (let i= password.length ; i < len; i++) {
 		const x = generateX();
 		password += x;
 	}
@@ -47,4 +61,47 @@ function generatePassword() {
 	pwEl.innerText = password;
 }
 
+
+function generateX() {
+	const xs = [];
+	if (upperEl.checked) {
+		xs.push(getUppperCase());
+	}
+	if (lowerEl.checked) {
+		xs.push(getLowerCase());
+	}
+	if (numberEl.checked) {
+		xs.push(getNumber());
+	}
+	if (symbolEl.checked) {
+		xs.push(getSymbol());
+	}
+
+	if (xs.length === 0) {
+		return '🚫'
+	}
+
+	return xs[Math.floor(Math.random() * xs.length)];
+	
+}
+
 generateEl.addEventListener('click', generatePassword);
+
+copyEl.addEventListener('click', () => {
+	const textarea = document.createElement('textarea');
+	const password = pwEl.innerText;
+
+	if (!password) {
+		return;
+	}
+	
+	textarea.value = password;
+	document.body.appendChild(textarea);
+	textarea.select();
+	document.execCommand('copy')
+	textarea.remove();
+	
+	setTimeout(alert("copied to clipboard"),4000);
+	
+	
+})
