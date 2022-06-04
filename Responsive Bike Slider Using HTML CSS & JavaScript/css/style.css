@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	font-family: poppins;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+:root {
+	--main-color: #415aff;
+	--second-color:  #425bffe6;
+	--text-color: #343a40;
+	--bg-color: #fff;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	color:  var(--text-color );
+	background-color: #f8f8fa;
+}
+
+.bike-container {
+	max-width: 1060px;
+	margin: auto;
+	width: 100%;
+}
+
+.bike-container  h1 {
+	font-size: 1.8rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+
+.swiper-slide {
+
+	width: 500px;
+	margin-bottom: 4rem;
+}
+
+
+.bike-box {
+	position: relative;
+	padding: 15px;
+	background: var(--bg-color);
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+
+}
+
+.bike-box:hover {
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.212);
+	transition: 0.3s all ease-in-out;
+}
+
+.box-img {
+	max-width: 100%;
+	width: 100%;
+	height: 200px;
+	object-fit: contain;
+	object-position: center;
+}
+
+.c-rating {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.f-box {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+}
+
+.f-box img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+	border: 2px solid var(--bg-color);
+}
+
+.f-text h3 {
+	font-size: .82rem;
+}
+
+.f-box p {
+	line-height: 1rem;
+	font-size: 1rem;
+}
+
+.stars {
+	display: flex;
+	align-items: center;
+	color: #ffc107;
+}
+
+.bike-title {
+	font-size: 1.1rem;
+	margin: 1.2rem 0 1rem;
+}
+
+.price-book {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.price {
+	color: var(--main-color);
+}
+
+.price span {
+	font-size: .8rem;
+	color: var(--text-color);
+}
+
+.tag {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	font-size: .7rem;
+	font-weight: 500;
+	color: #28a745;
+	background-color: #91e2a4;
+	padding: 2px 10px;
+}
+
+.book-btn {
+	color: var(--bg-color);
+	background-color: var(--main-color);
+	text-transform: uppercase;
+	font-size: .9rem;
+	font-weight: 500;
+	padding: 4px 10px;
+	border-radius: 5px;
+}
+
+.book-btn:hover {
+	background-color: var(--second-color);
+	transition: 0.3s all linear;
+}
+
+/* making responsive */
+@media  (max-width:1064px){
+	.bike-container{
+		margin: 0 auto;
+		width: 90%;
+	}
+}
+@media  (max-width:400px){
+	.bike-container h1{
+		font-size: 1.2rem;
+	}
+}
