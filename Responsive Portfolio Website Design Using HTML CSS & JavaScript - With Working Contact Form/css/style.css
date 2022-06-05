@@ -121,7 +121,6 @@ header {
 /* home */
 
 .home {
-	border: 2px solid green;
 	min-height: 600px;
 	display: flex;
 	align-items: center;
@@ -323,4 +322,163 @@ header {
 
 .services-box  p {
 	font-size: .9rem;
+}
+
+/* portfolio */
+
+.portfolio-content {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 2rem;
+}
+
+.portfolio-box {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.portfolio-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.portfolio-overlay{
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: hsl(234, 45%, 16%, 0.7);
+}
+
+.portfolio-overlay h2 {
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.portfolio-overlay .bx {
+	font-size: 24px;
+	padding: 10px;
+	background: var(--main-color);
+	color: var(--bg-color);
+	border-radius: 4px;
+}
+
+.portfolio-overlay .bx:hover {
+	background-color: #546eff;
+	transition: all 300ms linear;
+}
+
+.portfolio-box:hover .portfolio-overlay {
+	top: 0;
+	transition: 500ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* projects  */
+
+.projects-content {
+	display: grid;
+	grid-template-columns: repeat(3,200px);
+	justify-content: center;
+	gap: 1.5rem;
+}
+
+.project-box {
+	padding: 20px 10px;
+	background: var(--box-color);
+	border-radius: .4rem;
+	text-align: center;
+}
+
+.projects-box h2 {
+	font-size: 1.2rem;
+}
+
+.projects-box span {
+	font-size: .84rem;
+}
+
+/* reviews */
+
+.reviews {
+	max-width: 750px;
+	margin: auto;
+	width: 100%;
+}
+
+.review-box {
+	max-width: 550px;
+	margin: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 3.5rem !important;
+}
+
+.review-box .bx {
+	font-size: 2rem;
+	color: var(--main-color);
+	margin-bottom: .5rem;
+}
+
+.review-box .review-text {
+	font-size: .889rem;
+	margin-bottom: 1rem;
+}
+
+.review-profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.review-profile h2 {
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+	color: var(--main-color);
+	font-weight: 600;
+}
+
+.review-profile span {
+	font-size: .89rem;
+	margin: .5rem .7rem;
+}
+
+.review-box img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	padding: 4px;
+	border: 2px solid var(--main-color);
+	object-fit: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	object-position: center;
+}
+
+.swiper-pagination-bullet {
+	width: 6px !important;
+	height: 6px !important;
+	border-radius: .2rem !important;
+	background-color: var(--bg-color) !important;
+	opacity: 1 !important;
+
+}
+
+.swiper-pagination-bullet-active {
+	width: 1.5rem !important;
+	background: var(--main-color) !important;
 }
