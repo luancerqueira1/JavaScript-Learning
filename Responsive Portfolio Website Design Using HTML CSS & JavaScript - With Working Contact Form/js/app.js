@@ -1,8 +1,16 @@
 const menu = document.querySelector(".menu-icon");
+const navBar = document.querySelector(".navbar");
 
 menu.onclick = () => {
+  navBar.classList.toggle("open-menu");
 	menu.classList.toggle('move')
 }
+
+window.onscroll = () => {
+  navBar.classList.remove("open-menu");
+  menu.classList.remove("move");
+}
+
 //revies swiper
 var swiper = new Swiper(".reviews-content", {
   spaceBetween: 30,
@@ -64,3 +72,19 @@ function success() {
     icon: "success!",
   });
 }
+
+// header background change on scroll
+
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  header.classList.toggle('header-active', window.scrollY > 0)
+})
+
+//scoll top
+
+let srollTop = document.querySelector(".scroll-top");
+
+window.addEventListener("scroll", () => {
+  srollTop.classList.toggle("scroll-active", window.scrollY >= 400);
+});
