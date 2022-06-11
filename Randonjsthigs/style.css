@@ -1,0 +1,29 @@
+
+/*Learn JavaScript DOM Traversal In 15 Minutes*/
+
+body {
+	margin: 0;
+}
+
+div{
+	display: flex;
+	margin: .5rem;
+	padding: 1rem;
+	border: 3px solid black;
+	min-height: 2rem;
+	flex-grow: 1;
+}
+
+.grandparent {
+	max-width: 500px;
+	background-color: rgb(230, 32, 32);
+	flex-direction: column;
+}
+
+.parent {
+	background-color: rgb(60, 206, 60);
+}
+
+.child {
+	background-color: rgba(76, 76, 240, 0.979);
+}
