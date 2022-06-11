@@ -92,31 +92,63 @@
 
 
 /*===== Learn JavaScript DOM Traversal In 15 Minutes =====*/
-const grandparentid = document.getElementById("grandparent-id");
-const grandparent = document.querySelector(".grandparent");
-const parents = document.getElementsByClassName('parent');
-const parent = document.querySelector('.parent');
-const parentall = document.querySelectorAll('.parent');
+// const grandparentid = document.getElementById("grandparent-id");
+// const grandparent = document.querySelector(".grandparent");
+// const parents = document.getElementsByClassName('parent');
+// const parent = document.querySelector('.parent');
+// const parentall = document.querySelectorAll('.parent');
 
-//get the children
-const children = Array.from(grandparent.children);
-const parent1 = children[0];
-const children2 = parent1.children;
+// //get the children
+// const children = Array.from(grandparent.children);
+// const parent1 = children[0];
+// const children2 = parent1.children;
 
-// changecolor(children2)
+// // changecolor(children2)
 
-// children.forEach(changecolor);
+// // children.forEach(changecolor);
 
-// parentall.forEach(changecolor);
-// changecolor(grandparent)
+// // parentall.forEach(changecolor);
+// // changecolor(grandparent)
 
 
-function changecolor(element) {
-  element.style.backgroundColor = '#333'
-}
+// function changecolor(element) {
+//   element.style.backgroundColor = '#333'
+// }
 
-const childOne = document.querySelector('#child-one');
-const parentChildOne = childOne.parentElement;
-const grandparent2 = childOne.closest('.grandparent')
+// const childOne = document.querySelector('#child-one');
+// const parentChildOne = childOne.parentElement;
+// const grandparent2 = childOne.closest('.grandparent')
 
-changecolor(grandparent2)
+// changecolor(grandparent2)
+
+/*===== Learn JavaScript DOM Traversal In 15 Minutes =====*/
+// const grandparent = document.querySelector(".grandparent");
+// const parent = document.querySelector(".parent");
+// const child = document.querySelector(".child");
+
+// grandparent.addEventListener('click', e => {
+//   console.log("grandparent");
+// })
+
+// parent.addEventListener('click', e => {
+//   console.log("parent");
+// })
+
+// child.addEventListener('click', e => {
+//   console.log("child");
+// })
+
+const div = document.querySelectorAll("div");
+
+div.forEach(div => {
+  div.addEventListener('click', () => {
+    console.log('HI');
+  })
+})
+
+const newDiv = document.createElement('div');
+newDiv.style.width ='200px'
+newDiv.style.height ='200px'
+newDiv.style.backgroundColor ='purple'
+document.body.append(newDiv);
+newDiv
