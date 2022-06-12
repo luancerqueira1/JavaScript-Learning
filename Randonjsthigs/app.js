@@ -138,17 +138,121 @@
 //   console.log("child");
 // })
 
-const div = document.querySelectorAll("div");
+// const div = document.querySelectorAll("div");
 
-div.forEach(div => {
-  div.addEventListener('click', () => {
-    console.log('HI');
-  })
-})
+// div.forEach(div => {
+//   div.addEventListener('click', () => {
+//     console.log('HI');
+//   })
+// })
 
-const newDiv = document.createElement('div');
-newDiv.style.width ='200px'
-newDiv.style.height ='200px'
-newDiv.style.backgroundColor ='purple'
-document.body.append(newDiv);
-newDiv
+// const newDiv = document.createElement('div');
+// newDiv.style.width ='200px'
+// newDiv.style.height ='200px'
+// newDiv.style.backgroundColor ='purple'
+// document.body.append(newDiv);
+// newDiv
+
+/*===== JavaScript Higher Order Functions & Arrays =====*/
+const companies = [
+  { name: 'comapany one', category: 'finance', start: 1981, end: 2003 },
+  { name: 'comapany two', category: 'retail', start: 1992, end: 2008 },
+  { name: 'comapany three', category: 'auto', start: 1999, end: 2007 },
+  { name: 'comapany four', category: 'retail', start: 1989, end: 2010 },
+  { name: 'comapany five', category: 'tecnology', start: 2009, end: 2014 },
+  { name: 'comapany six', category: 'finance', start: 1987, end: 2010 },
+  { name: 'comapany seven', category: 'auto', start: 1986, end: 1996 },
+  { name: 'comapany eight', category: 'tecnology', start: 2011, end: 2016 },
+  { name: 'comapany nine', category: 'retail', start: 1981, end: 1989 },
+];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+// for (let i = 0; i < companies.length; i++){
+//   console.log(companies[i]);
+// }
+
+// //FOREACH
+// companies.forEach((company,index) => {
+//   console.log(company.name);
+// })
+
+//FILTER
+// let canDrink = []
+
+// // for (let i = 0; i < ages.length; i++){
+// //   if (ages[i] >= 21) {
+// //     canDrink.push(ages[i])
+// //   }
+// // }
+
+// const canDrink = ages.filter(age => age >= 21)
+// console.log(canDrink);
+
+
+//FILTER RETAIL COMPANIES
+// const retailCompanies = companies.filter(function (comapany) {
+//   if (comapany.category === 'retail') {
+//     return true;
+//   }
+// })
+
+// const retailCompanies = companies.filter(company => company.category === 'retail')
+
+// console.log(retailCompanies);
+
+//GET 80S COMPANIES
+// const eightiesCompanies = companies.filter(company => company.start >= 1980 && company.start < 1990);
+
+// console.log(eightiesCompanies);
+
+
+//LASTED 10 years
+// const lasted10Years = companies.filter(company =>(company.end - company.start >= 10))
+// console.log(lasted10Years);
+
+//MAP
+//create array of company itemsNames
+// const companyNames = companies.map(function (company,index) {
+//   return company.name;
+// })
+// console.log(companyNames);
+
+// const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`)
+// console.log(testMap);
+
+//SORT
+
+// const sortCompanies = companies.sort(function (c1,c2) {
+//   if (c1.start > c2.start) {
+//     return 1
+//   }
+//   else {
+//     return -1
+//   }
+// })
+// console.log(sortCompanies);
+
+// const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1))
+// console.log(sortedCompanies);
+
+
+//SORT AGES
+// const sortAges = ages.sort((a,b)=> a - b)
+
+// console.log(sortAges);
+
+//REDUCE
+// let ageSume = 0
+// for (let i = 0; i < ages.length; i++){
+//   ageSume += ages[i]
+// }
+
+const ageSum = ages.reduce(function (total, age) {
+  return total + age
+}, 0)
+console.log(ageSum);
+// /*-----------------------------------------*/
+const ageSum2 = ages.reduce( (total, age) => total + age ,0)
+
+console.log(ageSum2);
