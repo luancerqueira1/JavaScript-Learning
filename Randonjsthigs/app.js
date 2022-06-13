@@ -253,26 +253,44 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // }, 0)
 // console.log(ageSum);
 // /*-----------------------------------------*/
-const ageSum2 = ages.reduce( (total, age) => total + age ,0)
+// const ageSum2 = ages.reduce( (total, age) => total + age ,0)
 
-console.log(ageSum2);
+// console.log(ageSum2);
 
-//GET TOTAL YEARS FOR ALL COMPANIES
-const totalYears = companies.reduce(function (total,company) {
-  return total + (company.end - company.start)
-}, 0); 
-console.log(totalYears);
-// /*-----------------------------------------*/
+// //GET TOTAL YEARS FOR ALL COMPANIES
+// const totalYears = companies.reduce(function (total,company) {
+//   return total + (company.end - company.start)
+// }, 0);
+// console.log(totalYears);
+// // /*-----------------------------------------*/
 
-const totalYears2 = companies.reduce((total, company) => total + (company.end - company.start), 0); 
-console.log(totalYears2);
+// const totalYears2 = companies.reduce((total, company) => total + (company.end - company.start), 0);
+// console.log(totalYears2);
 
 
-//COMBINE METHODS
-const combine = ages
-  .map(age => age * 2)
-  .filter(age => age >= 40)
-  .sort((a, b) => a - b)
-  .reduce((a,b) => a +b , 0)
+// //COMBINE METHODS
+// const combine = ages
+//   .map(age => age * 2)
+//   .filter(age => age >= 40)
+//   .sort((a, b) => a - b)
+//   .reduce((a,b) => a +b , 0)
 
-console.log(combine);
+// console.log(combine);
+
+/*===== JavaScript Promises In 10 Minutes =====*/
+let p = new Promise((resolve, reject) => {
+  let a = 1 + 1
+  if (a == 2) {
+    resolve('resolved')
+  }
+  else {
+    reject('failed')
+  }
+})
+
+
+p.then((message) => {
+  console.log('this is in the then ' + message) ;
+}).catch((message) => {
+  console.log("this is in the catch "  + message);
+})
