@@ -54,7 +54,6 @@
 // const includesTwo = items2.includes(0);
 // console.log(includesTwo);
 
-
 // /*===== JavaScript ES6 Arrow Functions Tutorial =====*/
 
 // function sum(a, b) {
@@ -90,7 +89,6 @@
 // 	console.log('click');
 // })
 
-
 /*===== Learn JavaScript DOM Traversal In 15 Minutes =====*/
 // const grandparentid = document.getElementById("grandparent-id");
 // const grandparent = document.querySelector(".grandparent");
@@ -109,7 +107,6 @@
 
 // // parentall.forEach(changecolor);
 // // changecolor(grandparent)
-
 
 // function changecolor(element) {
 //   element.style.backgroundColor = '#333'
@@ -189,7 +186,6 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // const canDrink = ages.filter(age => age >= 21)
 // console.log(canDrink);
 
-
 //FILTER RETAIL COMPANIES
 // const retailCompanies = companies.filter(function (comapany) {
 //   if (comapany.category === 'retail') {
@@ -205,7 +201,6 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // const eightiesCompanies = companies.filter(company => company.start >= 1980 && company.start < 1990);
 
 // console.log(eightiesCompanies);
-
 
 //LASTED 10 years
 // const lasted10Years = companies.filter(company =>(company.end - company.start >= 10))
@@ -235,7 +230,6 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1))
 // console.log(sortedCompanies);
-
 
 //SORT AGES
 // const sortAges = ages.sort((a,b)=> a - b)
@@ -267,7 +261,6 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // const totalYears2 = companies.reduce((total, company) => total + (company.end - company.start), 0);
 // console.log(totalYears2);
 
-
 // //COMBINE METHODS
 // const combine = ages
 //   .map(age => age * 2)
@@ -279,18 +272,18 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 /*===== JavaScript Promises In 10 Minutes =====*/
 let p = new Promise((resolve, reject) => {
-  let a = 1 + 1
+  let a = 1 + 1;
   if (a == 2) {
-    resolve('resolved')
+    resolve('resolved');
+  } else {
+    reject('failed');
   }
-  else {
-    reject('failed')
-  }
-})
-
+});
 
 p.then((message) => {
-  console.log('this is in the then ' + message) ;
+  console.log('this is in the then ' + message);
 }).catch((message) => {
-  console.log("this is in the catch "  + message);
-})
+  console.log('this is in the catch ' + message);
+});
+
+console.log('failed');
