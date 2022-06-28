@@ -104,9 +104,58 @@
 // console.log(`a soma dos dois é ${sum(a, b)}`);
 
 /*--------------------------------- */
-function fazerSuco(fruta1 , fruta2) {
-	return fruta1 + fruta2;
-}
+// function fazerSuco(fruta1 , fruta2) {
+// 	return fruta1 + fruta2;
+// }
 
-const copo = fazerSuco('maracuja', ' manga')
-console.log(copo);
+// const copo = fazerSuco('maracuja', ' manga')
+// console.log(copo);
+
+/* FUNCTION SCOPE */
+// let subject = 'create video'
+
+// function createThink() {
+//   subject = 'study';
+//   return subject;
+// }
+
+// console.log(subject);
+// console.log(createThink(subject));
+// console.log(subject);
+
+/* FUNCTION HOISTING */
+// sayMyname();
+
+// function sayMyname() {
+// 	console.log('luan');
+// }
+// //NAO SOFRE ELEVAÇAO ⬇️
+// const sayMyname = function () {
+// 	console.log('luan');
+// }
+
+/* ARROW FUNCTION */
+// const sayMyName = () => {
+// 	console.log('luan');
+// }
+// sayMyName();
+
+/* CALLBACK FUNCTION */
+// function sayMyName(name) {
+//   console.log('antes de executar callback');
+//   name();
+//   console.log('Depois de executar callback');
+// }
+// sayMyName(() => {
+//   console.log('estou em uma callback');
+// });
+
+/* FUNCTION CONSTRUCTOR */
+function Person(name,age) {
+	this.name = name;
+	this.age = age
+}
+const luan = new Person('luan',24);
+const maik = new Person('maik',30);
+console.log(luan);
+console.log(maik);
