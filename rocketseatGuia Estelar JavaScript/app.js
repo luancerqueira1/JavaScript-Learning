@@ -151,11 +151,59 @@
 // });
 
 /* FUNCTION CONSTRUCTOR */
-function Person(name,age) {
-	this.name = name;
-	this.age = age
-}
-const luan = new Person('luan',24);
-const maik = new Person('maik',30);
-console.log(luan);
-console.log(maik);
+// function Person(name,age) {
+// 	this.name = name;
+// 	this.age = age
+// }
+// const luan = new Person('luan',24);
+// const maik = new Person('maik', 30);
+
+// console.log(luan);
+// console.log(maik);
+
+/* PROTOTYPE */
+// let cores = ['blue', 'red'];
+// console.log(cores.hasOwnProperty());
+
+// manipulando STRING e NUMEROS
+// let string = '123';
+// let number = 123;
+// console.log(Number(string));
+// console.log(String(number));
+
+// let number2 = 1234;
+// console.log(String(number2).length);
+
+// let number3 = 123.322;
+// console.log(Number(number3).toFixed(2).replace('.', ','));
+
+// let letrasMaiusculas = 'ABC  roma';
+// let letrasMinusculas = 'abc roma';
+// console.log(letrasMaiusculas.toLowerCase());
+// console.log(letrasMinusculas.toUpperCase());
+// console.log(letrasMaiusculas.includes('amor'));
+
+// let frase = 'eu querp viver em paz';
+// meuArray = frase.split('.')
+// console.log(meuArray);
+
+// let cores = ['blue', 'red', 'green'];
+// //adiciona item no fim
+// cores.push('pink');
+// console.log(cores);
+// //adiciona mo começo
+// cores.unshift('black');
+// console.log(cores);
+// //remove do fim
+// cores.pop();
+// console.log(cores);
+// //remove do começo 
+// cores.shift();
+// console.log(cores);
+// //pegar alguns elementos 
+// console.log(cores.slice(0, 3));
+// //remover um ou mais elementos
+// cores.splice(2, 1);
+// console.log(cores);
+
+
