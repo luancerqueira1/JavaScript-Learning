@@ -197,13 +197,84 @@
 // //remove do fim
 // cores.pop();
 // console.log(cores);
-// //remove do começo 
+// //remove do começo
 // cores.shift();
 // console.log(cores);
-// //pegar alguns elementos 
+// //pegar alguns elementos
 // console.log(cores.slice(0, 3));
 // //remover um ou mais elementos
 // cores.splice(2, 1);
 // console.log(cores);
 
+/* OPERADORES ARITIMETICOS */
+// //multiplicaçao
+// console.log(3 * 3);
+// //divisao
+// console.log(10 / 2);
+// //soma
+// console.log(10 + 2);
+// //subtraçao
+// console.log(10 - 2);
+// //resto da divisao
+// console.log(11 % 2);
+// //incremento
+// let increment = 0;
+// increment ++;
+// console.log(increment);
+// //decrement
+// let decrement = 2;
+// decrement--;
+// console.log(decrement);
+// //exponencial - **
+// console.log(3**2);
 
+/* OPERADORES DE COMPARAÇAO */
+// let one = 1;
+// console.log(one === 1);
+// console.log(one !== 1, one);
+
+/* opea-radores logicos */
+// let pao = true;
+// let queijo = false;
+
+// // &&
+// console.log(pao && queijo);
+// // ||
+// console.log(pao || queijo);
+// // NOT !
+// console.log(pao && !queijo);
+
+// let pao = true;
+// let queijo = true;
+
+// const niceBreackFast = pao && !queijo ? 'cafe bom' : 'cafe ruim';
+// console.log(niceBreackFast);
+
+// let age = 16;
+// const canDrive =  age >= 18 ? 'nao pode dirigir' : 'abilitado para dirigir'
+// console.log(canDrive);
+
+/*
+	FALSY
+	*false
+   *0
+   *-0
+	*""
+	*null
+	*undefined 
+	*NAN
+*/
+// console.log(null ? 'verdadeiro' : 'false');
+/*
+	TRUTHY
+	*true
+   *{}
+   *[]
+	*3.33
+	*'0'
+	*'false'
+	*-1
+	*infinity
+	*-infinity
+*/
+// console.log('0' ? 'verdadeiro' : 'false');
