@@ -278,3 +278,115 @@
 	*-infinity
 */
 // console.log('0' ? 'verdadeiro' : 'false');
+
+/* IF ELSE */
+// let temperature = 37.4;
+// let highTemperature = temperature >= 37.5;
+// let mediumTemperature = temperature < 37.5 && temperature >= 37;
+
+// if (highTemperature) {
+// 	console.log('febre alta');
+// }
+// else if (mediumTemperature){
+// 	console.log('modrada');
+// }
+// else {
+// 	console.log('saudaver');
+// }
+
+/* SWITCH */
+// let expression = 'a'
+// switch (expression) {
+// 	case 'a':
+// 		console.log('a');
+// 		break;
+// 	case 'b':
+// 		console.log('b');
+// 		break;
+// 	default:
+// 		break;
+// }
+
+//throw
+// function sayMyName(name = '') {
+// 	if (name === '') {
+// 		throw 'nome é obrigatorio'
+// 	}
+
+// 	console.log(name);
+// }
+// //try catch
+// try {
+// 	sayMyName('')
+// }
+// catch (e) {
+// 	console.log(e);
+// }
+// console.log('apos o try/catch');
+
+/* FOR OF */
+// let name = 'luan';
+// let names =['luan','thomas','dante']
+// for (letra of names) {
+// 	console.log(letra);
+// }
+
+/* FOR IN */
+// let person = {
+// 	name: 'luan',
+// 	age: 24,
+// 	weight :70,
+// }
+
+// for (let property in person) {
+// 	console.log(property);
+// 	console.log(person[property]);
+// }
+
+/* TRANSFORMAR NOTAS ESCOLARES */
+// let nota = 99.9;
+
+// if (nota < 60) {
+// 	console.log('F');
+// }
+// else if (nota <= 69) {
+// 	console.log('D');
+// }
+// else if (nota <= 79) {
+// 	console.log('C');
+// }
+// else if (nota <=89) {
+// 	console.log('B');
+// }
+// else if (nota <= 100){
+// 	console.log('A');
+// } else {
+// 	console.log('Nota invalida');
+// }
+
+/* SISTeMA DE GASTOS FAMILIAR */
+
+let family = {
+	income : [1200],
+	expenses : [600,100,100,700]
+}
+
+function sum(array) {
+	let total = 0;
+	for (let value of array) {
+		total += value
+	}
+	return total;
+
+}
+	
+function calcularTotal() {
+	const calculateIncomes = sum(family.income);
+	console.log(calculateIncomes);
+	const calculateExpenses = sum(family.expenses);
+	console.log(calculateExpenses);
+
+	let total = calculateIncomes - calculateExpenses;
+	console.log(total);
+}
+calcularTotal();
