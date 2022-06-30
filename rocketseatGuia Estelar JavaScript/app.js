@@ -365,28 +365,105 @@
 // }
 
 /* SISTeMA DE GASTOS FAMILIAR */
+// let family = {
+// 	income : [1200],
+// 	expenses : [600,100,100,700]
+// }
 
-let family = {
-	income : [1200],
-	expenses : [600,100,100,700]
-}
+// function sum(array) {
+// 	let total = 0;
+// 	for (let value of array) {
+// 		total += value
+// 	}
+// 	return total;
 
-function sum(array) {
-	let total = 0;
-	for (let value of array) {
-		total += value
-	}
-	return total;
-
-}
+// }
 	
-function calcularTotal() {
-	const calculateIncomes = sum(family.income);
-	console.log(calculateIncomes);
-	const calculateExpenses = sum(family.expenses);
-	console.log(calculateExpenses);
+// function calcularTotal() {
+// 	const calculateIncomes = sum(family.income);
+// 	console.log(calculateIncomes);
+// 	const calculateExpenses = sum(family.expenses);
+// 	console.log(calculateExpenses);
 
-	let total = calculateIncomes - calculateExpenses;
-	console.log(total);
+// 	let total = calculateIncomes - calculateExpenses;
+// 	console.log(total);
+// }
+// calcularTotal();
+
+/* CELSIUS EM FAHRENHEIT */
+//NAo fiz pq nao entendi nada
+
+/* BUSCANDO E CONTANDO DADOS EM ARRAYS */
+
+const booksByCategory = [
+  {
+    category: 'riqueza',
+    books: [
+      {
+        title: 'os segredos',
+        author: 't. harv',
+      },
+      {
+        title: 'o homen',
+        author: 'george s.',
+      },
+      {
+        title: 'pai rico',
+        author: 'hobert .t',
+      },
+    ],
+  },
+  {
+    category: 'inteligemcia emocional',
+	  books: [
+		  {
+			  title: 'voce e insubstituivel',
+			  author:'augusto curry'
+		 },
+		  {
+			  title: 'ansiedade',
+			  author:'augusto curry'
+		 },
+		  {
+			  title: 'vos 7 habitos',
+			  author:'stephen r. covey'
+		 },
+	 ],
+  },
+];
+
+const totalCategories = booksByCategory.length;
+console.log(totalCategories);
+for (let category of booksByCategory) {
+	console.log('total de livros de categorias : ' + category.category);
+	console.log(category.books.length);
+} 
+
+function countAuthors() {
+	let authors = [];
+
+	for (let category of booksByCategory) {
+		for (let book of category.books) {
+			if (authors.indexOf(book.author) == -1) {
+				authors.push(book.author)
+			}
+		}
+	}
+	console.log('total de authors : ', + authors.length );
 }
-calcularTotal();
+
+countAuthors();
+
+function booksOfAugusto() {
+	let books = [];
+
+	for (let category of booksByCategory) {
+		for (let book of category.books) {
+			if (book.author === 'augusto curry') {
+				books.push(book.title)
+			}
+		}
+	}
+	console.log('lisvros do autor : ', books );
+}
+booksOfAugusto();
