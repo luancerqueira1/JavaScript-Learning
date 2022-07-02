@@ -1,0 +1,16 @@
+
+.purple {
+   background-color: purple;
+   padding: .5rem;
+   margin: 0 auto;
+}
+
+.hidden {
+   background-color: rgb(238, 238, 23);
+   height: 85vh;
+   width: 90vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+}

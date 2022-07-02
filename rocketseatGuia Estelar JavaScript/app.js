@@ -395,75 +395,115 @@
 
 /* BUSCANDO E CONTANDO DADOS EM ARRAYS */
 
-const booksByCategory = [
-  {
-    category: 'riqueza',
-    books: [
-      {
-        title: 'os segredos',
-        author: 't. harv',
-      },
-      {
-        title: 'o homen',
-        author: 'george s.',
-      },
-      {
-        title: 'pai rico',
-        author: 'hobert .t',
-      },
-    ],
-  },
-  {
-    category: 'inteligemcia emocional',
-	  books: [
-		  {
-			  title: 'voce e insubstituivel',
-			  author:'augusto curry'
-		 },
-		  {
-			  title: 'ansiedade',
-			  author:'augusto curry'
-		 },
-		  {
-			  title: 'vos 7 habitos',
-			  author:'stephen r. covey'
-		 },
-	 ],
-  },
-];
+// const booksByCategory = [
+//   {
+//     category: 'riqueza',
+//     books: [
+//       {
+//         title: 'os segredos',
+//         author: 't. harv',
+//       },
+//       {
+//         title: 'o homen',
+//         author: 'george s.',
+//       },
+//       {
+//         title: 'pai rico',
+//         author: 'hobert .t',
+//       },
+//     ],
+//   },
+//   {
+//     category: 'inteligemcia emocional',
+// 	  books: [
+// 		  {
+// 			  title: 'voce e insubstituivel',
+// 			  author:'augusto curry'
+// 		 },
+// 		  {
+// 			  title: 'ansiedade',
+// 			  author:'augusto curry'
+// 		 },
+// 		  {
+// 			  title: 'vos 7 habitos',
+// 			  author:'stephen r. covey'
+// 		 },
+// 	 ],
+//   },
+// ];
 
-const totalCategories = booksByCategory.length;
-console.log(totalCategories);
-for (let category of booksByCategory) {
-	console.log('total de livros de categorias : ' + category.category);
-	console.log(category.books.length);
-} 
+// const totalCategories = booksByCategory.length;
+// console.log(totalCategories);
+// for (let category of booksByCategory) {
+// 	console.log('total de livros de categorias : ' + category.category);
+// 	console.log(category.books.length);
+// }
 
-function countAuthors() {
-	let authors = [];
+// function countAuthors() {
+// 	let authors = [];
 
-	for (let category of booksByCategory) {
-		for (let book of category.books) {
-			if (authors.indexOf(book.author) == -1) {
-				authors.push(book.author)
-			}
-		}
+// 	for (let category of booksByCategory) {
+// 		for (let book of category.books) {
+// 			if (authors.indexOf(book.author) == -1) {
+// 				authors.push(book.author)
+// 			}
+// 		}
+// 	}
+// 	console.log('total de authors : ', + authors.length );
+// }
+
+// countAuthors();
+
+// function booksOfAugusto() {
+// 	let books = [];
+
+// 	for (let category of booksByCategory) {
+// 		for (let book of category.books) {
+// 			if (book.author === 'augusto curry') {
+// 				books.push(book.title)
+// 			}
+// 		}
+// 	}
+// 	console.log('lisvros do autor : ', books );
+// }
+// booksOfAugusto();
+
+/* CRIANDO E ADICIONANDO ELEMENTOS */
+// const div = document.createElement('div');
+// const body = document.querySelector('body');
+
+// div.innerText = 'oi genteee';
+// body.append(div);
+// body.prepend(div); //adiciona antes
+
+/* EVENT LISTENER */
+// const h1 = document.querySelector('h1');
+// const p = document.querySelector('p');
+
+// // h1.addEventListener('click', () => {
+// // 	console.log('printei');
+// // })
+// /*------------------------------------*/
+// h1.onclick = () => {
+// 	p.style.backgroundColor = 'red'
+// }
+
+// const input = document.querySelector('input');
+// input.onkeydown = function (event){
+// 	console.log(event);
+// }
+
+/* DESAFIO MODAL */
+const openModal = document.querySelector('#opnemodal');
+const visible = document.querySelector('#visible-modal');
+openModal.addEventListener('click', (event) => {
+	visible.style.display = 'flex';
+
+})
+
+document.addEventListener('keydown', (event) => {
+	const isEscKey = event.key === 'Escape'
+	if (isEscKey) {
+		visible.style.display = 'none';
 	}
-	console.log('total de authors : ', + authors.length );
-}
-
-countAuthors();
-
-function booksOfAugusto() {
-	let books = [];
-
-	for (let category of booksByCategory) {
-		for (let book of category.books) {
-			if (book.author === 'augusto curry') {
-				books.push(book.title)
-			}
-		}
-	}
-	console.log('lisvros do autor : ', books );
-}
-booksOfAugusto();
+})
