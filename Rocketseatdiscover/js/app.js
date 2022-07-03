@@ -494,16 +494,16 @@
 // }
 
 /* DESAFIO MODAL */
-const openModal = document.querySelector('#opnemodal');
-const visible = document.querySelector('#visible-modal');
-openModal.addEventListener('click', (event) => {
-	visible.style.display = 'flex';
+// const openModal = document.querySelector('#opnemodal');
+// const visible = document.querySelector('#visible-modal');
+// openModal.addEventListener('click', (event) => {
+// 	visible.style.display = 'flex';
 
-})
+// })
 
-document.addEventListener('keydown', (event) => {
-	const isEscKey = event.key === 'Escape'
-	if (isEscKey) {
-		visible.style.display = 'none';
-	}
-})
+// document.addEventListener('keydown', (event) => {
+// 	const isEscKey = event.key === 'Escape'
+// 	if (isEscKey) {
+// 		visible.style.display = 'none';
+// 	}
+// })
