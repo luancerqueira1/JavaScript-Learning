@@ -1,0 +1,11 @@
+{
+  "name": "qualquer-nome",
+  "version": "1.0.0",
+  "description": "aprendendo node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./node/index.js"
+  },
+  "author": "Luan",
+  "license": "ISC"
+}
