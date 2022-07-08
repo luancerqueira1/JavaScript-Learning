@@ -1,5 +1,3 @@
-
-
 /*operators*/
 // const food = Number(prompt('how much was your food?')); ;
 // const tippercetage = prompt('tip percentage') / 100;
@@ -120,7 +118,7 @@
 // console.log(double([2, 2, 2, 3, 5, 8, 9]));
 
 // const letterCounter = (phrase) => {
-   
+
 //    let result = undefined;
 //    for (const index in phrase) {
 //       result = Number(index) + 1;
@@ -169,7 +167,52 @@
 // const wordFrequency = (phrase) => {
 //    let words = phrase.split(' ');
 //    return letterFrequency(words)
-   
+
 // }
 // const userInput = prompt('write your sentence')
 // console.log(wordFrequency(userInput));
+
+/* ARRAY METHODS */
+// MAP
+// const doubleMap = (numbers) => {
+//    return numbers.map(number => number * 2)
+// }
+// console.log(doubleMap([1, 2, 3]));
+
+// FILTER 👉🏻 returns an array
+// const filter = (numbers, greaterThen) => {
+//    let result = [];
+//    for (const number of numbers) {
+//       if (number > greaterThen) {
+//          result.push(number);
+//       }
+//    }
+
+//    return result
+// }
+// console.log(filter([1, 2, 3, 4, 5], 1));
+
+// const nums = [1, 2, 3, 4, 5, 6];
+// console.log(nums.filter(num => num > 3));
+
+const actors = [
+  {
+    name: 'jhon',
+    net: 100,
+  },
+  {
+    name: 'luan',
+    net: 0.2,
+  },
+  {
+    name: 'dri',
+    net: 20,
+  },
+  {
+    name: 'dri',
+    net: 30,
+  }
+];
+const result = actors.filter(actor => actor.net > 20);
+let names = result.map(actor => actor.name).join(', ')
+document.getElementsByTagName('body').innerHTML = `<h1> ${names} </h1>`
