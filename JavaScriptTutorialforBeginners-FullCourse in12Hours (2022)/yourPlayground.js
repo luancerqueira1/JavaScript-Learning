@@ -72,17 +72,104 @@
 // };
 // console.log(person2);
 
-const introducer = (name, shirt) => {
-   const person = {
-      name: name,
-      shirt: shirt,
-      assets: 100,
-      debt: 50,
-      netWorth : function() {
-         return this.assets - this.debt
-      }
-   };
-   const intro = `Hi my name is ${person.name} and the color of my hirt is ${person.shirt} eu eu tenho R$:${person.netWorth()} conto`
-   return intro
-}
-console.log(introducer('luan','white')); 
+// const introducer = (name, shirt) => {
+//    const person = {
+//       name: name,
+//       shirt: shirt,
+//       assets: 100,
+//       debt: 50,
+//       netWorth : function() {
+//          return this.assets - this.debt
+//       }
+//    };
+//    const intro = `Hi my name is ${person.name} and the color of my hirt is ${person.shirt} eu eu tenho R$:${person.netWorth()} conto`
+//    return intro
+// }
+// console.log(introducer('luan','white'));
+
+/* LOOP */
+// const fruits = ['🍎', '🍩', '🥨', '🍉', '🍭'];
+// for (let i = 0; i < fruits.length; i++) {
+//    console.log(fruits[i]);
+// };
+
+// for (const fruit of fruits) {
+//    console.log(fruit);
+// }
+
+// fruits.forEach((fruit) => {
+//    console.log(fruit);
+// });
+
+// let result = [];
+// const numbers = [1, 2, 3, 4, 5];
+// for (const number of numbers) {
+//    // console.log(number * 2);
+//    console.log(number);
+//    result.push(number * 2)
+// }
+// console.log(result);
+
+// const double = (numbers) => {
+//    let result = [];
+//    for (const number of numbers) {
+//       result.push(number ** 2)
+//    }
+//    return result
+// }
+// console.log(double([2, 2, 2, 3, 5, 8, 9]));
+
+// const letterCounter = (phrase) => {
+   
+//    let result = undefined;
+//    for (const index in phrase) {
+//       result = Number(index) + 1;
+//    }
+//    return result
+// }
+// const phrase = prompt('wahts the frase');
+// console.log(letterCounter(phrase));
+
+// const sumArray = (numbers) => {
+//    let result = 0;
+//    for (number of numbers) {
+//       result += number
+//    }
+//    return result
+// }
+// const nums = [1,2,3,4]
+// console.log(sumArray(nums));
+
+// const max = (numbers) => {
+//    let result = numbers[0];
+//    for (const number of numbers) {
+//       if (number > result) {
+//          result = number
+//       }
+//    }
+//    return result
+// }
+// let numbers = [1,2,8,3,4,5]
+// console.log(max(numbers));
+
+// const letterFrequency = (phrase) => {
+//    let frequency = {};
+//    for (const letter of phrase) {
+//       if (letter in frequency) {
+//          frequency[letter] += +1;
+//       }
+//       else {
+//          frequency[letter] = 1
+//       }
+//    }
+//    return frequency
+// }
+// console.log(letterFrequency('luan gama cerqueira'));
+
+// const wordFrequency = (phrase) => {
+//    let words = phrase.split(' ');
+//    return letterFrequency(words)
+   
+// }
+// const userInput = prompt('write your sentence')
+// console.log(wordFrequency(userInput));
