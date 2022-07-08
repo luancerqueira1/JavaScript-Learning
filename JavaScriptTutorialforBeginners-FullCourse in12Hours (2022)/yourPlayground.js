@@ -195,24 +195,57 @@
 // const nums = [1, 2, 3, 4, 5, 6];
 // console.log(nums.filter(num => num > 3));
 
-const actors = [
-  {
-    name: 'jhon',
-    net: 100,
-  },
-  {
-    name: 'luan',
-    net: 0.2,
-  },
-  {
-    name: 'dri',
-    net: 20,
-  },
-  {
-    name: 'dri',
-    net: 30,
-  }
-];
-const result = actors.filter(actor => actor.net > 20);
-let names = result.map(actor => actor.name).join(', ')
-document.getElementsByTagName('body').innerHTML = `<h1> ${names} </h1>`
+// const actors = [
+//   {
+//     name: 'jhon',
+//     net: 100,
+//   },
+//   {
+//     name: 'luan',
+//     net: 2,
+//   },
+//   {
+//     name: 'drim',
+//     net: 20,
+//   },
+//   {
+//     name: 'dex',
+//     net: 30,
+//   }
+// ];
+// const result = actors.filter(actor => actor.net > 20);
+// let names = result.map(actor => actor.name).join(', ')
+// document.body.innerHTML = `<h1> ${names} </h1>`
+
+/* REDUCE */
+// const nums = [1, 2, 3,2];
+// const result = nums.reduce((prev, curr) => {
+//   return prev + curr
+// })
+// console.log(result);
+// const total = actors.reduce((prev, curr) => prev + curr.net , 0);
+// console.log(total);
+
+/* DOM MANIPULATION */
+// let title = document.getElementById('title');
+// title.innerText = 'oii';
+// title.style.color = 'red'
+// title.style.backgroundColor = 'lightpink';
+
+let red = document.getElementById('red');
+let yellow = document.getElementById('yellow');
+let green = document.getElementById('green');
+let clicou = document.getElementById('clicou');
+
+red.onclick = () => {
+  clicou.style.backgroundColor = 'red';
+  clicou.innerHTML = 'you clicked on red';
+}
+yellow.onclick = () => {
+  clicou.style.backgroundColor = 'yellow';
+  clicou.innerHTML = 'you clicked on yellow';
+};
+green.onclick = () => {
+  clicou.style.backgroundColor = 'green';
+  clicou.innerHTML = 'you clicked on green';
+};
