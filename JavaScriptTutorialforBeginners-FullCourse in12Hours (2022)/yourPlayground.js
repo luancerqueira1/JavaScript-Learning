@@ -232,20 +232,45 @@
 // title.style.color = 'red'
 // title.style.backgroundColor = 'lightpink';
 
-let red = document.getElementById('red');
-let yellow = document.getElementById('yellow');
-let green = document.getElementById('green');
-let clicou = document.getElementById('clicou');
+// let red = document.getElementById('red');
+// let yellow = document.getElementById('yellow');
+// let green = document.getElementById('green');
+// let clicou = document.getElementById('clicou');
+// let colorBtn = document.querySelectorAll('.color-btn');
+// let clearBtn = document.querySelector('#clear-btn');
 
-red.onclick = () => {
-  clicou.style.backgroundColor = 'red';
-  clicou.innerHTML = 'you clicked on red';
-}
-yellow.onclick = () => {
-  clicou.style.backgroundColor = 'yellow';
-  clicou.innerHTML = 'you clicked on yellow';
-};
-green.onclick = () => {
-  clicou.style.backgroundColor = 'green';
-  clicou.innerHTML = 'you clicked on green';
-};
+// red.onclick = () => {
+//   clicou.style.backgroundColor = 'red';
+//   clicou.innerHTML = 'you clicked on red';
+// }
+// yellow.onclick = () => {
+//   clicou.style.backgroundColor = 'yellow';
+//   clicou.innerHTML = 'you clicked on yellow';
+// };
+// green.onclick = () => {
+//   clicou.style.backgroundColor = 'green';
+//   clicou.innerHTML = 'you clicked on green';
+// };
+/*--------------------------------------------- */
+// const timesClicked = {
+//   'red': 0,
+//   'yellow': 0,
+//   'green' : 0,
+// }
+// colorBtn.forEach((btn) => {
+//   btn.onclick = () => {
+//     timesClicked[btn.value] += 1;
+//     clicou.innerHTML = `you clicked on ${btn.value} ${timesClicked[btn.value]} times`;
+//     btn.innerText = timesClicked[btn.value];
+
+//   }
+// });
+
+// clearBtn.onclick = () => clearScore();
+
+// const clearScore = () => {
+//   colorBtn.forEach((btn) => {
+//     timesClicked[btn.value] = 0;
+//     btn.innerText = " ";
+//   });
+// };
