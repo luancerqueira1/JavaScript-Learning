@@ -274,3 +274,10 @@
 //     btn.innerText = " ";
 //   });
 // };
+
+// const randomSelectArray = (fruits) => {
+//    const randomNumber = Math.floor(Math.random() * fruits.length);
+//    return fruits[randomNumber];
+// };
+// const fruits = ['🍎', '🍭', '🍉'];
+// console.log(randomSelectArray(fruits));
