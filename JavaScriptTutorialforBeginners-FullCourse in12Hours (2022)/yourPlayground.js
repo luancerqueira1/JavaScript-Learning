@@ -281,3 +281,52 @@
 // };
 // const fruits = ['🍎', '🍭', '🍉'];
 // console.log(randomSelectArray(fruits));
+
+/* API */
+// https://dog.ceo/api/breeds/image/random
+
+// const APIURL = 'https://dog.ceo/api/breeds/image/random';
+
+// async function getRandom(URL) {
+//    const resp = await fetch(URL);
+//    const respData = await resp.json();
+
+//    show(respData.message);
+// }
+// const dogBtn = document.querySelector('#dog-btn');
+// const pic = document.querySelector('#pic');
+
+// const show = (showurl) => {
+//    pic.setAttribute('src', showurl);
+// };
+// dogBtn.onclick = () => {
+//    getRandom(APIURL);
+// };
+
+/* SUPER HERO API */
+
+const randomHero = () => {
+   const numberHeros = 371;
+  return Number(Math.floor(Math.random() * numberHeros) + 1);  
+};
+
+const APIHERO = `https://superheroapi.com/api.php/1481962918922066/${randomHero}`;
+
+getSuperHero(APIHERO);
+
+async function getSuperHero(url) {
+   const resp = await fetch(url);
+   const respData = await resp.json();
+   console.log(respData);
+
+   dados(respData.image.url);
+}
+
+const dados = (show) => {
+   const heroimg = document.querySelector('#hero');
+   heroimg.setAttribute('src', show);
+};
+
+const heroBtn = document.querySelector('#hero-random');
+
+
