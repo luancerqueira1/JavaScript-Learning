@@ -303,30 +303,46 @@
 //    getRandom(APIURL);
 // };
 
-/* SUPER HERO API */
+/* SUPER HERO API */ // error
 
-const randomHero = () => {
-   const numberHeros = 371;
-  return Number(Math.floor(Math.random() * numberHeros) + 1);  
-};
+// API URL 
+// const APIHERO = 'https://superheroapi.com/api.php/1481962918922066';
 
-const APIHERO = `https://superheroapi.com/api.php/1481962918922066/${randomHero}`;
+// async function getRandomSuperHero(url) {
+//    const resp = await fetch(`${url}/${randomNumber()}`);
+//    const respData = await resp.json();
+//    console.log(respData);
 
-getSuperHero(APIHERO);
+//    getData(respData.image.url);
+// };
 
-async function getSuperHero(url) {
-   const resp = await fetch(url);
-   const respData = await resp.json();
-   console.log(respData);
+// async function getSearchSuper (url) {
+//    const resp = await fetch(`${url}/search/batman`);
+//    const respData = await resp.json();
 
-   dados(respData.image.url);
-}
+//    getData(respData.image.url);
+// };
+// //find searched hero BTN
+// const searchHeroBtn = document.querySelector('#search-hero-btn');
+//  const searchHero = document.querySelector('#search-hero');
+// searchHeroBtn.onclick = () => searched(searchHero.value);
+// ;
 
-const dados = (show) => {
-   const heroimg = document.querySelector('#hero');
-   heroimg.setAttribute('src', show);
-};
+// //show hero picture 
+// const getData = (show) => {
+//    const heroimg = document.querySelector('#hero');
+//    heroimg.setAttribute('src',`${show}`);
+// };
 
-const heroBtn = document.querySelector('#hero-random');
+// //click to get arandom hero
+// const heroBtn = document.querySelector('#hero-random');
+// heroBtn.onclick = () => {
+//    getRandomSuperHero(APIHERO);
+// }
 
-
+// //random hero function
+// const randomNumber = () => {
+//    const numberHeros = 371;
+//    return Number(Math.floor(Math.random() * numberHeros) + 1);
+// };
+// batman
