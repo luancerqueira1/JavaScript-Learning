@@ -402,8 +402,8 @@
 
 // getWeatherData();
 
+/*===================   Weather App   ======================== */
 /**
- * Weather App
  * TODO: Complete getWeatherData() to return json response Promise
  * TODO: Complete searchCity() to get user input and get data using getWeatherData()
  * TODO: Complete showWeatherData() to set the data in the the html file from response
@@ -417,54 +417,87 @@
 "max-temp"
 */
 
-// API_KEY for maps api
-let API_KEY = 'a8e71c9932b20c4ceb0aed183e6a83bb';
+// // API_KEY for maps api
+// let API_KEY = 'a8e71c9932b20c4ceb0aed183e6a83bb';
 
-/**
- * Retrieve weather data from openweathermap
- * HINT: Use fetch()
- * HINT: URL should look like this:
- * https://api.openweathermap.org/data/2.5/weather?q=detroit&appid=a8e71c9932b20c4ceb0aed183e6a83bb&units=imperial
- */
-const getWeatherData = async (city) => {
-   const URL = 'https://api.openweathermap.org/data/2.5/weather';
-   const FULL_URL = `${URL}?q=${city}&appid=${API_KEY}&units=imperial`;
-   //HINT: Use template literals to create a url with input and an API key
+// /**
+//  * Retrieve weather data from openweathermap
+//  * HINT: Use fetch()
+//  * HINT: URL should look like this:
+//  * https://api.openweathermap.org/data/2.5/weather?q=detroit&appid=a8e71c9932b20c4ceb0aed183e6a83bb&units=imperial
+//  */
+// const getWeatherData = async (city) => {
+//    try {
+//       const URL = 'https://api.openweathermap.org/data/2.5/weather';
+//       const FULL_URL = `${URL}?q=${city}&appid=${API_KEY}&units=imperial`;
+//       //HINT: Use template literals to create a url with input and an API key
 
-   //CODE GOES HERE
-   const resp = await fetch(FULL_URL);
-   const respData = await resp.json();
-   console.log(respData);
+//       //CODE GOES HERE
+//       const resp = await fetch(FULL_URL);
+//       const respData = await resp.json();
 
-   showWeatherData(respData);
-};
-/**
- * Retrieve city input and get the weather data
- * HINT: Use the promise returned from getWeatherData()
- */
-const searchCity = () => {
-   const city = document.getElementById('city-input').value;
-   // CODE GOES HERE
-   getWeatherData('euclides da cunha');
-   
-};
-/**
- * Show the weather data in HTML
- * HINT: make sure to console log the weatherData to see how the data looks like
- */
-const showWeatherData = (weatherData) => {
-   //CODE GOES HERE
-   const cityName = document.querySelector('#city-name');
-   const weatherType = document.querySelector('#weather-type');
-   const temp = document.querySelector('#temp');
-   const minTemp = document.querySelector('#min-temp');
-   const maxTemp = document.querySelector('#max-temp');
+//       showWeatherData(respData);
+//    } catch {
+//       noResults();
+//    }
+// };
 
-   cityName.innerText = weatherData.name;
-   weatherType.innerText = weatherData.weather[0].main;
-   temp.innerText = weatherData.main.temp;
-   
-   minTemp.innerText = weatherData.main.temp_max;
-   maxTemp.innerText = weatherData.main.temp_min;
-   
-};
+// /**
+//  * Retrieve city input and get the weather data
+//  * HINT: Use the promise returned from getWeatherData()
+//  */
+// const searchCity = () => {
+//    const city = document.getElementById('city-input').value;
+//    // CODE GOES HERE
+//    getWeatherData(city);
+// };
+// /**
+//  * Show the weather data in HTML
+//  * HINT: make sure to console log the weatherData to see how the data looks like
+//  */
+// const showWeatherData = (weatherData) => {
+//    //CODE GOES HERE
+//    const cityName = document.querySelector('#city-name');
+//    const weatherType = document.querySelector('#weather-type');
+//    const temp = document.querySelector('#temp');
+//    const minTemp = document.querySelector('#min-temp');
+//    const maxTemp = document.querySelector('#max-temp');
+
+//    cityName.innerText = weatherData.name;
+//    weatherType.innerText = weatherData.weather[0].main;
+
+//    temp.innerText = FtoC(weatherData.main.temp);
+//    minTemp.innerText = FtoC(weatherData.main.temp_max);
+//    maxTemp.innerText = FtoC(weatherData.main.temp_min);
+// };
+
+// // fahrenheit to celsius
+// function FtoC(value) {
+//    const valor = (5 / 9) * (value - 32);
+//    return Number(valor.toFixed(2));
+// };
+// // No results Found
+// function noResults() {
+//    const cityName = document.querySelector('#city-name');
+//    cityName.innerText = '❌Sem Resultados';
+//    const weatherType = (document.querySelector('#weather-type').innerText = '');
+//    const temp = (document.querySelector('#temp').innerText = '');
+//    const minTemp = (document.querySelector('#min-temp').innerText = '');
+//    const maxTemp = (document.querySelector('#max-temp').innerText = '');
+// };
+// //chicago
+
+// class
+class Car {
+   constructor(name, color, speed) {
+      this.name = name;
+      this.color = color;
+      this.speed = speed;
+   }
+   drive() {
+      console.log('driving');
+   }
+}
+const ferrari = new Car('ferrari', 'red', 200);
+console.log(ferrari);
+ferrari.drive();
