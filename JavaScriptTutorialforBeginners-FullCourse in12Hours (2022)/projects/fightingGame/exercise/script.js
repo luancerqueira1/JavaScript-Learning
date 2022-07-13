@@ -44,7 +44,7 @@ let p2HealthDiv = document.getElementById('p2Health')
 // ** Check if either players health is  0 and if it is, then update isOver to true **
 const updateGame = (p1,p2,gameState) => {
   // Update the DOM with the names and the latest health of players
-
+  
   // Condition IF either player health is <= 0 then set isOver to true and declareWinner
 
 }

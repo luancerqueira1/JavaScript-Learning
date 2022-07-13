@@ -487,17 +487,77 @@
 // };
 // //chicago
 
-// class
-class Car {
-   constructor(name, color, speed) {
-      this.name = name;
-      this.color = color;
-      this.speed = speed;
-   }
-   drive() {
-      console.log('driving');
-   }
-}
-const ferrari = new Car('ferrari', 'red', 200);
-console.log(ferrari);
-ferrari.drive();
+
+/* CLASSES */
+// class Car {
+//    constructor(name, color, speed) {
+//       this.name = name;
+//       this.color = color;
+//       this.speed = speed;
+//    }
+//    drive() {
+//       console.log('driving');
+//    }
+// }
+// const ferrari = new Car('ferrari', 'red', 200);
+// console.log(ferrari);
+// ferrari.drive();
+
+// class Bank {
+//    constructor(balance) {
+//       this.balance = balance
+//    }
+
+//    withdraw(amount) {
+//       if (this.balance - amount <= 0) {
+//          console.log('YOU HAVE $0');
+//          return;
+//       }
+//       this.balance -= amount
+//       console.log('withdrew', `${amount}`);
+
+//    }
+
+//    deposit(amount) {
+//       this.balance += amount
+//       console.log('deposited', `${amount}`);
+  
+//    }
+// }
+
+// const luan = new Bank(0);
+
+// const depisitBtn = document.getElementById('deposit');
+// const withdraw = document.getElementById('withdraw');
+// const amountInput =document.getElementById('amount');
+// const balance = document.getElementById('balance');
+
+
+// depisitBtn.onclick = () => {
+//    const amount = Number(amountInput.value);
+//    luan.deposit(amount);
+//    balance.innerText = `balance: ${luan.balance}`;
+// }
+// withdraw.onclick = () => {
+//    const amount = Number(amountInput.value);
+//    luan.withdraw(amount);
+//    balance.innerText = `balance: ${luan.balance}`;
+// };
+
+//for loops -> whuen you know how many times you want to loop
+// while loop -> when you ar not sure how many times you want to loop
+
+//events
+// document.addEventListener('keydown', function (e) {
+//    const punch = document.getElementById('punch');
+
+//    if (e.key == 'q') {
+//       punch.play()
+//    }
+// })
+
+/* THE FIGHTING GAME */
+
+
+
+
