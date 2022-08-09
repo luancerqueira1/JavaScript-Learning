@@ -1,0 +1,235 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-size: 20px;
+}
+html{
+   scroll-behavior: smooth;
+}
+img {
+   width: 100%;
+}
+a {
+   text-decoration: none;
+}
+ul {
+   list-style: none;
+}
+.navbar{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 10vh;
+   background: #ececec;
+}
+.logo{
+   padding-left: 2em;
+}
+.logo-text{
+   font-size: 1.8rem;
+}
+.menubar{
+   width: 45%;
+   margin-left: 8.5rem;
+}
+
+.list {
+   display: flex;
+   justify-content: space-between;
+}
+
+.list-items{
+   color: black;
+   font-family: sans-serif;
+   font-size: .9rem;
+   transition: .4s;
+}
+.list-items a:hover {
+   color: black;
+}
+
+.cart {
+   padding-right: 2rem;
+   position: relative;
+}
+
+.cart .number-of-items {
+   display: flex;
+   cursor: pointer;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   position: absolute;
+   left: 18px;
+   top: -7px;
+   background-color: #f09d51;
+   height: 20px;
+   width: 20px;
+   border-radius: 7px;
+}
+
+.number-of-items .noi {
+   font-size: .7rem;
+}
+
+.bx-cart-download{
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+.burger {
+   height: 28px;
+   width: 32px;
+   display: none;
+}
+
+.layer1,
+.layer2,
+.layer3{
+   background-color: black;
+   height: 3px;
+   width: 100%;
+   margin-top: 4px;
+   border-radius: 10px;
+}
+
+.section1{
+   height: calc(100vh - 10vh);
+   width: 100%;
+   background: url(http://me.devoteam.com/wp-content/uploads/sites/10/2021/05/111-e1575791609362-scaled.jpeg) center center/cover;
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+.section1 .banner{
+   height: 170px;
+   width: 600px;
+   background: rgba(255, 255, 255, .7);
+   border-radius: 5px;
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   text-align: center;
+   align-items: center;
+   font-family: sans-serif;
+   z-index: 8;
+}
+
+.banner h1 {
+   font-size: 2em;
+}
+.banner a {
+   display: flex;
+   justify-content: center;
+   padding: 1em 2.5em;
+   font-size: .8em;
+   color: white;
+   background-color: #f90d51;
+   transition:  all 300ms ease-in-out;
+}
+
+.banner a:hover {
+   background-color: #eb396c;
+}
+
+/*menubar*/
+.menu-sidebar {
+   display: none;
+}
+
+.cart-sidebar{
+   background: #ececec;
+   position: fixed;
+   right: 0;
+   top: 0;
+   width: 450px;
+   height: 100vh;
+   z-index: 10;
+   transition:  all 300ms linear;
+   /* transform: translateX(100%); */
+   overflow: scroll;
+}
+.cart-sidebar .cart {
+   padding: 0;
+}
+.cart .close-cart {
+   font-size: 1.3rem;
+   padding: 1rem;
+   cursor: pointer;
+}
+.bxs-exit {
+   margin-top: .5rem;
+}
+
+.cart h2 {
+   text-align: center;
+   width: 100%;
+   margin-bottom: 1rem;
+   font-size: 1.1rem;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cart-product .product-image img {
+   width: 130px;
+   height: 90px;
+}
+.cart-product-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin-left: 1rem;
+   height: 80px;
+}
+
+.plus-minus {
+   display: flex;
+   transform: rotate(90deg);
+   color: #eb396c;
+   font-size: 1.5em;
+   cursor: pointer;
+}
+
+.total-sum {
+   text-align: center;
+   margin: 1em 0 0.5em 0;
+
+}
+.clear-cart {
+   text-align: center;
+}
+
+.clear-cart .btn {
+   background: #eb396c;
+   color: white;
+   border: 1px solid white;
+   padding: .5rem 1.7rem;
+   cursor: pointer;
+   transition: all 300ms linear;
+}
+
+.clear-cart .btn:hover{
+   border: 1px solid #eb396c;
+   background: transparent;
+   color: black;
+}
+
+.overlay {
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 9;
+   width: 100%;
+   background-color: #f3851f;
+   opacity: .3;
+   transition: all 300ms linear;
+}
+
+.none {
+   
+}
