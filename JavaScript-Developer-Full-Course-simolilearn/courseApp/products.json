@@ -37,7 +37,9 @@
          "fields": {
             "title": "digital marketing",
             "price": "40.99",
-            "image": { "fields": { "file": { "url": "img/digitalmarketing.jpg" } } }
+            "image": {
+               "fields": { "file": { "url": "img/digitalmarketing.jpg" } }
+            }
          }
       },
       {
@@ -45,7 +47,9 @@
          "fields": {
             "title": "advance web development",
             "price": "150.99",
-            "image": { "fields": { "file": { "url": "img/advancewebdevelopment.jpg" } } }
+            "image": {
+               "fields": { "file": { "url": "img/advancewebdevelopment.jpg" } }
+            }
          }
       },
       {
@@ -53,7 +57,9 @@
          "fields": {
             "title": "data structure",
             "price": "110.99",
-            "image": { "fields": { "file": { "url": "img/datastructure.jpg" } } }
+            "image": {
+               "fields": { "file": { "url": "img/datastructure.jpg" } }
+            }
          }
       },
       {
