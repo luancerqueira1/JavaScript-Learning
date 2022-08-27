@@ -114,21 +114,93 @@
 // console.log(myBike.wheelie());
 
 /*===== RECURSION =====*/
-//without recursion 
-const fibonacci = (num, array = [0, 1]) => {
-   while (num > 2) {
-      const [nextToLast, last] = array.slice(-2);
-      array.push(nextToLast + last);
-      num -= 1;
-   }
-   return array;
-}
-console.log(fibonacci(5));
+//without recursion
+// const fibonacci = (num, array = [0, 1]) => {
+//    while (num > 2) {
+//       const [nextToLast, last] = array.slice(-2);
+//       array.push(nextToLast + last);
+//       num -= 1;
+//    }
+//    return array;
+// }
+// console.log(fibonacci(5));
 
-//with recursion
-const fib = (num, array = [0, 1]) => {
-   if (num <= 2) return array;
-   const [nextToLast, last] = array.slice(-2);
-   return fib(num -1 , [...array,nextToLast + last])
-}
-console.log(fib(5));
+// //with recursion
+// const fib = (num, array = [0, 1]) => {
+//    if (num <= 2) return array;
+//    const [nextToLast, last] = array.slice(-2);
+//    return fib(num -1 , [...array,nextToLast + last])
+// }
+// console.log(fib(5));
+
+/*===== DECORATORS =====*/
+// let sum = (...args) => {
+//    return [...args].reduce((acc,num) => acc + num)
+// }
+// console.log(sum(3, 3, 3));
+
+// const callCounter = (fn) => {
+//    let count = 0;
+//    return (...args) => {
+//       console.log(`sum has been called ${count += 1} times`);
+//       return fn(...args)
+//    }
+// }
+// sum = callCounter(sum);
+// console.log(sum(4));
+// console.log(sum(4,3));
+
+// let rectangleArea = (length, width) => {
+//    return length * width
+// };
+
+// const countParams = (fn) => {
+//    return (...params) => {
+//       if (params.length !== fn.length) {
+//          throw new Error(`incorrect number of parameters for ${fn.name}`);
+//       }
+//       return fn(...params);
+//    };
+// }
+
+// const requireIntergers = (fn) => {
+//    const name = fn.name;
+//    return (name,...params) => {
+//       params.forEach(param => {
+//          if (!Number.isInteger(param)) {
+//             throw new TypeError(`params for ${name} must be intergs`);
+//          }
+//       });
+//       return fn(...params)
+//    };
+// }
+// rectangleArea = countParams(rectangleArea);
+// rectangleArea = requireIntergers(rectangleArea);
+// console.log(rectangleArea(20,30));
+
+// let requestData = async (url) => {
+//    try {
+//       const response = await fetch(url);
+//       const data = await response.json()
+//       return data;
+//    }
+//    catch (err) {
+//       console.error(err);
+//    }
+// }
+
+// const dataResponseTime = (fn) => {
+//    return async (url) => {
+//       console.time('fn');
+//       const data = await fn(url);
+//       console.timeEnd('fn');
+//       return data;
+//    }
+// }
+
+// const myTestFunction = async () => {
+//    requestData = dataResponseTime(requestData);
+//    const data = await requestData('https://jsonplaceholder.typicode.com/posts');
+//    console.log(data);
+// }
+// myTestFunction();
