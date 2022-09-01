@@ -224,16 +224,19 @@
 
 /*===== forEach is BAD! for Async Await Code =====*/
 
-const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const getPost = async (id) => {
-   return await (await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)).json();
-}
-const getPostSerialized = async (ids) => {
-   for (id in ids) {
-      const data = await getPost(ids[id])
-      console.log(data);
-   }
-   console.log('waiting');
-}
-getPostSerialized(ids);
+// const getPost = async (id) => {
+//    return await (await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)).json();
+// }
+// const getPostSerialized = async (ids) => {
+//    for (id in ids) {
+//       const data = await getPost(ids[id])
+//       console.log(data);
+//    }
+//    console.log('waiting');
+// }
+// getPostSerialized(ids);
+
+/*===== DO NOT use innerHTML =====*/
+//performamce & security 
