@@ -204,3 +204,36 @@
 //    console.log(data);
 // }
 // myTestFunction();
+
+/*===== CURRY =====*/
+//...........................
+
+/*===== Shallow Copy and Deep Copy  =====*/
+//Primitives pass values
+// let x = 2;
+// let y = x;
+// y += x;
+// console.log(x);
+// console.log(y);
+// //Structural types use references
+// let array = [1, 2, 3];
+// let yarray = array;
+// array.push(4)
+// console.log(array);
+// console.log(yarray);
+
+/*===== forEach is BAD! for Async Await Code =====*/
+
+const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const getPost = async (id) => {
+   return await (await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)).json();
+}
+const getPostSerialized = async (ids) => {
+   for (id in ids) {
+      const data = await getPost(ids[id])
+      console.log(data);
+   }
+   console.log('waiting');
+}
+getPostSerialized(ids);
