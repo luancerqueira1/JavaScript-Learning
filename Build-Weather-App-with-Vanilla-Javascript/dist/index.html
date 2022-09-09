@@ -16,9 +16,9 @@
       <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-   <main>
+   <main class="fade-in">
       <h1 class="offscreen">Weather App A P I</h1>
-      <section id="searchBar" class="searchBar">
+      <section id="searchBar" class="searchBar fade-in">
          <form action="" id="searchBar__form" class="searchBar__form" role="search">
             <label for="searchBar__text" class="offscreen">Enter a Location</label>
             <input type="text" id="searchBar__text" class="searchBar__text" role="searchbox" size="40" autocomplete="off" placeholder="city,state,country"> 
@@ -31,15 +31,26 @@
 
       <a href="#currentForecast" class="skip-link">Skip to current Conditions 
       </a>
-      <section id="currentForecast" class="currentForecast" role="region" aria-labelledby="currentForecast__location">
+      <section id="currentForecast" class="currentForecast fade-in" role="region" aria-labelledby="currentForecast__location">
          <h2 id="currentForecast__location" class="currentForecast__location">current Conditions</h2>
-         <div id="currentForecast__conditions" class="currentForecast__conditions"></div>
+         <div id="currentForecast__conditions" class="currentForecast__conditions">
+            <div class="icon" id="icon">
+               <i class="fa fa-sun" aria-hidden="true" title="clear sky"> </i>
+            </div>
+            <div class="temp">59°<div class="unit">F</div></div>
+            <div class="desc">clear sky</div>
+            <div class="feels">feels like 53°</div>
+            <div class="maxtemp">high 62°</div>
+            <div class="mintemp">low 39°</div>
+            <div class="humidity">humidity 44%</div>
+            <div class="wind">wind 7 mph</div>
+         </div>
       </section>
 
       <a href="#currentForecast" class="skip-link">skip to six  day forecast
       </a>
 
-      <nav id="navButtons" class="navButtons">
+      <nav id="navButtons" class="navButtons fade-in">
          <button id="getLocation" class="button" title="get Location" aria-label="get the current weather conditions for your location">
             <i class="fas fa-map-marker-alt"></i>
             <i class="fas fa-sync fa-spin"id="none"></i>
@@ -57,16 +68,18 @@
             <i class="fas fa-sync fa-spin"id="none"></i>
          </button>
          <button id="refresh" class="button" title="refresh weather" aria-label="refresh the current weather conditions">
-            <i class="fas fa-sync-alt"></i>
-            <i class="fas fa-sync fa-spin"id="none"></i>
+            <i class="fas fa-sync-alt "></i>
+            <i class="fas fa-sync fa-spin b"id="none"></i>
          </button>
       </nav>
 
-      <hr>
+      <hr class="fade-in">
 
-      <section id="dailyForecast" class="dailyForecast" role="region" aria-labelledby="dailyForecast__title">
+      <section id="dailyForecast" class="dailyForecast fade-in" role="region" aria-labelledby="dailyForecast__title">
          <h2 id="dailyForecast__title" class="dailyForecast__title offscreen">Six Day Forecast</h2>
-         <div id="dailyForecast__contents" class="dailyForecast__contents"></div>
+         <div id="dailyForecast__contents" class="dailyForecast__contents">
+
+         </div>
       </section>
       <p id="confirmation" class="offscreen" aria-live="assertive"></p>
    </main>

@@ -4,10 +4,14 @@
 *{
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
 }
 
 html{
    background-color: $background-color;
+   background-image: url("../dist/img/clouds.jpg");
+   background-blend-mode: overlay;
+   background-size: cover;
    font-size: 16px;
    font-family: 'Montserrat', sans-serif;
    font-weight: bold;
@@ -19,6 +23,7 @@ html{
 }
 
 body {
+   width: 100%;
    min-height: 100vh;
    @include flexCenter;
    flex-direction: column;
@@ -48,7 +53,12 @@ hr {
    margin: auto;
    border: 1px solid $bordercolor;
 }
-
+.none {
+   visibility: none;
+}
+.block {
+   visibility: visible;
+}
 #none {
    display: none;
 }

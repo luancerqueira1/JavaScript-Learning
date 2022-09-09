@@ -1,7 +1,15 @@
 @use 'abstracts/colors' ;
 @use 'abstracts/mixins' ;
+
 @use 'base/base' ;
 
-@use 'components/a11ly' ;
+@use 'components/a11ly';
 @use 'components/buttons';
+@use 'components/fadeIn';
+
 @use 'layout/searchBar';
+@use 'layout/navButtons';
+@use 'layout/currentForecast';
+@use 'layout/dailyForecast' ;
+
+@use 'themes/backgrounds';
