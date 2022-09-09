@@ -1,4 +1,7 @@
-@use 'abstracts/colors' as *;
-@use 'abstracts/mixins' as *;
-@use 'base/base' as *;
+@use 'abstracts/colors' ;
+@use 'abstracts/mixins' ;
+@use 'base/base' ;
 
+@use 'components/a11ly' ;
+@use 'components/buttons';
+@use 'layout/searchBar';
