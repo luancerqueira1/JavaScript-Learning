@@ -9,7 +9,7 @@ export default class CurrentLocation {
    getName() {
       return this._name;
    }
-   setName() {
+   setName(name) {
       this._name = name;
    }
    getLat() {
