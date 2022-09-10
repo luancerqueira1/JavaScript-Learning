@@ -14,7 +14,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-      <script src="js/main.js" type="module"></script>
+      <script src="js/main.js" type="module" defer></script>
 </head>
 <body>
    <main class="fade-in">
@@ -25,7 +25,7 @@
             <input type="text" id="searchBar__text" class="searchBar__text" role="searchbox" size="40" autocomplete="off" placeholder="city,state,country"> 
             <button id="searchBar__button" class="searchBar__button button" title="submit location" aria-label="enter zip code or city,state,and country to retrive weather conditions">
                <i class="fa-solid fa-magnifying-glass"></i>
-               <i class="fas fa-sync fa-spin " id="none"></i>
+               <i class="fas fa-sync fa-spin none " id="none"></i>
             </button>
          </form>
       </section>
@@ -35,16 +35,8 @@
       <section id="currentForecast" class="currentForecast fade-in" role="region" aria-labelledby="currentForecast__location">
          <h2 id="currentForecast__location" class="currentForecast__location">current Conditions</h2>
          <div id="currentForecast__conditions" class="currentForecast__conditions">
-            <div class="icon" id="icon">
-               <i class="fa fa-sun" aria-hidden="true" title="clear sky"> </i>
-            </div>
-            <div class="temp">59°<div class="unit">F</div></div>
-            <div class="desc">clear sky</div>
-            <div class="feels">feels like 53°</div>
-            <div class="maxtemp">high 62°</div>
-            <div class="mintemp">low 39°</div>
-            <div class="humidity">humidity 44%</div>
-            <div class="wind">wind 7 mph</div>
+            
+            
          </div>
       </section>
 
@@ -53,24 +45,24 @@
 
       <nav id="navButtons" class="navButtons fade-in">
          <button id="getLocation" class="button" title="get Location" aria-label="get the current weather conditions for your location">
-            <i class="fas fa-map-marker-alt"></i>
-            <i class="fas fa-sync fa-spin"id="none"></i>
+            <i class="fas fa-map-marker-alt "></i>
+            <i class="fas fa-sync fa-spin none"id="none"></i>
          </button>
          <button id="home" class="button" title="home weather" aria-label="get the current weather conditions for your home location">
             <i class="fas fa-home"></i>
-            <i class="fas fa-sync fa-spin" id="none"></i>
+            <i class="fas fa-sync fa-spin none" id="none"></i>
          </button>
          <button id="saveLocation" class="button" title="save location" aria-label="save the current location as your home location">
             <i class="fas fa-save"></i>
-            <i class="fas fa-sync fa-spin" id="none"></i>
+            <i class="fas fa-sync fa-spin none" id="none"></i>
          </button>
          <button id="unit" class="button" title="toggle measurement units" aria-label="toggle between metric and imperial measurement units">
             <i class="fas fa-chart-bar"></i>
-            <i class="fas fa-sync fa-spin"id="none"></i>
+            <i class="fas fa-sync fa-spin none"id="none"></i>
          </button>
          <button id="refresh" class="button" title="refresh weather" aria-label="refresh the current weather conditions">
             <i class="fas fa-sync-alt "></i>
-            <i class="fas fa-sync fa-spin b"id="none"></i>
+            <i class="fas fa-sync fa-spin none"id="none"></i>
          </button>
       </nav>
 
