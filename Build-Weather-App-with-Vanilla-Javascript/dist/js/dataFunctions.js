@@ -1,4 +1,3 @@
-
 export const setLocationObject = (locationObj, coordsObj) => {
    const { lat, lon, name, unit } = coordsObj;
    locationObj.setLat(lat);
@@ -9,11 +8,17 @@ export const setLocationObject = (locationObj, coordsObj) => {
    }
 };
 export const getHomeLocation = () => {
-   return localStorage.getItem('defaultWeatherLocation')
-}
+   return localStorage.getItem('defaultWeatherLocation');
+};
+
+export const getCoordsFromApi = async (entryText, units) => {
+   const regex = /^\d+$/g;
+   const flag = regex.text(entryText) ? 'zip' : 'q';
+
+};
 
 export const cleanText = (text) => {
    const regex = / {2,}/g;
    const entryText = text.replaceAll(regex, ' ').trim();
    return entryText;
-}
+};
