@@ -150,7 +150,7 @@ const submitNewLocation = async (event) => {
          displayApiError(coordsData);
       }
    } else {
-      displayError('conection error', 'conectin error');
+      displayError('conection error','conectin error');
    }
 };
 

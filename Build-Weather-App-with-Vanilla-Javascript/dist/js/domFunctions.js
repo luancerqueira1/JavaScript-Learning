@@ -47,10 +47,17 @@ export const updateScreenReaderConfirmation = (message) => {
 export const updateDisplay = (weatherJson, locationObj) => {
    fadeDisplay();
    clearDisplay();
-   const weatherClass = getWeatherClass(weatherJson.current.weather[0].icon)
+   const weatherClass = getWeatherClass(weatherJson.current.weather[0].icon);
+   seBGImage(weatherClass);
+   const screenReaderWeather = buildScreenReaderWeather(
+      weatherJson,
+      locationObj
+   );
+   updateScreenReaderConfirmation(screenReaderWeather);
+   updateWeatherLocationHeader(locationObj.getName());
+
+   setFocusOnSearch();
    fadeDisplay();
-
-
 };
 
 const fadeDisplay = () => {
@@ -63,10 +70,12 @@ const fadeDisplay = () => {
 };
 
 const clearDisplay = () => {
-   const currentLocations = document.getElementById('currentForecast__conditions');
+   const currentLocations = document.getElementById(
+      'currentForecast__conditions'
+   );
    deleteContents(currentLocations);
    const sixDayForecast = document.getElementById('dailyForecast__contents');
-   deleteContents(sixDayForecast)
+   deleteContents(sixDayForecast);
 };
 
 const deleteContents = (parentElement) => {
@@ -76,7 +85,7 @@ const deleteContents = (parentElement) => {
       child = parentElement.lastElementChild;
    }
 };
- 
+
 const getWeatherClass = (icon) => {
    const firstTwoChars = icon.slice(0, 2);
    const lastChar = icon.slice(2);
@@ -85,6 +94,33 @@ const getWeatherClass = (icon) => {
       10: 'rain',
       11: 'rain',
       12: 'snow',
-      50:'fog'
+      50: 'fog',
+   };
+   let weatherClass;
+   if (weatherLookup[firstTwoChars]) {
+      weatherClass = weatherLookup[firstTwoChars];
+   } else if (lastChar === 'd') {
+      weatherClass == 'clouds';
+   } else {
+      weatherClass == 'night';
    }
+   return weatherClass;
+};
+
+const seBGImage = (weatherClass) => {
+   document.documentElement.classList.add(weatherClass);
+   document.documentElement.classList.forEach((img) => {
+      if (img !== weatherClass) {
+         document.documentElement.classList.remove(img);
+      }
+   });
+};
+
+const buildScreenReaderWeather = (weatherJson, locationObj) => {
+   const loctaion = locationObj.getName();
+   const unit = location.getUnit();
+   const tempUnit = unit === 'imperial' ? 'F' : 'C';
+   return `${weatherJson.current.weather[0].description} and ${Math.round(
+      weatherJson.current.temp
+   )}°${tempUnit} in ${location}`;
 };

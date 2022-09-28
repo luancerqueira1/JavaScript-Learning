@@ -81,6 +81,13 @@ form.addEventListener("submit", (e)=> {
 	}
 });
 
+const oi = 'dd';
+
+if (oi) {
+	if((oi) && (oi) || (((oi)))) {
+	}
+}
+
 
 
 

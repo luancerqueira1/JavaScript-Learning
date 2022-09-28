@@ -1,4 +1,4 @@
-const WEATHER_API_KEY = '409a8f0fe005a4e5a374787579dfb66f';
+const WEATHER_API_KEY = '20dd61b550eaf411deafabef70ad88bd';
 
 export const setLocationObject = (locationObj, coordsObj) => {
    const { lat, lon, name, unit } = coordsObj;
@@ -21,6 +21,7 @@ export const getWeatherFromCoords = async (locationObj) => {
    try {
       const weatherStream = await fetch(url);
       const weatherJson = await weatherStream.json();
+      console.log(weatherJson);
       return weatherJson;
    } catch (err) {
       console.error(err);
@@ -40,7 +41,6 @@ export const getCoordsFromApi = async (entryText, units) => {
    } catch (err) {
       console.error(err.stack);
    }
-
 };
 
 export const cleanText = (text) => {

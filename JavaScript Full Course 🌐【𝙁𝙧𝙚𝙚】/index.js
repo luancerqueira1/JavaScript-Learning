@@ -2551,6 +2551,14 @@ function resetGame() {
   
 };
 
+const oi = 12;
+if (doniec) {
+}
+
+
+
+
+
 
 
 
